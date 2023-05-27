@@ -16,8 +16,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from roomieAPI import RoomieAPI
+from roomieAPIRoomInfo import RoomieAPIRoomInfo
+from roomieAPIRoomAccomodations import RoomieAPIRoomAccomodations
 
 urlpatterns = [
-    path('RoomieAPI/', RoomieAPI.as_view(), name='RoomieAPI'),
+    path('RoomieAPIRoomInfo/', RoomieAPIRoomInfo.as_view(), name='RoomInfo'),
+    path('RoomieAPIRoomAccomodations/', RoomieAPIRoomAccomodations.as_view(), name='RoomAccomodations'),
 ]

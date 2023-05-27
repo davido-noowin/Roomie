@@ -1,4 +1,4 @@
-from django import models
+from django.db import models
 from studentSchema import Student
 from roomSchema import Room
 

@@ -7,5 +7,5 @@ class Room(models.Model):
     room_number = models.IntegerField()
 
     class Meta:
-        app_label = 'roomie-backend'
+        app_label = 'roomie_backend'
         db_table = 'Room'
