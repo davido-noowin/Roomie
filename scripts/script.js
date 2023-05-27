@@ -5,38 +5,11 @@ function load() {
     const nextBtn = document.querySelector(".next-btn");
     let currentIndex = 0;
   
-    function showCurrentSlide() {
-      carouselItems.forEach(function(item) {
-        item.classList.remove("active");
-      });
-      carouselItems[currentIndex].classList.add("active");
-    }
-  
-    function goToNextSlide() {
-      currentIndex++;
-      if (currentIndex >= carouselItems.length) {
-        currentIndex = 0;
-      }
-      showCurrentSlide();
-    }
-  
-    function goToPrevSlide() {
-      currentIndex--;
-      //check if the current index is less than zero
-      if (currentIndex < 0) {
-        currentIndex = carouselItems.length - 1;
-      }
-      //show current
-      showCurrentSlide();
-    }
-  
-    prevBtn.addEventListener("click", goToPrevSlide);
-    nextBtn.addEventListener("click", goToNextSlide);
-  
-    // Initialize the carousel by showing the first slide
-    showCurrentSlide();
-  });
-
-//carousel function(might delete)
-  
+    buttons.forEach(button => {
+      button.addEventListener("click", () => {
+        const offset = button.dataset.carouselButton === "next" ? 1 : -1
+        const slides = button.closest("[data-carousel]").querySelector("[data-slides")
+      })
+    })
+  }
 }
