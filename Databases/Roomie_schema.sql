@@ -29,8 +29,8 @@ CREATE TABLE Room(
 CREATE TABLE RoomAccomodations(
 	room_id VARCHAR(20),
     accomodation VARCHAR(20) NOT NULL,
-    FOREIGN KEY (room_id) REFERENCES Room(room_id),
-    PRIMARY KEY (room_id, accomodation)
+    PRIMARY KEY (room_id, accomodation),
+    FOREIGN KEY (room_id) REFERENCES Room(room_id)
 );
     
 

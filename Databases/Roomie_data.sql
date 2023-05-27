@@ -58,7 +58,7 @@ INSERT INTO Room (room_id, location, room_size, room_number) VALUES
 ('MRC175', 'Multimedia Resources Center', 2, 175);
 
 
-INSERT INTO Room (room_id, accomodation) VALUES
+INSERT INTO RoomAccomodations (room_id, accomodation) VALUES
 ('Langson360', 'whiteboard'),
 ('Langson360', 'power outlet'),
 ('Langson382', 'whiteboard'),
@@ -96,7 +96,6 @@ INSERT INTO Room (room_id, accomodation) VALUES
 ('Gateway2109', 'whiteboard'),
 ('Gateway2109', 'power outlet'),
 ('Gateway2109', 'tv'),
-('Gateway2109', 'computer'),
 ('Gateway2110', 'power outlet'),
 ('Gateway2111', 'power outlet'),
 ('Gateway2112', 'whiteboard'),
@@ -111,8 +110,6 @@ INSERT INTO Room (room_id, accomodation) VALUES
 ('Science371', 'tv'),
 ('Science402', 'whiteboard'),
 ('Science402', 'power outlet'),
-('Science406', 'whiteboard'),
-('Science406', 'power outlet'),
 ('Science410', 'whiteboard'),
 ('Science410', 'power outlet'),
 ('Science471', 'whiteboard'),
@@ -184,4 +181,3 @@ INSERT INTO Room (room_id, accomodation) VALUES
 ('MRC174', 'tv'),
 ('MRC175', 'power outlet'),
 ('MRC175', 'tv');
-
