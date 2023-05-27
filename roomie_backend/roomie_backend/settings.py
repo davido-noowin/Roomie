@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-$p2(u-31(85*j78!+u45+lb@1j)#)pxet%u%^t2pj**an50#=#
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['3.133.161.88']
 
 
 # Application definition
@@ -78,9 +78,9 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'Roomie',
-        'USER': 'root',
+        'USER': 'admin',
         'PASSWORD': "password",
-        'HOST': "127.0.0.1",
+        'HOST': "roomiedatabase.ckyamljcxjnh.us-east-2.rds.amazonaws.com",
         'PORT': "3306",
     }
 }
