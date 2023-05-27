@@ -42,20 +42,26 @@ button {
    background-color: #3a468f;
    color:rgb(241, 241, 241);
 }
+
+.pagewrap {
+  justify-content: space-between;
+}
 .calendardiv{
   display: flex;
   align-items: center;
-  padding: 0 10px 100px;
+  padding: 30px 30px 100px;
   justify-content: left;
   min-height: 100vh;
   background: #b7b5b8;
 }
+/* calendar container */
 .wrapper{
   width: 450px;
   background: #fff;
   border-radius: 10px;
   box-shadow: 0 15px 40px rgba(0,0,0,0.12);
 }
+/* calendar header */
 .wrapper header{
   display: flex;
   align-items: center;
@@ -138,23 +144,29 @@ header .current-date{
   background: #f2f2f2;
 }
 .filterdiv {
-  background: #fff;
-}
-.filter-section {
-  margin-bottom: 20px;
-}
-
-.item {
-  margin-bottom: 100px;
+  display: flex;
+  align-items: center;
+  padding: 30px 30px 100px;
+  justify-content:right;
+  min-height: 100vh;
+  background: #b7b5b8;
 }
 
 .filter-container {
-  display: flex;
+  /* display: flex;
   flex-direction: right;
   align-items: right;
   justify-content: right;
   position: right;
   top: 20px;
   right: 20px;
-  transform: translateY(-50%);
+  transform: translateY(-50%); */
+}
+
+.filter-section {
+  margin-bottom: 20px;
+}
+
+.item {
+  margin-bottom: 100px;
 }
