@@ -181,3 +181,6 @@ INSERT INTO RoomAccomodations (room_id, accomodation) VALUES
 ('MRC174', 'tv'),
 ('MRC175', 'power outlet'),
 ('MRC175', 'tv');
+
+INSERT INTO Student(name_first, name_last, name_middle, email, student_password) VALUE
+('admin', 'root', '', 'sysadmin@localhost.com', 'password')

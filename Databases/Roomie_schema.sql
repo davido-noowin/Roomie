@@ -1,6 +1,6 @@
 DROP DATABASE IF EXISTS Roomie;
 CREATE DATABASE Roomie;
-USE roomie;
+USE Roomie;
 
 # Entities
 CREATE TABLE Student(
