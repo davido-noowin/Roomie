@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+}
+
+.navbar {
+   background:rgb(240, 240, 240);
+   font-family: 'calibri';
+   padding-left: 20px;
+   padding-right: 15px;
+}
+.navdiv {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo a{
+    font-size: 30px;
+    color:black;
+    text-decoration: none;
+}
+li {
+    list-style: none;
+    display: inline-block;
+    top: 10px;
+}
+li a {
+    color:black;
+    font-size: 25px;
+    margin-right: 35px;
+    font-weight:400;
+    text-decoration: none;
+}
+li a:hover {
+    color:rgb(192, 46, 32);
+    transition-duration: 0.2s;
+}
+button {
+    background-color: #3a468f;
+    color:rgb(241, 241, 241);
+}
+.carousel-container {
+    width: 640px;
+    height: 360px;
+    margin: 0 auto;
+    position: relative;
+  }
+  
+.carousel {
+    display: flex;
+    overflow: hidden;
+    position: relative;
+}
+  
+/* .carousel-item:not(.active) {
+    opacity: 0.6;
+} */
+  
+.carousel-item {
+flex: 0 0 640px;
+transition: transform 0.3s ease-in-out;
+opacity: 0;
+visibility:visible ;
+}
+  
+.carousel-item.active {
+    opacity: 1;
+    visibility: visible;
+}
+  
+.carousel-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+  
+.carousel-item-next,
+.carousel-item-prev {
+    transform: translateX(0);
+}
+  
+.carousel-item-next.carousel-item-left,
+.carousel-item-prev.carousel-item-right {
+    transform: translateX(0);
+}
+  /* move carousel left */
+.carousel-item-next.carousel-item-left,
+.active.carousel-item-next,
+.carousel-item-prev.carousel-item-right {
+    transform: translateX(-100%);
+  }
+  /* move carousel right */
+  .carousel-item-next,
+  .active.carousel-item-prev {
+    transform: translateX(100%);
+  }
+  /* button style */
+  .carousel-btn {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    padding: 10px;
+    border: none;
+    border-radius: 50%;
+    z-index: 10px;
+    cursor: pointer;
+    background-color: black;
+    font-size: 18px;
+  }
+  /* make button bigger when clicked */
+  .carousel-btn:active { 
+    transform: scale(1.1);
+  }
+  .next-btn {
+    right: 10px;
+  }
+  
+  .prev-btn {
+    left: 10px;
+  }
+  
+  
+
+
+  
