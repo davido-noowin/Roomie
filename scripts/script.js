@@ -15,11 +15,14 @@ buttons.forEach(button => {
   })
 });
 
-document.getElementById('policies').addEventListener('click', () => {
-  document.getElementsByClassName('popContainer').style.display = 'block';
-});
+function openPopup() {
+  document.getElementById('policies').addEventListener('click', () => {
+    document.getElementsById('popupContainer').style.display = 'block';
+  });
+  
+  document.getElementById('closePopupBtn').addEventListener('click', () => {
+    document.getElementsByClassName('popupContainer').style.display = 'none';
+  });
+}
 
-document.getElementById('closePopupBtn').addEventListener('click', () => {
-  document.getElementsByClassName('popupContainer').style.display = 'none';
-});
 

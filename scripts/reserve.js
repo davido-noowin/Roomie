@@ -53,3 +53,59 @@ prevNextIcon.forEach(icon => { // getting prev and next icons
         renderCalendar(); // calling renderCalendar function
     });
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+  const checkboxes = document.querySelectorAll('.filter-checkbox');
+  const radios = document.querySelectorAll('.filter-radio');
+
+  checkboxes.forEach(function(checkbox) {
+    checkbox.addEventListener('change', applyFilters);
+  });
+
+  radios.forEach(function(radio) {
+    radio.addEventListener('click', applyFilters);
+  });
+
+  function applyFilters() {
+    const selectedCategories = getSelectedValues('.filter-checkbox');
+    const selectedRating = getSelectedValue('.filter-radio');
+
+    const items = document.querySelectorAll('.item');
+    items.forEach(function(item) {
+      const category = item.dataset.category;
+      const rating = item.dataset.rating;
+
+      if ((selectedCategories.length === 0 || selectedCategories.includes(category)) &&
+          (selectedRating === '' || rating === selectedRating)) {
+        item.style.display = 'block';
+      } else {
+        item.style.display = 'none';
+      }
+    });
+  }
+
+  function getSelectedValues(selector) {
+    const selectedValues = [];
+    const elements = document.querySelectorAll(selector);
+
+    elements.forEach(function(element) {
+      if (element.checked) {
+        selectedValues.push(element.value);
+      }
+    });
+
+    return selectedValues;
+  }
+
+  function getSelectedValue(selector) {
+    const elements = document.querySelectorAll(selector);
+
+    for (let i = 0; i < elements.length; i++) {
+      if (elements[i].checked) {
+        return elements[i].value;
+      }
+    }
+
+    return '';
+  }
+});

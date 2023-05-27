@@ -46,7 +46,34 @@
         <ul class="days"></ul>
       </div>
     </div>
-  </div>
+  <h1>Filter List</h1>
+  
+  <h2>Filters:</h2>
+  <div class="filterdiv">
+    <div class="filter-section">
+      <h3>Accommodations:</h3>
+      <label><input type="checkbox" class="filter-checkbox" value="Chargers">Chargers</label>
+      <label><input type="checkbox" class="filter-checkbox" value="Whiteboard">Whiteboard</label>
+      <label><input type="checkbox" class="filter-checkbox" value="TV">TV</label>
+    </div>
     
+    <div class="filter-section">
+      <h3>Capacity:</h3>
+      <label><input type="radio" class="filter-radio" name="capacity" value="1">1-4 person(s)</label>
+      <label><input type="radio" class="filter-radio" name="capacity" value="2">5+ people</label>
+    </div>
+    
+    <ul id="item-list">
+
+      <li class="item" data-category="Capacity" data-rating="2">Item 2</li>
+      <li class="item" data-category="Chargers" data-rating="3">Item 3</li>
+      <li class="item" data-category="Whiteboard" data-rating="5">Item 4</li>
+      <li class="item" data-category="TV" data-rating="1">Item 5</li>
+    </ul>
+  </div>
+  </div>
+  </body>
+    
+    <script src="/scripts/reserve.js"></script>
   </body>
 </html>

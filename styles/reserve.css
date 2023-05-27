@@ -137,3 +137,24 @@ header .current-date{
 .days li:not(.active):hover::before{
   background: #f2f2f2;
 }
+.filterdiv {
+  background: #fff;
+}
+.filter-section {
+  margin-bottom: 20px;
+}
+
+.item {
+  margin-bottom: 100px;
+}
+
+.filter-container {
+  display: flex;
+  flex-direction: right;
+  align-items: right;
+  justify-content: right;
+  position: right;
+  top: 20px;
+  right: 20px;
+  transform: translateY(-50%);
+}
