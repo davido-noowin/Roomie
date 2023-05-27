@@ -1,0 +1,15 @@
+<h2>Register</h2>
+<form method="POST">
+    {% csrf_token %}
+    <label for="name_first">First Name:</label>
+    <input type="text" id="name_first" name="name_first" required><br>
+    <label for="name_last">Last Name:</label>
+    <input type="text" id="name_last" name="name_last" required><br>
+    <label for="name_middle">Middle Name:</label>
+    <input type="text" id="name_middle" name="name_middle"><br>
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required><br>
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" required><br>
+    <input type="submit" value="Register">
+</form>
