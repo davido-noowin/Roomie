@@ -17,8 +17,10 @@ class RoomieAPIRoomAccomodations(View):
         accomodation_info = defaultdict(list)
         #print(accomodations)
         for element in accomodations:
-            print(element.room_id)
-            accomodation_info[str(element.room_id)].append(element.accomodation)
+            string_element = str(element.room_id)
+            if string_element.startswith('Room object (') and string_element.endswith(')'):
+                string_element = string_element[len('Room object ('):-1]
+            accomodation_info[string_element].append(element.accomodation)
 
         #print(accomodation_info)
         response = accomodation_info
