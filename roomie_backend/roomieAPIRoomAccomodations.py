@@ -1,6 +1,6 @@
 from django.views import View
 from django.shortcuts import render
-from django.http import HttpResponse
+from django.http import JsonResponse
 from roomAccomodationsSchema import RoomsAccomodation
 from django.db import connection
 from collections import defaultdict
@@ -24,7 +24,7 @@ class RoomieAPIRoomAccomodations(View):
 
         #print(accomodation_info)
         response = accomodation_info
-        return HttpResponse(str(accomodation_info))
+        return JsonResponse(accomodation_info)
 
     def get_table_name(self, model_class):
         table_name = model_class._meta.db_table

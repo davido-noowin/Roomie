@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+}
+
+.navbar {
+   background:rgb(240, 240, 240);
+   font-family: 'calibri';
+   padding-left: 20px;
+   padding-right: 15px;
+}
+.navdiv {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo a{
+    font-size: 30px;
+    color:black;
+    text-decoration: none;
+}
+.logo a:hover {
+    color:rgb(38, 32, 155);
+    transition-duration: 0.2s;
+    transition: transform 0.3s ease-in-out;
+    text-decoration: underline;
+}
+li {
+    list-style: none;
+    display: inline-block;
+}
+li a {
+    color:black;
+    font-size: 25px;
+    margin-right: 35px;
+    font-weight:400;
+    text-decoration: none;
+}
+li a:hover {
+    color:rgb(38, 32, 155);
+    transition-duration: 0.2s;
+    transition: transform 0.3s ease-in-out;
+    text-decoration: underline;
+}
+/* li.profile {
+    margin-top: 20px;
+} */
+
+
+*, *::before, *::after{
+    box-sizing: border-box;
+}
+/* entire canvas */
+body {
+    margin:0;
+}
+
+h4 {
+    margin: 10px
+}
+/* button location */
+.carousel {
+    width: 57.5%;
+    height: 100%;
+    bottom:0;
+    position:absolute;
+    
+} 
+/* }remove top padding */
+.carousel > ul {
+    
+    list-style: none;
+}
+/* image styling */
+.slide{
+    position: absolute;
+    padding-top: 100px;
+    object-position: center;
+    
+    opacity:0;
+    transition: 200ms opacity ease-in-out;
+    transition-delay: 200ms;
+}
+.slide[data-active]{
+    opacity: 1;
+    z-index: 1;
+    transition-delay: 0;
+}
+.slide > img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 720px;
+    height: 370px;
+    padding-left: 20px;
+    object-position: center;
+}
+/* button styling without hover */
+.carousel-button {
+    position:absolute;
+    z-index: 3;
+    background: none;
+    border: none;
+    font-size: 4rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: white;
+    cursor: pointer;
+    border-radius: .25rem;
+    padding: 5px 10px;
+    background-color: rgba(0, 0, 0, .2);
+}
+/* hover style */
+.carousel-button:hover{
+    color: white;
+    background-color: rgba(0, 0, 0, .2);
+}
+/* hover effect */
+.carousel-button:hover {
+    outline: 1px solid black;
+}
+.carousel-button.prev {
+    left: 2rem;
+}
+.carousel-button.next {
+    right: 2rem;
+}
+
+/* policies popup */
+.popupContainer {
+    width: 100%;
+    height: 100;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.popup {
+    width: 400px;
+    background-color: white;
+    border-radius: 6px;
+    position: absolute;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    top: 50%;
+    left: 50%;
+}
+
+.popup .closePopupBtn {
+    width: 100%;
+}
