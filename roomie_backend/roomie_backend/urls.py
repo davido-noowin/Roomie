@@ -18,8 +18,11 @@ from django.contrib import admin
 from django.urls import path
 from roomieAPIRoomInfo import RoomieAPIRoomInfo
 from roomieAPIRoomAccomodations import RoomieAPIRoomAccomodations
+from roomieAPIStudent import LoginStudent, RegisterStudent
 
 urlpatterns = [
     path('RoomieAPIRoomInfo/', RoomieAPIRoomInfo.as_view(), name='RoomInfo'),
     path('RoomieAPIRoomAccomodations/', RoomieAPIRoomAccomodations.as_view(), name='RoomAccomodations'),
+    path('login/', LoginStudent.as_view(), name='Login'),
+    path('register/', RegisterStudent.as_view(), name='Register')
 ]

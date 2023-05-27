@@ -7,7 +7,8 @@ CREATE TABLE Student(
 	name_first VARCHAR(50),
     name_last VARCHAR(50),
     name_middle VARCHAR(50) DEFAULT '',
-    email VARCHAR(30) PRIMARY KEY
+    email VARCHAR(30) PRIMARY KEY,
+    student_password VARCHAR(100)
 );
 
 CREATE TABLE roomsBooked(
