@@ -77,7 +77,7 @@ WSGI_APPLICATION = 'roomie_backend.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'RoomieAWS',
+        'NAME': 'roomiedatabase',
         'USER': 'admin',
         'PASSWORD': "password",
         'HOST': "roomiedatabase.ckyamljcxjnh.us-east-2.rds.amazonaws.com",
