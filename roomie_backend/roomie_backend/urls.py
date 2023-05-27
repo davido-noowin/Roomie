@@ -16,7 +16,8 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from roomieAPI import RoomieAPI
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    path('RoomieAPI/', RoomieAPI.as_view(), name='RoomieAPI'),
 ]
