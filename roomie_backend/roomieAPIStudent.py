@@ -10,24 +10,30 @@ class LoginStudent(View):
     http_method_names = ['get', 'post']
 
     def get(self, request):
-        return render(request, 'roomie_backend/Log.html')
+        return render(request, 'login.html')
     
 
     def post(self, request):
         email = request.POST.get('email')
         password = request.POST.get('password')
-        user = authenticate(request, email=email, password=password)
 
-        if user is not None:
-            login(request, user)
-            return JsonResponse({'success' : True, 'message' : f'Successfully logged in {email}'})
-        else:
-            return JsonResponse({'success': False, 'message': 'Invalid username or password, please try again.'})
-        
+        try:
+            user = Student.objects.get(email=email)
+            if user.check_password(password):
+                # Authentication successful
+                login(request, user)
+                return JsonResponse({'success': True, 'message': f'Successfully logged in {email}'})
+            else:
+                # Invalid password
+                return JsonResponse({'success': False, 'message': 'Invalid password, please try again.'})
+        except Student.DoesNotExist:
+            # User not found
+            return JsonResponse({'success': False, 'message': 'Invalid email, please try again.'})
+
 
 class RegisterStudent(View):
     def get(self, request):
-        return render(request, 'roomie_backed/register.html')
+        return render(request, 'register.html')
     
 
     def post(self, request):

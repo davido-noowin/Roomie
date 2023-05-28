@@ -1,9 +1,55 @@
-<h2>Login</h2>
-<form method="POST">
-    {% csrf_token %}
-    <label for="email">Email:</label>
-    <input type="email" id="email" name="email" required><br>
-    <label for="password">Password:</label>
-    <input type="password" id="password" name="password" required><br>
-    <input type="submit" value="Login">
-</form>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login and Signup Form</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/styles/LogIn.css">
+
+    <!-- Boxicons CSS -->
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+  <div class="center">
+    <div class="header">
+       Login Form
+    </div>
+    <form method="POST" action="{% url 'login' %}">
+       {% csrf_token %}
+       <input type="text" name="email" placeholder="Email" required>
+       <i class="far fa-envelope"></i>
+       <input id="pswrd" type="password" name="password" placeholder="Password" required>
+       <i class="fas fa-lock" onclick="show()"></i>
+       <input type="submit" value="Sign in">
+        
+    </div>
+    </form>
+ </div>
+ <div class="option_field">
+  <span class="checkbox">
+    <input type="checkbox" id="check">
+    <label for="check">Remember me</label>
+  </span>
+  a.
+ </div>
+ <script>
+    function show() {
+     var pswrd = document.getElementById('pswrd');
+     var icon = document.querySelector('.fas');
+     if (pswrd.type === "password") {
+      pswrd.type = "text";
+      pswrd.style.marginTop = "20px";
+      icon.style.color = "#7f2092";
+     } else {
+      pswrd.type = "password";
+      icon.style.color = "grey";
+     }
+    }
+  
+  
+ </script>
+</body>
+</html>
