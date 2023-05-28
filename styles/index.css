@@ -133,15 +133,6 @@ h4 {
 }
 
 /* policies popup */
-.popupContainer {
-    width: 100;
-    height: 100;
-    background-color: rgba(0, 0, 0, 0.5);
-    display: block;
-    align-items: center;
-    justify-content: center;
-}
-
 .popup {
     width: 700px;
     background-color: white;
@@ -158,9 +149,6 @@ h4 {
 .open-popup {
     visibility: visible;
 }
-.popup #closePopupBtn {
+.popup button {
     width: 100%;
 }
-/* LogIn&Register */
-
-/* Logo background */

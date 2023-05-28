@@ -16,15 +16,11 @@ buttons.forEach(button => {
 });
 
 function openPopup() {
-  document.getElementById('popup').addEventListener('click', () => {
-    document.getElementsById('popupContainer').style.display = 'block';
-  });
+  document.getElementById('popup').classList.add("open-popup");
 }
 
-function closePopup(){
-  document.getElementById('closePopupBtn').addEventListener('click', () => {
-    document.getElementsByClassName('popupContainer').style.display = 'none';
-  });
+function closePopup() {
+  document.getElementById('popup').classList.remove("open-popup");
 }
 
 

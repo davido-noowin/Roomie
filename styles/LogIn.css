@@ -74,13 +74,15 @@ form a{
  padding: 0 0 0 20px;
 }
 .option_field{
-  margin-top: 16px;
+  margin-top: 10px;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  align-items: left;
+  justify-content: center;
 
 }
 .checkbox {
   display: flex;
+  column-gap: 12px;
   white-space: nowrap;
+  font-size: 12px;
 }
