@@ -146,11 +146,12 @@ header .current-date{
 .days li:not(.active):hover::before{
   background: #f2f2f2;
 }
+
 .filter-div {
   display: flex;
-  align-items: center;
+  align-items: left;
   padding: 30px 30px 100px;
-  justify-content:right;
+  justify-content:center;
   min-height: 100vh;
   background: #b7b5b8;
 }
@@ -159,7 +160,7 @@ header .current-date{
   width: 450px;
   background: #fff;
   border-radius: 10px;
-  box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+  box-shadow: 0 10px 40px rgba(0,0,0,0.12);
 }
 
 .filter-container header {
@@ -173,7 +174,7 @@ header .current-date{
 
 .filter-section {
   display: flex;
-  align-items: left;
+  align-items: center;
   padding: 25px 30px 10px;
   justify-content: left;
   color: #333;
