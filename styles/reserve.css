@@ -17,13 +17,17 @@
    align-items: center;
    justify-content: space-between;
 }
-img {
-  float:right;
+.main-logo {
+  display: flex;
+  align-items: center;
+  justify-content:flex-start;
 }
 .logo a{
-   font-size: 30px;
-   color:black;
-   text-decoration: none;
+  float:left;
+  padding-left: 1vw;
+  font-size: 30px;
+  color:black;
+  text-decoration: none;
 }
 .logo a:hover {
   color:rgb(38, 32, 155);
@@ -47,16 +51,12 @@ li a:hover {
   transition: all 0.2s ease-in-out;
   text-decoration: underline;
 }
-button {
-   background-color: #3a468f;
-   color:rgb(241, 241, 241);
-}
 
 .wrap{
   display: flex;
   align-items: center;
   padding: 30px 30px 100px;
-  justify-content: space-between;
+  justify-content: left;
   min-height: 100vh;
   background: #b7b5b8;
 }
@@ -183,7 +183,6 @@ header .current-date{
   width: calc(100% / 7);
   font-size: 1.07rem;
 }
-
 .item {
   margin-bottom: 100px;
 }

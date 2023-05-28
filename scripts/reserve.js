@@ -87,10 +87,11 @@ document.addEventListener('DOMContentLoaded', function() {
   function getSelectedValues(selector) {
     const selectedValues = [];
     const elements = document.querySelectorAll(selector);
-
+    //console.log(elements)
     elements.forEach(function(element) {
       if (element.checked) {
         selectedValues.push(element.value);
+        //console.log(element.value)
       }
     });
 
@@ -99,6 +100,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
   function getSelectedValue(selector) {
     const elements = document.querySelectorAll(selector);
+    // Grabbing selected radio
 
     for (let i = 0; i < elements.length; i++) {
       if (elements[i].checked) {
@@ -110,6 +112,6 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
   function getCalendarDate() {
-
+    
   }
 });
