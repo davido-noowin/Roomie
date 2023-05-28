@@ -153,14 +153,14 @@ header .current-date{
 .filter-div {
   display: flex;
   align-items: left;
-  padding: 30px 30px 100px;
+  padding: 100px 50px 100px;
   justify-content:center;
   min-height: 100vh;
   background: #b7b5b8;
 }
 
 .filter-container {
-  width: 450px;
+  width: 600px;
   background: #fff;
   border-radius: 10px;
   box-shadow: 0 10px 40px rgba(0,0,0,0.12);
