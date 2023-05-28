@@ -16,34 +16,37 @@
     </head>
     <body>
       <div class="center">
-        <input type="checkbox" id="show">
-        <label for="show" class="show-btn">View Form</label>
-        <div class="container">
-           <label for="show" class="close-btn fas fa-times" title="close"></label>
-           <div class="text">
-              Login Form
-           </div>
-           <form action="#">
-              <div class="data">
-                 <label>Email or Phone</label>
-                 <input type="text" required>
-              </div>
-              <div class="data">
-                 <label>Password</label>
-                 <input type="password" required>
-              </div>
-              <div class="forgot-pass">
-                 <a href="#">Forgot Password?</a>
-              </div>
-              <div class="btn">
-                 <div class="inner"></div>
-                 <button type="submit">login</button>
-              </div>
-              <div class="signup-link">
-                 Not a member? <a href="#">Signup now</a>
-              </div>
-           </form>
+        <div class="header">
+           Login Form
         </div>
+        <form>
+           <input type="text" placeholder="Email" Required>
+           <i class="far fa-envelope"></i>
+           <input id="pswrd" type="password" placeholder="Password" Required>
+           <i class="fas fa-lock" onclick="show()"></i>
+           <input type="submit" value="Sign in">
+           <a href="#">Register Account</a>
+        </form>
      </div>
+     <div class="option_field">
+      <span class="checkbox">
+        <input type="checkbox" id="check">
+        <label for="check" > Remember me</label>
+      </span>
+      a.
+     <script>
+        function show(){
+         var pswrd = document.getElementById('pswrd');
+         var icon = document.querySelector('.fas');
+         if (pswrd.type === "password") {
+          pswrd.type = "text";
+          pswrd.style.marginTop = "20px";
+          icon.style.color = "#7f2092";
+         }else{
+          pswrd.type = "password";
+          icon.style.color = "grey";
+         }
+        }
+     </script>
   </body>
 </html>

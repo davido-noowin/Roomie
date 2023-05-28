@@ -1,55 +1,55 @@
-/* Import Google font - Poppins */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
 }
+
 .navbar {
-  background:rgb(240, 240, 240);
-  font-family: 'calibri';
-  padding-left: 20px;
-  padding-right: 15px;
+   background:rgb(240, 240, 240);
+   font-family: 'calibri';
+   padding-left: 20px;
+   padding-right: 15px;
 }
 .navdiv {
-   display: flex;
-   align-items: center;
-   justify-content: space-between;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 .main-logo {
-  display: flex;
-  align-items: center;
-  justify-content:flex-start;
+    display: flex;
+    align-items: center;
+    justify-content:flex-start;
 }
 .logo a{
-  float:left;
-  padding-left: 1vw;
-  font-size: 30px;
-  color:black;
-  text-decoration: none;
+    float:left;
+    padding-left: 1vw;
+    font-size: 30px;
+    color:black;
+    text-decoration: none;
 }
 .logo a:hover {
-  color:rgb(38, 32, 155);
-  transition: all 0.2s ease-in-out;
-  text-decoration: underline;
+    color:rgb(38, 32, 155);
+    transition: transform 0.3s ease-in-out;
+    text-decoration: underline;
 }
 li {
-   list-style: none;
-   display: inline-block;
-   top: 10px;
+    list-style: none;
+    display: inline-block;
 }
 li a {
-   color:black;
-   font-size: 25px;
-   margin-right: 35px;
-   font-weight:400;
-   text-decoration: none;
+    color:black;
+    font-size: 25px;
+    margin-right: 35px;
+    font-weight:400;
+    text-decoration: none;
 }
 li a:hover {
-  color:rgb(38, 32, 155);
-  transition: all 0.2s ease-in-out;
-  text-decoration: underline;
+    color:rgb(38, 32, 155);
+    transition: 0.3s ease-in-out;
+    text-decoration: underline;
 }
 
 .wrap{
@@ -127,6 +127,7 @@ header .current-date{
   margin-top: 30px;
 }
 .days li.inactive{
+  pointer-events: none;
   color: #aaa;
 }
 .days li.active{

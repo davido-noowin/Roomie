@@ -16,10 +16,12 @@ buttons.forEach(button => {
 });
 
 function openPopup() {
-  document.getElementById('policies').addEventListener('click', () => {
+  document.getElementById('popup').addEventListener('click', () => {
     document.getElementsById('popupContainer').style.display = 'block';
   });
-  
+}
+
+function closePopup(){
   document.getElementById('closePopupBtn').addEventListener('click', () => {
     document.getElementsByClassName('popupContainer').style.display = 'none';
   });

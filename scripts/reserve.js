@@ -26,6 +26,15 @@ const renderCalendar = () => {
         // adding active class to li if the current day, month, and year matched
         let isToday = i === date.getDate() && currMonth === new Date().getMonth() 
                      && currYear === new Date().getFullYear() ? "active" : "";
+        // To find active day
+        if (i === date.getDate() && currMonth === new Date().getMonth() && currYear === new Date().getFullYear())
+        {
+          let day = i;
+        }
+        else 
+        {
+          i;
+        }
         liTag += `<li class="${isToday}">${i}</li>`;
     }
 
@@ -33,7 +42,7 @@ const renderCalendar = () => {
         liTag += `<li class="inactive">${i - lastDayofMonth + 1}</li>`
     }
     currentDate.innerText = `${months[currMonth]} ${currYear}`; // passing current mon and yr as currentDate text
-
+    console.log(daysTag);
     daysTag.innerHTML = liTag;
 }
 renderCalendar();
@@ -97,10 +106,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
     return selectedValues;
   }
-
+  // Grabbing selected radio
   function getSelectedValue(selector) {
     const elements = document.querySelectorAll(selector);
-    // Grabbing selected radio
 
     for (let i = 0; i < elements.length; i++) {
       if (elements[i].checked) {
@@ -115,9 +123,10 @@ document.addEventListener('DOMContentLoaded', function() {
     const calendarDates = document.querySelectorAll(".days li");
     calendarDates.forEach(function(date) {
       date.addEventListener("click", function() {
+        let newDate = new Date();
         const selectedDate = parseInt(date.innerText);
-        const selectedMonth = currMonth;
-        const selectedYear = currYear;
+        let selectedMonth = newDate.getMonth() + 1;
+        const selectedYear = newDate.getFullYear();
         
         console.log(`Selected Date: ${selectedDate}`);
         console.log(`Selected Month: ${selectedMonth}`);
@@ -125,4 +134,8 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     )}
   )}
+  getCalendarDate();
+  //let isToday = i === date.getDate() && currMonth === new Date().getMonth() 
+                    // && currYear === new Date().getFullYear() ? "active" : "";
+  //console.log(isToday);
 });

@@ -46,6 +46,7 @@ li a {
     margin-right: 35px;
     font-weight:400;
     text-decoration: none;
+    cursor:pointer;
 }
 li a:hover {
     color:rgb(38, 32, 155);
@@ -133,27 +134,31 @@ h4 {
 
 /* policies popup */
 .popupContainer {
-    width: 100%;
+    width: 100;
     height: 100;
     background-color: rgba(0, 0, 0, 0.5);
-    display: none;
+    display: block;
     align-items: center;
     justify-content: center;
 }
 
 .popup {
-    width: 400px;
+    width: 700px;
     background-color: white;
+    position:absolute;
     border-radius: 6px;
-    position: absolute;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     text-align: center;
-    top: 50%;
-    left: 50%;
+    top: 25%;
+    left: 25%;
+    visibility:hidden;
 }
 
-.popup .closePopupBtn {
+.open-popup {
+    visibility: visible;
+}
+.popup #closePopupBtn {
     width: 100%;
 }
 /* LogIn&Register */

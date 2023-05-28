@@ -1,130 +1,86 @@
-@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
-*{
-  margin: 0;
-  padding: 0;
-  outline: none;
-  box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
-}
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+TC&display=swap');
 body{
-  height: 100vh;
-  width: 100%;
-  background: linear-gradient(115deg, #56d8e4 10%, #9f01ea 90%);
+ margin: 0;
+ padding: 0;
+ background: radial-gradient(#010280,#061993,#0c3baa, #135cc5);
+ height: 100vh;
+ overflow: hidden;
+ font-family: 'Noto Sans TC', sans-serif;
 }
-.show-btn{
-  background: #fff;
-  padding: 10px 20px;
-  font-size: 20px;
-  font-weight: 500;
-  color: #3498db;
-  cursor: pointer;
-  box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+.center{
+ width: 430px;
+ margin: 130px auto;
+ position: relative;
 }
-.show-btn, .container{
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+.center .header{
+ font-size: 28px;
+ font-weight: bold;
+ color: white;
+ padding: 25px 0 30px 25px;
+ background: rgb(4, 4, 131);
+ border-bottom: 1px solid rgb(4, 4, 131);
+ border-radius: 5px 5px 0 0;
 }
+.center form{
+ position: absolute;
+ background: #FFD700;
+ width: 100%;
+ padding: 50px 10px 0 30px;
+ box-sizing: border-box;
+ border: 1px solid rgb(4, 4, 131);;
+ border-radius: 0 0 5px 5px;
+}
+form input{
+ height: 50px;
+ width: 90%;
+ padding: 0 10px;
+ border-radius: 3px;
+ border: 1px solid silver;
+ font-size: 18px;
+ outline: none;
+}
+form input[type="password"]{
+ margin-top: 20px;
+}
+form i{
+ position: absolute;
+ font-size: 25px;
+ color: grey;
+ margin: 15px 0 0 -45px;
+}
+i.fa-lock{
+ margin-top: 35px;
+}
+form input[type="submit"]{
+ margin-top: 40px;
+ margin-bottom: 40px;
+ width: 130px;
+ height: 45px;
+ color: white;
+ cursor: pointer;
+ line-height: 45px;
+ border-radius: 45px;
+ border-radius: 5px;
+ background: rgb(4, 4, 131);;
+}
+form input[type="submit"]:hover{
+ background: #fff;
+ transition: .5s;
+}
+form a{
+ text-decoration: none;
+ font-size: 18px;
+ color: linear-gradient(#002366, #000033);
+ padding: 0 0 0 20px;
+}
+.option_field{
+  margin-top: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 
-input[type="checkbox"]{
-  display: none;
 }
-.container{
-  display: none;
-  background: #fff;
-  width: 410px;
-  padding: 30px;
-  box-shadow: 0 0 8px rgba(0,0,0,0.1);
-}
-#show:checked ~ .container{
-  display: block;
-}
-.container .close-btn{
-  position: absolute;
-  right: 20px;
-  top: 15px;
-  font-size: 18px;
-  cursor: pointer;
-}
-.container .close-btn:hover{
-  color: #3498db;
-}
-.container .text{
-  font-size: 35px;
-  font-weight: 600;
-  text-align: center;
-}
-.container form{
-  margin-top: -20px;
-}
-.container form .data{
-  height: 45px;
-  width: 100%;
-  margin: 40px 0;
-}
-form .data label{
-  font-size: 18px;
-}
-form .data input{
-  height: 100%;
-  width: 100%;
-  padding-left: 10px;
-  font-size: 17px;
-  border: 1px solid silver;
-}
-form .data input:focus{
-  border-color: #3498db;
-  border-bottom-width: 2px;
-}
-form .forgot-pass{
-  margin-top: -8px;
-}
-form .forgot-pass a{
-  color: #3498db;
-  text-decoration: none;
-}
-form .forgot-pass a:hover{
-  text-decoration: underline;
-}
-form .btn{
-  margin: 30px 0;
-  height: 45px;
-  width: 100%;
-  position: relative;
-  overflow: hidden;
-}
-form .btn .inner{
-  height: 100%;
-  width: 300%;
-  position: absolute;
-  left: -100%;
-  z-index: -1;
-  background: -webkit-linear-gradient(right, #56d8e4, #9f01ea, #56d8e4, #9f01ea);
-  transition: all 0.4s;
-}
-form .btn:hover .inner{
-  left: 0;
-}
-form .btn button{
-  height: 100%;
-  width: 100%;
-  background: none;
-  border: none;
-  color: #fff;
-  font-size: 18px;
-  font-weight: 500;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  cursor: pointer;
-}
-form .signup-link{
-  text-align: center;
-}
-form .signup-link a{
-  color: #3498db;
-  text-decoration: none;
-}
-form .signup-link a:hover{
-  text-decoration: underline;
+.checkbox {
+  display: flex;
+  white-space: nowrap;
 }
