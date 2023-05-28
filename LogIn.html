@@ -1,49 +1,115 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <title>Login</title>
-    <link rel="stylesheet" href="/styles/profile.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Google Font Link for Icons -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
-    <script src="/scripts/reserve.js" defer></script>
-  </head>
-<!--LogIn and Register(subject to change)-->
-<body>
-    <div class="containter">
-        <input type="checkbox" id="check">
-        <div class="login form">
-            <header>Login</header>
-            <form action="#">
-                <input type="text" placeholder="Enter your email">
-    <input type="password" placeholder="Enter your password">
-    <a href="#">Forgot password?</a>
-    <input type="button" class="button" value="Login">
-  </form>
-  <div class="signup">
-    <span class="signup">Don't have an account?
-     <label for="check">Signup</label>
-    </span>
-  </div>
-</div>
-<div class="registration form">
-<header>Signup</header>
-<form action="#">
-<input type="text" placeholder="Enter your email">
-<input type="password" placeholder="Create a password">
-<input type="password" placeholder="Confirm your password">
-<input type="button" class="button" value="Signup">
-</form>
-<div class="signup">
-<span class="signup">Already have an account?
- <label for="check">Login</label>
- </span>
-</div>
-</div>
-</div>
-</body>
-</html>
-<!-- Load scripts at the end of your HTML to make pages load faster! -->
-<script src="/scripts/profile.js"></script>
-</body>
+<!-- Coding By CodingNepal - codingnepalweb.com -->
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Responsive Login and Signup Form </title>
+
+        <!-- CSS -->
+        <link rel="stylesheet" href="css/style.css">
+                
+        <!-- Boxicons CSS -->
+        <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+                        
+    </head>
+    <body>
+        <section class="container forms">
+            <div class="form login">
+                <div class="form-content">
+                    <header>Login</header>
+                    <form action="#">
+                        <div class="field input-field">
+                            <input type="email" placeholder="Email" class="input">
+                        </div>
+
+                        <div class="field input-field">
+                            <input type="password" placeholder="Password" class="password">
+                            <i class='bx bx-hide eye-icon'></i>
+                        </div>
+
+                        <div class="form-link">
+                            <a href="#" class="forgot-pass">Forgot password?</a>
+                        </div>
+
+                        <div class="field button-field">
+                            <button>Login</button>
+                        </div>
+                    </form>
+
+                    <div class="form-link">
+                        <span>Don't have an account? <a href="#" class="link signup-link">Signup</a></span>
+                    </div>
+                </div>
+
+                <div class="line"></div>
+
+                <div class="media-options">
+                    <a href="#" class="field facebook">
+                        <i class='bx bxl-facebook facebook-icon'></i>
+                        <span>Login with Facebook</span>
+                    </a>
+                </div>
+
+                <div class="media-options">
+                    <a href="#" class="field google">
+                        <img src="#" alt="" class="google-img">
+                        <span>Login with Google</span>
+                    </a>
+                </div>
+
+            </div>
+
+            <!-- Signup Form -->
+
+            <div class="form signup">
+                <div class="form-content">
+                    <header>Signup</header>
+                    <form action="#">
+                        <div class="field input-field">
+                            <input type="email" placeholder="Email" class="input">
+                        </div>
+
+                        <div class="field input-field">
+                            <input type="password" placeholder="Create password" class="password">
+                        </div>
+
+                        <div class="field input-field">
+                            <input type="password" placeholder="Confirm password" class="password">
+                            <i class='bx bx-hide eye-icon'></i>
+                        </div>
+
+                        <div class="field button-field">
+                            <button>Signup</button>
+                        </div>
+                    </form>
+
+                    <div class="form-link">
+                        <span>Already have an account? <a href="#" class="link login-link">Login</a></span>
+                    </div>
+                </div>
+
+                <div class="line"></div>
+
+                <div class="media-options">
+                    <a href="#" class="field facebook">
+                        <i class='bx bxl-facebook facebook-icon'></i>
+                        <span>Login with Facebook</span>
+                    </a>
+                </div>
+
+                <div class="media-options">
+                    <a href="#" class="field google">
+                        <img src="#" alt="" class="google-img">
+                        <span>Login with Google</span>
+                    </a>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- JavaScript -->
+        <script src="js/script.js"></script>
+    </body>
 </html>
