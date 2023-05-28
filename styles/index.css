@@ -71,7 +71,7 @@ h4 {
 .carousel {
     width: 57.5%;
     height: 100%;
-    left: 0;
+    bottom: 0;
     position:fixed;
     
 } 

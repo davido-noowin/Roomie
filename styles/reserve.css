@@ -17,6 +17,9 @@
    align-items: center;
    justify-content: space-between;
 }
+img {
+  float:right;
+}
 .logo a{
    font-size: 30px;
    color:black;
@@ -154,14 +157,7 @@ header .current-date{
   min-height: 100vh;
   background: #b7b5b8;
 }
-.wrap{
-  display: flex;
-  align-items: center;
-  padding: 30px 30px 100px;
-  justify-content: space-between;
-  min-height: 100vh;
-  background: #b7b5b8;
-}
+
 .filter-container {
   width: 450px;
   background: #fff;
