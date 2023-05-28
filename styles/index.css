@@ -23,11 +23,9 @@
     align-items: center;
     justify-content:flex-start;
 }
-/* img {
-    float:right;
-} */
 .logo a{
-    padding-left: 8vw;
+    float:left;
+    padding-left: 1vw;
     font-size: 
     30px;
     color:black;
