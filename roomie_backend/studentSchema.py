@@ -1,7 +1,6 @@
-from django.contrib.auth.models import AbstractUser
 from django.db import models
 
-class Student(AbstractUser):
+class Student(models.Model):
     name_first = models.CharField(max_length = 50)
     name_last = models.CharField(max_length = 50)
     name_middle = models.CharField(max_length = 50, default = '')
