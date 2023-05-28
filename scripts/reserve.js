@@ -129,4 +129,17 @@ document.addEventListener("DOMContentLoaded", function() {
   }
 
   getCalendarDate();
+
+  // trying to parse json response
+  // function populateData() {
+  //   const dataText = document.getElementById('data-container');
+  //   fetch('http://3.133.161.88:8000/roomAccomodations/')
+  //       .then(Response => Response.json())
+  //       .then(data => {
+  //           const parsedData = JSON.parse(data);
+  //           dataText.appendChild(parsedData);
+  //       })
+  // }
+  // populateData();
 });
+

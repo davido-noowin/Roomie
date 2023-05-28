@@ -18,7 +18,7 @@
        Login Form
     </div>
     <form method="POST" action="{% url 'login' %}">
-       {% csrf_token %}
+       
        <input type="text" name="email" placeholder="Email" required>
        <i class="far fa-envelope"></i>
        <input id="pswrd" type="password" name="password" placeholder="Password" required>
@@ -28,12 +28,9 @@
     </div>
     </form>
  </div>
- <div class="option_field">
-  <span class="checkbox">
-    <input type="checkbox" id="check">
-    <label for="check">Remember me</label>
+ 
   </span>
-  a.
+
  </div>
  <script>
     function show() {
