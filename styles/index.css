@@ -25,7 +25,6 @@
 }
 .logo a:hover {
     color:rgb(38, 32, 155);
-    transition-duration: 0.2s;
     transition: transform 0.3s ease-in-out;
     text-decoration: underline;
 }
@@ -42,13 +41,9 @@ li a {
 }
 li a:hover {
     color:rgb(38, 32, 155);
-    transition-duration: 0.2s;
-    transition: transform 0.3s ease-in-out;
+    transition: 0.3s ease-in-out;
     text-decoration: underline;
 }
-/* li.profile {
-    margin-top: 20px;
-} */
 
 
 *, *::before, *::after{
@@ -77,7 +72,7 @@ h4 {
 }
 /* image styling */
 .slide{
-    position: absolute;
+    position: fixed;
     padding-top: 100px;
     object-position: center;
     
@@ -155,3 +150,4 @@ h4 {
 .popup .closePopupBtn {
     width: 100%;
 }
+/* LogIn&Register */
