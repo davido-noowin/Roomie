@@ -5,9 +5,6 @@ $.ajax({
     success: function(response) {
       // Handle the response from the server
       console.log(response);
-
-      const keys = Object.keys(response)
-      console.log(keys)
       // Do something with the room information
 
     },
@@ -25,9 +22,6 @@ $.ajax({
     success: function(response) {
       // Handle the response from the server
       console.log(response);
-
-      const accomodations = Object.keys(response)
-      console.log(accomodations)
       // Do something with the room information
 
     },
