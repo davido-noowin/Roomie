@@ -8,7 +8,7 @@ from django.contrib.auth import authenticate, login
 
 class LoginStudent(View):
     def get(self, request):
-        return render(request, 'roomie_backed/login.html')
+        return render(request, 'LogIn.html')
     
 
     def post(self, request):
