@@ -27,7 +27,7 @@ class LoginStudent(View):
 
 class RegisterStudent(View):
     def get(self, request):
-        return render(request, 'roomie_backed/register.html')
+        return render(request, 'register.html')
     
 
     def post(self, request):
