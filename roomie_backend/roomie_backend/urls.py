@@ -23,6 +23,6 @@ from roomieAPIStudent import LoginStudent, RegisterStudent
 urlpatterns = [
     path('roomInfo/', RoomieAPIRoomInfo.as_view(), name='RoomInfo'),
     path('roomAccomodations/', RoomieAPIRoomAccomodations.as_view(), name='RoomAccomodations'),
-    path('login/', LoginStudent.as_view(), name='Login'),
+    path('login/', LoginStudent.as_view(), name='login'),
     path('register/', RegisterStudent.as_view(), name='Register')
 ]
