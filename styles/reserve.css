@@ -55,7 +55,7 @@ li a:hover {
 .wrap{
   display: flex;
   align-items: center;
-  padding: 30px 30px 100px;
+  padding: 5px 5px 100px;
   justify-content: left;
   min-height: 100vh;
   background: #b7b5b8;
@@ -66,6 +66,7 @@ li a:hover {
   background: #fff;
   border-radius: 10px;
   box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+  margin: 10px 40px 10px 30px;
 }
 /* calendar header */
 .cal-container header{
@@ -152,10 +153,19 @@ header .current-date{
 }
 
 .filter-container {
-  width: 300px;
+  width: 450px;
   background: #fff;
   border-radius: 10px;
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+  margin: 10px 40px 10px 30px;
+}
+.filter-container header {
+  font-size: 1.5rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  padding: 25px 30px 10px;
+  justify-content: space-between;
 }
 
 .filter-section {
@@ -164,7 +174,7 @@ header .current-date{
   align-items: flex-start;
   padding: 25px 30px 10px;
   color: #333;
-  font-size: 1.07rem;
+  font-size: 1.2rem;
 }
 
 .filter-section label {
@@ -179,4 +189,21 @@ header .current-date{
 }
 .item {
   margin-bottom: 100px;
+}
+
+.data-container {
+  width: 450px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+  margin: 10px 40px 10px 30px;
+}
+
+.data-container header {
+  font-size: 1.45rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  padding: 25px 30px 10px;
+  justify-content: space-between;
 }

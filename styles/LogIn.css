@@ -1,88 +1,46 @@
-@import url('https://fonts.googleapis.com/css?family=Noto+Sans+TC&display=swap');
-body{
- margin: 0;
- padding: 0;
- background: radial-gradient(#010280,#061993,#0c3baa, #135cc5);
- height: 100vh;
- overflow: hidden;
- font-family: 'Noto Sans TC', sans-serif;
+*{
+  margin:0;
+  padding:0;
 }
-.center{
- width: 430px;
- margin: 130px auto;
- position: relative;
+.main{
+  height:100%;
+  width:100%;
+  background-image: linear-gradient(center, #010280,#061993,#0C3BAA,#135CC5,#1973D1);
+  position:absolute
 }
-.center .header{
- font-size: 28px;
- font-weight: bold;
- color: white;
- padding: 25px 0 30px 25px;
- background: rgb(4, 4, 131);
- border-bottom: 1px solid rgb(4, 4, 131);
- border-radius: 5px 5px 0 0;
-}
-.center form{
- position: absolute;
- background: #FFD700;
- width: 100%;
- padding: 50px 10px 0 30px;
- box-sizing: border-box;
- border: 1px solid rgb(4, 4, 131);;
- border-radius: 0 0 5px 5px;
-}
-form input{
- height: 50px;
- width: 90%;
- padding: 0 10px;
- border-radius: 3px;
- border: 1px solid silver;
- font-size: 18px;
- outline: none;
-}
-form input[type="password"]{
- margin-top: 20px;
-}
-form i{
- position: absolute;
- font-size: 25px;
- color: grey;
- margin: 15px 0 0 -45px;
-}
-i.fa-lock{
- margin-top: 35px;
-}
-form input[type="submit"]{
- margin-top: 40px;
- margin-bottom: 40px;
- width: 130px;
- height: 45px;
- color: white;
- cursor: pointer;
- line-height: 45px;
- border-radius: 45px;
- border-radius: 5px;
- background: rgb(4, 4, 131);;
-}
-form input[type="submit"]:hover{
- background: #fff;
- transition: .5s;
-}
-form a{
- text-decoration: none;
- font-size: 18px;
- color: linear-gradient(#002366, #000033);
- padding: 0 0 0 20px;
-}
-.option_field{
-  margin-top: 10px;
-  display: flex;
-  align-items: left;
-  justify-content: center;
+.form-box{
+  width: 380px;
+  height: 480px;
+  position:relative;
+  margin: 6% auto;
+  background: #fff;
+  padding: 5px;
 
 }
-.checkbox {
-  display: flex;
-  column-gap: 12px;
-  white-space: nowrap;
-  font-size: 12px;
+.button-box{
+  width: 220px;
+  margin: 35px auto;
+  position: relative;
+  border-radius: 30px;
+
+}
+.toggle-btn{
+  padding: 10px 30px;
+  cursor: pointer;
+  background: transparent;
+  border: 0;
+  outline: none;
+  position: relative;
+  
+}
+#btn{
+top: 0;
+left: 0;
+position: absolute;
+width: 110px;
+height: 100%;
+background: linear-gradient(to right, #FFC000	,rgb(170, 131, 15)	
+);
+border-radius: 30px;
+transition: .5s;
 }
