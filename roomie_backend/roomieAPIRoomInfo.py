@@ -13,6 +13,6 @@ class RoomieAPIRoomInfo(View):
         rooms = Room.objects.all()
 
         room_info = {room.room_id : [f'Location: {room.location}', f'Capacity: {room.room_size}', f'Room Number: {room.room_number}']for room in rooms}
-        print(room_info)
+        #print(room_info)
         response = room_info
         return JsonResponse(response)
