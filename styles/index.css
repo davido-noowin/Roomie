@@ -104,7 +104,7 @@ h4 {
 }
 /* button styling without hover */
 .carousel-button {
-    position:fixed;
+    position:absolute;
     z-index: 3;
     background: none;
     border: none;
