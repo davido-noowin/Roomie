@@ -25,6 +25,22 @@
        <i class="fas fa-lock" onclick="show()"></i>
        <input type="submit" value="Sign in">
        <a href="#">Register Account</a>
+       <div class="container">
+        <h2>Registration Form</h2>
+        <form id="registrationForm">
+            <label for="fullName">Full Name:</label>
+            <input type="text" id="fullName" name="fullName" required>
+
+            <label for="email">Email:</label>
+            <input type="text" id="email" name="email" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+
+            <input type="submit" value="Register">
+        </form>
+        <p class="message">Already have an account? <a href="#">Login</a></p>
+    </div>
     </form>
  </div>
  <div class="option_field">
@@ -47,6 +63,20 @@
       icon.style.color = "grey";
      }
     }
+    document.getElementById("registrationForm").addEventListener("submit", function(event) {
+      event.preventDefault(); // Prevent form submission
+
+      // Get form values
+      var fullName = document.getElementById("fullName").value;
+      var email = document.getElementById("email").value;
+      var password = document.getElementById("password").value;
+
+      // Perform form validation (add your own validation logic here)
+
+      // Submit the form data to the server (replace this with your server-side code)
+      // For demonstration purposes, we'll just display an alert with the form data
+      alert("Registration successful!\n\nFull Name: " + fullName + "\nEmail: " + email);
+  });
  </script>
 </body>
 </html>
