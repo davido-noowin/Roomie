@@ -10,7 +10,7 @@ class LoginStudent(View):
     http_method_names = ['get', 'post']
 
     def get(self, request):
-        return render(request, 'login.html')
+        return render(request, 'login.html', 'style/login.css')
     
 
     def post(self, request):
