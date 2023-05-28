@@ -18,14 +18,14 @@
     align-items: center;
     justify-content: space-between;
 }
-/* .main-logo {
+.main-logo {
     display: flex;
     align-items: center;
     justify-content:flex-start;
-} */
-img {
-    float:right;
 }
+/* img {
+    float:right;
+} */
 .logo a{
     padding-left: 8vw;
     font-size: 
