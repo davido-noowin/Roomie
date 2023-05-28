@@ -31,8 +31,8 @@
     text-decoration: none;
 }
 .logo a:hover {
-    color:rgb(38, 32, 155);
-    transition: transform 0.3s ease-in-out;
+    color:#1f6396;
+    transition: transform 0.1s ease-in-out;
     text-decoration: underline;
 }
 li {
@@ -47,8 +47,8 @@ li a {
     text-decoration: none;
 }
 li a:hover {
-    color:rgb(38, 32, 155);
-    transition: 0.3s ease-in-out;
+    color:#1f6396;
+    transition: 0.1s ease-in-out;
     text-decoration: underline;
 }
 
@@ -145,47 +145,38 @@ header .current-date{
   transform: translate(-50%, -50%);
 }
 .days li.active::before{
-  background: #3a468f;
+  background:#1f6396;
 }
 .days li:not(.active):hover::before{
   background: #f2f2f2;
 }
-.filter-div {
-  display: flex;
-  align-items: left;
-  padding: 100px 50px 100px;
-  justify-content:center;
-  min-height: 100vh;
-  background: #b7b5b8;
-}
 
 .filter-container {
-  width: 600px;
+  width: 300px;
   background: #fff;
   border-radius: 10px;
-  box-shadow: 0 10px 40px rgba(0,0,0,0.12);
-}
-
-.filter-container header {
-  display: flex;
-  align-items: center;
-  padding: 25px 30px 10px;
-  justify-content: space-between;
-  font-size: 1.45rem;
-  font-weight: 500;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.12);
 }
 
 .filter-section {
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  align-items: flex-start;
   padding: 25px 30px 10px;
-  margin-right: 50px;
-  justify-content: left;
   color: #333;
-  width: calc(100% / 7);
   font-size: 1.07rem;
 }
 
+.filter-section label {
+  display: inline-flex;
+  align-items: center;
+  margin-bottom: 10px; /* Adjust the spacing as needed */
+}
+
+.filter-section input[type="checkbox"],
+.filter-section input[type="radio"] {
+  margin-right: 5px; /* Adjust the spacing as needed */
+}
 .item {
   margin-bottom: 100px;
 }
