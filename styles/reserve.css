@@ -179,11 +179,13 @@ header .current-date{
   display: flex;
   align-items: center;
   padding: 25px 30px 10px;
+  margin-right: 50px;
   justify-content: left;
   color: #333;
   width: calc(100% / 7);
   font-size: 1.07rem;
 }
+
 .item {
   margin-bottom: 100px;
 }

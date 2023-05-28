@@ -32,7 +32,7 @@
     text-decoration: none;
 }
 .logo a:hover {
-    color:rgb(38, 32, 155);
+    color:#1e81b0;
     transition: transform 0.3s ease-in-out;
     text-decoration: underline;
 }
@@ -49,8 +49,8 @@ li a {
     cursor:pointer;
 }
 li a:hover {
-    color:rgb(38, 32, 155);
-    transition: 0.3s ease-in-out;
+    color:#1c698d;
+    transition: 0.1s ease-in-out;
     text-decoration: underline;
 }
 
