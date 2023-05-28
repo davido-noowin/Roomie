@@ -19,7 +19,7 @@ class LoginStudent(View):
 
         try:
             user = Student.objects.get(email=email)
-            pw = Student.objects.get(password=password)
+            pw = Student.objects.get(student_password=password)
             if pw:
                 # Authentication successful
                 login(request, user)
