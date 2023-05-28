@@ -22,6 +22,11 @@
    color:black;
    text-decoration: none;
 }
+.logo a:hover {
+  color:rgb(38, 32, 155);
+  transition: all 0.2s ease-in-out;
+  text-decoration: underline;
+}
 li {
    list-style: none;
    display: inline-block;
@@ -35,28 +40,32 @@ li a {
    text-decoration: none;
 }
 li a:hover {
-   color:rgb(192, 46, 32);
-   transition-duration: 0.2s;
+  color:rgb(38, 32, 155);
+  transition: all 0.2s ease-in-out;
+  text-decoration: underline;
 }
 button {
    background-color: #3a468f;
    color:rgb(241, 241, 241);
 }
-.calendardiv{
+
+.wrap{
   display: flex;
   align-items: center;
-  padding: 0 10px 100px;
-  justify-content: left;
+  padding: 30px 30px 100px;
+  justify-content: space-between;
   min-height: 100vh;
   background: #b7b5b8;
 }
-.wrapper{
+/* calendar container */
+.cal-container{
   width: 450px;
   background: #fff;
   border-radius: 10px;
   box-shadow: 0 15px 40px rgba(0,0,0,0.12);
 }
-.wrapper header{
+/* calendar header */
+.cal-container header{
   display: flex;
   align-items: center;
   padding: 25px 30px 10px;
@@ -137,24 +146,41 @@ header .current-date{
 .days li:not(.active):hover::before{
   background: #f2f2f2;
 }
-.filterdiv {
-  background: #fff;
+.filter-div {
+  display: flex;
+  align-items: center;
+  padding: 30px 30px 100px;
+  justify-content:right;
+  min-height: 100vh;
+  background: #b7b5b8;
 }
+
+.filter-container {
+  width: 450px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+}
+
+.filter-container header {
+  display: flex;
+  align-items: center;
+  padding: 25px 30px 10px;
+  justify-content: space-between;
+  font-size: 1.45rem;
+  font-weight: 500;
+}
+
 .filter-section {
-  margin-bottom: 20px;
+  display: flex;
+  align-items: left;
+  padding: 25px 30px 10px;
+  justify-content: left;
+  color: #333;
+  width: calc(100% / 7);
+  font-size: 1.07rem;
 }
 
 .item {
   margin-bottom: 100px;
-}
-
-.filter-container {
-  display: flex;
-  flex-direction: right;
-  align-items: right;
-  justify-content: right;
-  position: right;
-  top: 20px;
-  right: 20px;
-  transform: translateY(-50%);
 }

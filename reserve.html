@@ -1,9 +1,8 @@
 <!DOCTYPE html>
-<!-- Coding By CodingNepal - youtube.com/codingnepal -->
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Dynamic Calendar JavaScript | CodingNepal</title>
+    <title>Calendar</title>
     <link rel="stylesheet" href="/styles/reserve.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Google Font Link for Icons -->
@@ -16,16 +15,16 @@
           <div class="logo"><a href="index.html">Roomie</a></div>
           <ul>
               <li><a href="reserve.html">Reserve</a></li>
-              <li><a href="">Policies</a></li>
-              <li><a href="">    
+              <li><a onclick="openPopup()">Policies</a></li>
+              <li><a href="profile.html">    
                   <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 48 48"><g fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"><path d="M24 27a8 8 0 1 0 0-16a8 8 0 0 0 0 16Zm0-2a6 6 0 1 0 0-12a6 6 0 0 0 0 12Z"/><path d="M44 24c0 11.046-8.954 20-20 20S4 35.046 4 24S12.954 4 24 4s20 8.954 20 20ZM33.63 39.21A17.915 17.915 0 0 1 24 42a17.916 17.916 0 0 1-9.832-2.92c-.24-.3-.483-.61-.73-.93A2.144 2.144 0 0 1 13 36.845c0-1.077.774-1.98 1.809-2.131c6.845-1 11.558-.914 18.412.035A2.077 2.077 0 0 1 35 36.818c0 .48-.165.946-.463 1.31c-.307.374-.61.735-.907 1.082Zm3.355-2.744c-.16-1.872-1.581-3.434-3.49-3.698c-7.016-.971-11.92-1.064-18.975-.033c-1.92.28-3.335 1.856-3.503 3.733A17.94 17.94 0 0 1 6 24c0-9.941 8.059-18 18-18s18 8.059 18 18a17.94 17.94 0 0 1-5.015 12.466Z"/></g></svg>
                   </a>
               </li>
           </ul>
       </div>     
   </nav>
-  <div class="calendardiv">
-    <div class="wrapper">
+  <div class="wrap">
+    <div class="cal-container">
       <header>
         <p class="current-date"></p>
         <div class="icons">
@@ -46,32 +45,32 @@
         <ul class="days"></ul>
       </div>
     </div>
-  <h1>Filter List</h1>
+    <div class="filter-container">
+      <header>Filter:</header>
   
-  <h2>Filters:</h2>
-  <div class="filterdiv">
-    <div class="filter-section">
-      <h3>Accommodations:</h3>
-      <label><input type="checkbox" class="filter-checkbox" value="Chargers">Chargers</label>
-      <label><input type="checkbox" class="filter-checkbox" value="Whiteboard">Whiteboard</label>
-      <label><input type="checkbox" class="filter-checkbox" value="TV">TV</label>
+      <div class="filter-section">
+        <h3>Accommodations:</h3>
+        <label><input type="checkbox" class="filter-checkbox" value="Chargers">Chargers</label>
+        <label><input type="checkbox" class="filter-checkbox" value="Whiteboard">Whiteboard</label>
+        <label><input type="checkbox" class="filter-checkbox" value="TV">TV</label>
+      </div>
+      
+      <div class="filter-section">
+        <h3>Capacity:</h3>
+        <label><input type="radio" class="filter-radio" name="capacity" value="1">1-4 person(s)</label>
+        <label><input type="radio" class="filter-radio" name="capacity" value="2">5+ people</label>
+      </div>
+      
+      <ul id="item-list">
+  
+        <li class="item" data-category="Capacity" data-rating="2">Item 2</li>
+        <li class="item" data-category="Chargers" data-rating="3">Item 3</li>
+        <li class="item" data-category="Whiteboard" data-rating="5">Item 4</li>
+        <li class="item" data-category="TV" data-rating="1">Item 5</li>
+      </ul>
     </div>
-    
-    <div class="filter-section">
-      <h3>Capacity:</h3>
-      <label><input type="radio" class="filter-radio" name="capacity" value="1">1-4 person(s)</label>
-      <label><input type="radio" class="filter-radio" name="capacity" value="2">5+ people</label>
-    </div>
-    
-    <ul id="item-list">
+  </div>
 
-      <li class="item" data-category="Capacity" data-rating="2">Item 2</li>
-      <li class="item" data-category="Chargers" data-rating="3">Item 3</li>
-      <li class="item" data-category="Whiteboard" data-rating="5">Item 4</li>
-      <li class="item" data-category="TV" data-rating="1">Item 5</li>
-    </ul>
-  </div>
-  </div>
   </body>
     
     <script src="/scripts/reserve.js"></script>
