@@ -112,6 +112,17 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
   function getCalendarDate() {
-    
-  }
+    const calendarDates = document.querySelectorAll(".days li");
+    calendarDates.forEach(function(date) {
+      date.addEventListener("click", function() {
+        const selectedDate = parseInt(date.innerText);
+        const selectedMonth = currMonth;
+        const selectedYear = currYear;
+        
+        console.log(`Selected Date: ${selectedDate}`);
+        console.log(`Selected Month: ${selectedMonth}`);
+        console.log(`Selected Year: ${selectedYear}`);
+      }
+    )}
+  )}
 });
