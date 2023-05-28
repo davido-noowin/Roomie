@@ -19,7 +19,8 @@ class LoginStudent(View):
 
         try:
             user = Student.objects.get(email=email)
-            if user.check_password(password):
+            pw = Student.objects.get(password=password)
+            if pw:
                 # Authentication successful
                 login(request, user)
                 return JsonResponse({'success': True, 'message': f'Successfully logged in {email}'})
