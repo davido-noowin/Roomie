@@ -17,7 +17,7 @@
     <div class="header">
        Login Form
     </div>
-    <form method="POST" action="{% url 'login' %}">
+    <form method="POST" action="{% url 'login/' %}">
        {% csrf_token %}
        <input type="text" name="email" placeholder="Email" required>
        <i class="far fa-envelope"></i>
