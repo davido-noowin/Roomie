@@ -1,8 +1,8 @@
 // Fetch the accomodation data from user
-function grabAccommodationData(data)
+function grabAccommodationData(url)
 {
-    fetch("roomAccommodations", "GET")
+    fetch(url, "GET")
     .then( res => console.log(res))
-    .catch( err => console.log(err))
-    data.preventDefault()
+    .catch( error => console.log("ERROR"))
+    url.preventDefault()
 }
