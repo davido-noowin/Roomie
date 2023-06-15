@@ -66,6 +66,7 @@ li a:hover {
 *, *::before, *::after{
     box-sizing: border-box;
 }
+
 /* entire canvas */
 body {
     margin:0;
@@ -74,56 +75,69 @@ body {
 h4 {
     margin: 10px
 }
+
 /* button location */
-.carousel {
-    width: 57.5%;
-    height: 100%;
+.carousel{
+    width: 7%;
+    height: 1080px;
     bottom: 0;
-    position:fixed;
-    
-} 
+    text-align: center;
+    padding-top: 120px;
+    box-sizing: border-box;
+}
+
+
 /* }remove top padding */
 .carousel > ul {
     list-style: none;
 }
+
 /* image styling */
 .slide{
     position:absolute;
-    padding-top: 120px;
     object-position: center;
     opacity:0;
     transition: 200ms opacity ease-in-out;
     transition-delay: 200ms;
+    width: 1440px;
+    height: auto;
 }
+
 .slide[data-active]{
     opacity: 1;
-    z-index: 1;
+    z-index: 0;
     transition-delay: 0;
 }
+
 .slide > img{
     display: block;
-    justify-content: center;
-    align-items: center;
-    width: 720px;
-    height: 370px;
-    padding-left: 20px;
-    object-position: center;
+    width: 1440px;
+    height: 740px;
+    padding-left: 40px;
 }
+
+.container .buttons {
+    position: absolute;
+    top: 40%;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    width: 1440px;
+    opacity: 1;
+    padding: 20px;
+    margin: 20px;
+}
+
 /* button styling without hover */
 .carousel-button {
-    position:absolute;
-    z-index: 3;
     background: none;
-    border: none;
     font-size: 4rem;
-    top: 50%;
-    transform: translateY(-50%);
     color: white;
     cursor: pointer;
-    border-radius: .25rem;
     padding: 5px 10px;
-    background-color: rgba(0, 0, 0, .2);
+    background-color: rgba(0, 0, 0, .7);
 }
+
 /* hover style */
 .carousel-button:hover{
     color: white;
@@ -138,7 +152,7 @@ h4 {
 }
 .carousel-button.next {
     right: 2rem;
-    
+    margin-left: 90%;
 }
 
 /* policies popup */
