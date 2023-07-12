@@ -13,6 +13,7 @@ CREATE TABLE Student(
 CREATE TABLE roomsBooked(
 	 email VARCHAR(30) NOT NULL,
      room_booked VARCHAR(20),
+     date_booked datetime NOT NULL,
      FOREIGN KEY (email) REFERENCES Student(email),
      PRIMARY KEY (email, room_booked)
 );
