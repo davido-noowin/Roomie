@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="english">
+  <head>
+    <title>My Rooms</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <meta property="twitter:card" content="summary_large_image" />
+
+    <style data-tag="reset-style-sheet">
+      html {  line-height: 1.15;}body {  margin: 0;}* {  box-sizing: border-box;  border-width: 0;  border-style: solid;}p,li,ul,pre,div,h1,h2,h3,h4,h5,h6,figure,blockquote,figcaption {  margin: 0;  padding: 0;}button {  background-color: transparent;}button,input,optgroup,select,textarea {  font-family: inherit;  font-size: 100%;  line-height: 1.15;  margin: 0;}button,select {  text-transform: none;}button,[type="button"],[type="reset"],[type="button"]::-moz-focus-inner,[type="reset"]::-moz-focus-inner,[type="submit"]::-moz-focus-inner {  border-style: none;  padding: 0;}button:-moz-focus,[type="button"]:-moz-focus,[type="reset"]:-moz-focus,[type="submit"]:-moz-focus {  outline: 1px dotted ButtonText;}a {  color: inherit;  text-decoration: inherit;}input {  padding: 2px 4px;}img {  display: block;}html { scroll-behavior: smooth  }
+    </style>
+    <style data-tag="default-style-sheet">
+      html {
+        font-family: Inter;
+        font-size: 16px;
+      }
+
+      body {
+        font-weight: 400;
+        font-style:normal;
+        text-decoration: none;
+        text-transform: none;
+        letter-spacing: normal;
+        line-height: 1.15;
+        color: var(--dl-color-gray-black);
+        background-color: var(--dl-color-gray-white);
+
+      }
+    </style>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Encode+Sans+Semi+Expanded:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Encode+Sans+Semi+Condensed:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Encode+Sans+Condensed:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Encode+Sans:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+      data-tag="font"
+    />
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'style.css' %}" />
+  </head>
+  <body>
+    <div>
+      <link href="{% static 'my-rooms.css' %}" rel="stylesheet" />
+
+      <div class="my-rooms-container">
+        <div class="my-rooms-my-rooms">
+          <span class="my-rooms-text">
+            <span>View your study room reservations</span>
+          </span>
+          <div class="my-rooms-policies">
+            <div class="my-rooms-policy1">
+              <div class="my-rooms-frame162693"></div>
+              <span class="my-rooms-text002 HeadingsH1-Bold64">
+                <span>01</span>
+              </span>
+              <div class="my-rooms-frame162638">
+                <div class="my-rooms-frame1114">
+                  <div class="my-rooms-frame1113">
+                    <div class="my-rooms-title">
+                      <span class="my-rooms-text004 HeadingsH3-Bold24">
+                        <span>Accessibility</span>
+                      </span>
+                      <span class="my-rooms-text006">
+                        <span>
+                          Rooms may be reserved by current UCI students, staff,
+                          and faculty. Book up to 7 days in advance.
+                        </span>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="my-rooms-policy2">
+              <span class="my-rooms-text008 HeadingsH1-Bold64">
+                <span>02</span>
+              </span>
+              <div class="my-rooms-frame1626381">
+                <div class="my-rooms-frame11141">
+                  <div class="my-rooms-frame11131">
+                    <div class="my-rooms-title1">
+                      <span class="my-rooms-text010 HeadingsH3-Bold24">
+                        <span>Belongings</span>
+                      </span>
+                      <span class="my-rooms-text012">
+                        <span>
+                          Remove all personal items and trash before leaving as
+                          the UCI Libraries are not responsible for unattended
+                          belongings.
+                        </span>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="my-rooms-policy3">
+              <span class="my-rooms-text014 HeadingsH1-Bold64">
+                <span>03</span>
+              </span>
+              <span class="my-rooms-text016 HeadingsH3-Bold24">
+                Food and Beverage
+              </span>
+              <span class="my-rooms-text017">
+                <span>
+                  Food and beverages are permitted. Exercise caution with
+                  open-lid containers, and dispose of trash properly.
+                </span>
+              </span>
+            </div>
+            <div class="my-rooms-policy4">
+              <span class="my-rooms-text019 HeadingsH1-Bold64">
+                <span>04</span>
+              </span>
+              <span class="my-rooms-text021 HeadingsH3-Bold24">
+                <span>Confirmation</span>
+              </span>
+              <span class="my-rooms-text023">
+                <span>
+                  When it is time for your reservation, proceed directly to the
+                  study room with your email confirmation readily available.
+                </span>
+              </span>
+            </div>
+            <div class="my-rooms-policy5">
+              <span class="my-rooms-text025 HeadingsH1-Bold64">
+                <span>05</span>
+              </span>
+              <span class="my-rooms-text027 HeadingsH3-Bold24">
+                <span>Cancellation</span>
+              </span>
+              <span class="my-rooms-text029">
+                <span>
+                  If you will not be using the room, cancel your reservation to
+                  ensure that you do not exceed your daily limit.
+                </span>
+              </span>
+            </div>
+            <div class="my-rooms-policy6">
+              <span class="my-rooms-text031 HeadingsH1-Bold64">
+                <span>06</span>
+              </span>
+              <span class="my-rooms-text033 HeadingsH3-Bold24">
+                <span>Emergencies</span>
+              </span>
+              <span class="my-rooms-text035">
+                <span>
+                  The UCI Libraries reserve the right to cancel reservations due
+                  to unforeseen circumstances.
+                </span>
+              </span>
+            </div>
+          </div>
+          <span class="my-rooms-text037"><span>My Rooms</span></span>
+          <div class="my-rooms-navbar">
+            <div class="my-rooms-user">
+              <div class="my-rooms-vuesaxlinearuser">
+                <div class="my-rooms-user1">
+                  <img
+                    alt="VectorI321"
+                    src="{% static 'vectori321-fsp.svg' %}"
+                    class="my-rooms-vector"
+                  />
+                  <img
+                    alt="VectorI321"
+                    src="{% static 'vectori321-hws3.svg' %}"
+                    class="my-rooms-vector1"
+                  />
+                  <a href="{% url 'account' %}" class="my-rooms-navlink">
+                    <img alt="VectorI321" src="" class="my-rooms-vector2" />
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="my-rooms-navbaricon">
+              <a href="index.html" class="my-rooms-navlink1">
+                <div class="my-rooms-home-logo">
+                  <img
+                    alt="UCIprimarylogoprintblue13218"
+                    src="{% static 'uciprimarylogoprintblue13218-lqj-200h.png' %}"
+                    class="my-rooms-u-iprimarylogoprintblue1"
+                  />
+                  <span class="my-rooms-text039"><span>Roomie</span></span>
+                </div>
+              </a>
+            </div>
+            <a href="{% url 'reserve' %}" class="my-rooms-text041">
+              <span>Reserve</span>
+            </a>
+            <a href="{% url 'my-rooms' %}" class="my-rooms-text043">
+              <span>My Rooms</span>
+            </a>
+            <a href="{% url 'about' %}" class="my-rooms-text045"><span>About</span></a>
+            <img
+              alt="Line33218"
+              src="{% static 'line33218-hs34.svg' %}"
+              class="my-rooms-line3"
+            />
+          </div>
+          <div class="my-rooms-titlecard">
+            <span class="my-rooms-text047 HeadingsH5-Bold18">
+              <span>Terms</span>
+            </span>
+            <span class="my-rooms-text049 HeadingsH2-Bold44">
+              <span>Study room policies</span>
+            </span>
+          </div>
+          <div class="my-rooms-mycalendartitle">
+            <span class="my-rooms-text051 HeadingsH5-Bold18">
+              <span>Terms</span>
+            </span>
+            <span class="my-rooms-text053 HeadingsH2-Bold44">
+              <span>My calendar</span>
+            </span>
+          </div>
+          <div class="my-rooms-entire-calendar">
+            <div class="my-rooms-group23">
+              <div class="my-rooms-calendar-condensed">
+                <div class="my-rooms-group19">
+                  <div class="my-rooms-event">
+                    <div class="my-rooms-event1">
+                      <span class="my-rooms-text055"><span>8 AM</span></span>
+                      <span class="my-rooms-text057">
+                        <span>Study room 197</span>
+                      </span>
+                    </div>
+                  </div>
+                  <img
+                    alt="Divider3631"
+                    src="{% static 'divider3631-32qr.svg' %}"
+                    class="my-rooms-divider"
+                  />
+                  <div class="my-rooms-day">
+                    <span class="my-rooms-text059">3</span>
+                  </div>
+                  <div class="my-rooms-day01">
+                    <span class="my-rooms-text060"><span>10</span></span>
+                  </div>
+                  <div class="my-rooms-day02">
+                    <span class="my-rooms-text062"><span>17</span></span>
+                  </div>
+                  <div class="my-rooms-day03">
+                    <span class="my-rooms-text064"><span>24</span></span>
+                  </div>
+                  <div class="my-rooms-day04">
+                    <span class="my-rooms-text066"><span>31</span></span>
+                  </div>
+                  <div class="my-rooms-day05">
+                    <span class="my-rooms-text068"><span>Mo</span></span>
+                  </div>
+                  <div class="my-rooms-day06">
+                    <span class="my-rooms-text070"><span>Tu</span></span>
+                  </div>
+                  <div class="my-rooms-day07">
+                    <span class="my-rooms-text072"><span>We</span></span>
+                  </div>
+                  <div class="my-rooms-day08">
+                    <span class="my-rooms-text074"><span>Th</span></span>
+                  </div>
+                  <div class="my-rooms-day09">
+                    <span class="my-rooms-text076"><span>Fr</span></span>
+                  </div>
+                  <div class="my-rooms-day10">
+                    <span class="my-rooms-text078"><span>Sa</span></span>
+                  </div>
+                  <div class="my-rooms-day11">
+                    <span class="my-rooms-text080"><span>Su</span></span>
+                  </div>
+                  <div class="my-rooms-day12">
+                    <span class="my-rooms-text082">4</span>
+                  </div>
+                  <div class="my-rooms-day13">
+                    <span class="my-rooms-text083"><span>11</span></span>
+                  </div>
+                  <div class="my-rooms-day14">
+                    <span class="my-rooms-text085"><span>18</span></span>
+                  </div>
+                  <div class="my-rooms-day15">
+                    <span class="my-rooms-text087"><span>25</span></span>
+                  </div>
+                  <div class="my-rooms-day16">
+                    <span class="my-rooms-text089">5</span>
+                  </div>
+                  <div class="my-rooms-day17">
+                    <span class="my-rooms-text090"><span>12</span></span>
+                  </div>
+                  <div class="my-rooms-day18">
+                    <span class="my-rooms-text092"><span>19</span></span>
+                  </div>
+                  <div class="my-rooms-day19">
+                    <span class="my-rooms-text094"><span>26</span></span>
+                  </div>
+                  <div class="my-rooms-day20">
+                    <span class="my-rooms-text096">6</span>
+                  </div>
+                  <div class="my-rooms-day21">
+                    <span class="my-rooms-text097"><span>13</span></span>
+                  </div>
+                  <div class="my-rooms-day22">
+                    <span class="my-rooms-text099"><span>20</span></span>
+                  </div>
+                  <div class="my-rooms-day23">
+                    <span class="my-rooms-text101"><span>27</span></span>
+                  </div>
+                  <div class="my-rooms-day24">
+                    <span class="my-rooms-text103">7</span>
+                  </div>
+                  <div class="my-rooms-day25">
+                    <span class="my-rooms-text104"><span>14</span></span>
+                  </div>
+                  <div class="my-rooms-day26">
+                    <span class="my-rooms-text106"><span>21</span></span>
+                  </div>
+                  <div class="my-rooms-day27">
+                    <span class="my-rooms-text108"><span>28</span></span>
+                  </div>
+                  <div class="my-rooms-day28">
+                    <span class="my-rooms-text110">1</span>
+                  </div>
+                  <div class="my-rooms-day29">
+                    <span class="my-rooms-text111">8</span>
+                  </div>
+                  <div class="my-rooms-day30">
+                    <span class="my-rooms-text112"><span>15</span></span>
+                  </div>
+                  <div class="my-rooms-day31">
+                    <span class="my-rooms-text114"><span>22</span></span>
+                  </div>
+                  <div class="my-rooms-day32">
+                    <span class="my-rooms-text116"><span>29</span></span>
+                  </div>
+                  <div class="my-rooms-day33">
+                    <span class="my-rooms-text118">2</span>
+                  </div>
+                  <div class="my-rooms-day34">
+                    <span class="my-rooms-text119">9</span>
+                  </div>
+                  <div class="my-rooms-day35">
+                    <span class="my-rooms-text120"><span>16</span></span>
+                  </div>
+                  <div class="my-rooms-day36">
+                    <span class="my-rooms-text122"><span>23</span></span>
+                  </div>
+                  <div class="my-rooms-day37">
+                    <span class="my-rooms-text124"><span>30</span></span>
+                  </div>
+                  <div class="my-rooms-month">
+                    <div class="my-rooms-group18">
+                      <div class="my-rooms-day38">
+                        <span class="my-rooms-text126">
+                          <span>July 2023</span>
+                        </span>
+                      </div>
+                      <img
+                        alt="Arrows3571"
+                        src="{% static 'arrows3571-8qfl.svg' %}"
+                        class="my-rooms-arrows"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="my-rooms-responsive-calendar">
+                <div class="my-rooms-titleandcalendad">
+                  <div class="my-rooms-frame31">
+                    <div class="my-rooms-left-content">
+                      <div class="my-rooms-typography">
+                        <span class="my-rooms-text128">
+                          <span class="my-rooms-text129">01 January</span>
+                          <span>2022</span>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="my-rooms-calendar-crop">
+                    <div class="my-rooms-grid">
+                      <div class="my-rooms-label-left-group">
+                        <div class="my-rooms-frame5">
+                          <div class="my-rooms-typography01">
+                            <span class="my-rooms-text131">8:00 am</span>
+                          </div>
+                        </div>
+                        <div class="my-rooms-frame28">
+                          <div class="my-rooms-typography02">
+                            <span class="my-rooms-text132">
+                              <span>9:00 am</span>
+                            </span>
+                          </div>
+                        </div>
+                        <div class="my-rooms-frame6">
+                          <div class="my-rooms-typography03">
+                            <span class="my-rooms-text134">
+                              <span>10:00 am</span>
+                            </span>
+                          </div>
+                        </div>
+                        <div class="my-rooms-frame7">
+                          <div class="my-rooms-typography04">
+                            <span class="my-rooms-text136">
+                              <span>11:00 am</span>
+                            </span>
+                          </div>
+                        </div>
+                        <div class="my-rooms-frame8">
+                          <div class="my-rooms-typography05">
+                            <span class="my-rooms-text138">
+                              <span>12:00 pm</span>
+                            </span>
+                          </div>
+                        </div>
+                        <div class="my-rooms-frame9">
+                          <div class="my-rooms-typography06">
+                            <span class="my-rooms-text140">
+                              <span>1:00 pm</span>
+                            </span>
+                          </div>
+                        </div>
+                        <div class="my-rooms-frame10">
+                          <div class="my-rooms-typography07">
+                            <span class="my-rooms-text142">
+                              <span>2:00 pm</span>
+                            </span>
+                          </div>
+                        </div>
+                        <div class="my-rooms-frame11">
+                          <div class="my-rooms-typography08">
+                            <span class="my-rooms-text144">
+                              <span>3:00 pm</span>
+                            </span>
+                          </div>
+                        </div>
+                        <div class="my-rooms-frame12">
+                          <div class="my-rooms-typography09">
+                            <span class="my-rooms-text146">
+                              <span>4:00 pm</span>
+                            </span>
+                          </div>
+                        </div>
+                        <div class="my-rooms-frame13">
+                          <div class="my-rooms-typography10">
+                            <span class="my-rooms-text148">
+                              <span>5:00 pm</span>
+                            </span>
+                          </div>
+                        </div>
+                        <div class="my-rooms-frame14">
+                          <div class="my-rooms-typography11">
+                            <span class="my-rooms-text150">
+                              <span>6:00 pm</span>
+                            </span>
+                          </div>
+                        </div>
+                        <div class="my-rooms-frame15">
+                          <div class="my-rooms-typography12">
+                            <span class="my-rooms-text152">
+                              <span>7:00 pm</span>
+                            </span>
+                          </div>
+                        </div>
+                        <div class="my-rooms-frame16">
+                          <div class="my-rooms-typography13">
+                            <span class="my-rooms-text154">
+                              <span>8:00 pm</span>
+                            </span>
+                          </div>
+                        </div>
+                        <div class="my-rooms-frame17">
+                          <div class="my-rooms-typography14">
+                            <span class="my-rooms-text156">
+                              <span>9:00 pm</span>
+                            </span>
+                          </div>
+                        </div>
+                        <div class="my-rooms-frame18">
+                          <div class="my-rooms-typography15">
+                            <span class="my-rooms-text158">
+                              <span>10:00 pm</span>
+                            </span>
+                          </div>
+                        </div>
+                        <div class="my-rooms-frame19">
+                          <div class="my-rooms-typography16">
+                            <span class="my-rooms-text160">
+                              <span>11:00 pm</span>
+                            </span>
+                          </div>
+                        </div>
+                        <div class="my-rooms-frame20">
+                          <div class="my-rooms-typography17">
+                            <span class="my-rooms-text162">
+                              <span>12:00 am</span>
+                            </span>
+                          </div>
+                        </div>
+                        <div class="my-rooms-frame21">
+                          <div class="my-rooms-typography18">
+                            <span class="my-rooms-text164">
+                              <span>1:00 am</span>
+                            </span>
+                          </div>
+                        </div>
+                        <div class="my-rooms-frame22">
+                          <div class="my-rooms-typography19">
+                            <span class="my-rooms-text166">
+                              <span>2:00 am</span>
+                            </span>
+                          </div>
+                        </div>
+                        <div class="my-rooms-frame23">
+                          <div class="my-rooms-typography20">
+                            <span class="my-rooms-text168">
+                              <span>3:00 am</span>
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="my-rooms-column">
+                        <div class="my-rooms-slot"></div>
+                        <div class="my-rooms-slot01"></div>
+                        <div class="my-rooms-slot02"></div>
+                        <div class="my-rooms-slot03"></div>
+                        <div class="my-rooms-slot04"></div>
+                        <div class="my-rooms-slot05"></div>
+                        <div class="my-rooms-slot06"></div>
+                        <div class="my-rooms-slot07"></div>
+                        <div class="my-rooms-slot08"></div>
+                        <div class="my-rooms-slot09"></div>
+                        <div class="my-rooms-slot10"></div>
+                        <div class="my-rooms-slot11"></div>
+                        <div class="my-rooms-slot12"></div>
+                        <div class="my-rooms-slot13"></div>
+                        <div class="my-rooms-slot14"></div>
+                        <div class="my-rooms-slot15"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="my-rooms-footermyrooms">
+            <img
+              alt="ucilogo24021"
+              src="{% static 'ucilogo24021-opmx-200h.png' %}"
+              class="my-rooms-ucilogo2"
+            />
+            <img
+              alt="UCIprimarylogoprintblue14021"
+              src="{% static 'uciprimarylogoprintblue14021-z4ls-200h.png' %}"
+              class="my-rooms-u-iprimarylogoprintblue11"
+            />
+            <span class="my-rooms-text170"><span>Roomie</span></span>
+            <span class="my-rooms-text172">
+              <span>
+                <span>University of California, Irvine</span>
+                <br />
+                <span>CA 92697</span>
+                <br />
+                <span>(949) 824-5011</span>
+                <br />
+                <span></span>
+                <br />
+                <span></span>
+              </span>
+            </span>
+            <img
+              alt="Line24021"
+              src="{% static 'line24021-og8r.svg' %}"
+              class="my-rooms-line2"
+            />
+            <span class="my-rooms-text183">
+              <span class="my-rooms-text184">Disclaimer:</span>
+              <span>
+                This web page is not an official UCI web page. It is a project
+                from the 2023 VenusHacks hackathon. No harm to UCI and its
+                affiliates were intended in the creation of this website.
+              </span>
+            </span>
+            <span class="my-rooms-text186">
+              <span>UCI Libraries</span>
+              <br />
+              <span class="my-rooms-text189">
+                Hours of different libraries will vary
+              </span>
+              <br />
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

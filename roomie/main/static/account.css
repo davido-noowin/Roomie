@@ -1,0 +1,445 @@
+.account-container {
+  width: 100%;
+  display: flex;
+  overflow: auto;
+  min-height: 100vh;
+  align-items: center;
+  flex-direction: column;
+}
+.account-account {
+  width: 100%;
+  height: 1024px;
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  align-items: flex-start;
+  flex-shrink: 0;
+  background-color: rgba(255, 255, 255, 1);
+}
+.account-loginbox {
+  top: 376px;
+  left: 791.0000610351562px;
+  width: 338.0001525878906px;
+  height: 272px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+.account-loginbutton {
+  gap: 10px;
+  top: 227px;
+  left: 30.000154495239258px;
+  width: 95px;
+  display: flex;
+  padding: 8px 16px;
+  position: absolute;
+  align-items: center;
+  flex-shrink: 0;
+  border-radius: 16px;
+  justify-content: center;
+  background-color: var(--dl-color-default-maincolor);
+}
+.account-text {
+  color: var(--dl-color-default-screencolor);
+  height: auto;
+  font-size: 16px;
+  font-style: Medium;
+  text-align: left;
+  font-family: Encode Sans Semi Expanded;
+  font-weight: 500;
+  line-height: 179.99999523162842%;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.account-createaccbutton {
+  top: 227.375px;
+  left: 188.625px;
+  width: 133.375px;
+  height: 44.625px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+}
+.account-text02 {
+  top: 0px;
+  left: 0px;
+  color: var(--dl-color-default-textcolor);
+  height: auto;
+  padding: var(--dl-space-space-halfunit);
+  position: absolute;
+  font-size: 16px;
+  font-style: Medium;
+  text-align: left;
+  font-family: Encode Sans Semi Expanded;
+  font-weight: 500;
+  line-height: 179.99999523162842%;
+  border-width: 0px;
+  font-stretch: normal;
+  border-radius: var(--dl-radius-radius-radius8);
+  text-decoration: none;
+  background-color: #f3f3f3;
+}
+.account-text04 {
+  top: 163px;
+  left: 0.00015523280308116227px;
+  color: var(--dl-color-default-maincolor);
+  height: auto;
+  position: absolute;
+  font-size: 13px;
+  font-style: Medium;
+  text-align: left;
+  font-family: Encode Sans Semi Expanded;
+  font-weight: 500;
+  line-height: 179.99999523162842%;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.account-text06 {
+  top: 163px;
+  left: 197.00015258789062px;
+  color: var(--dl-color-default-maincolor);
+  height: auto;
+  position: absolute;
+  font-size: 13px;
+  font-style: Medium;
+  text-align: left;
+  font-family: Encode Sans Semi Expanded;
+  font-weight: 500;
+  line-height: 179.99999523162842%;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.account-text08 {
+  left: 0px;
+  color: var(--dl-color-default-paragraphcolor);
+  width: 338px;
+  height: auto;
+  position: absolute;
+  font-size: 18px;
+  font-style: Medium;
+  text-align: left;
+  font-family: Encode Sans Semi Expanded;
+  font-weight: 500;
+  line-height: 180%;
+  border-width: 0px;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.account-text09 {
+  top: 104px;
+  left: 0px;
+  color: var(--dl-color-default-paragraphcolor);
+  width: 338px;
+  height: auto;
+  position: absolute;
+  font-size: 18px;
+  font-style: Medium;
+  text-align: left;
+  font-family: Encode Sans Semi Expanded;
+  font-weight: 500;
+  line-height: 180%;
+  border-width: 0px;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.account-line7 {
+  top: 35px;
+  left: 0px;
+  width: 338px;
+  height: auto;
+  position: absolute;
+}
+.account-line6 {
+  top: 140px;
+  left: 0px;
+  width: 338px;
+  height: auto;
+  position: absolute;
+}
+.account-text10 {
+  top: 162px;
+  left: 833px;
+  color: var(--dl-color-default-textcolor);
+  height: auto;
+  position: absolute;
+  font-size: 64px;
+  font-style: Medium;
+  text-align: center;
+  font-family: Encode Sans Semi Expanded;
+  font-weight: 500;
+  line-height: 129.99999523162842%;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.account-text12 {
+  top: 259px;
+  left: 842px;
+  color: var(--dl-color-default-paragraphcolor);
+  height: auto;
+  position: absolute;
+  font-size: 18px;
+  font-style: Medium;
+  text-align: center;
+  font-family: Encode Sans Semi Expanded;
+  font-weight: 500;
+  line-height: 179.99999523162842%;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.account-footer {
+  top: 780px;
+  left: 160px;
+  width: 1600px;
+  height: 237px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+.account-ucilogo2 {
+  top: 116px;
+  left: 0px;
+  width: 80px;
+  height: 80px;
+  position: absolute;
+}
+.account-u-iprimarylogoprintblue1 {
+  top: 27px;
+  left: 0px;
+  width: 88px;
+  height: 74px;
+  position: absolute;
+  border-radius: 20px;
+}
+.account-text14 {
+  top: 35px;
+  left: 95px;
+  color: rgba(0, 0, 0, 1);
+  width: 120px;
+  height: auto;
+  position: absolute;
+  font-size: 32px;
+  font-style: SemiBold;
+  text-align: left;
+  font-family: Encode Sans Semi Expanded;
+  font-weight: 600;
+  line-height: 179.99999523162842%;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.account-text16 {
+  top: 103px;
+  left: 95px;
+  color: var(--dl-color-default-textcolor);
+  width: 267px;
+  height: auto;
+  position: absolute;
+  font-size: 18px;
+  font-style: Regular;
+  text-align: left;
+  font-family: Encode Sans Semi Expanded;
+  font-weight: 400;
+  line-height: 179.99999523162842%;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.account-line2 {
+  top: 0px;
+  left: -2.842170943040401e-14px;
+  width: 1600px;
+  height: auto;
+  position: absolute;
+}
+.account-text27 {
+  top: 101px;
+  left: 1295px;
+  color: var(--dl-color-default-paragraphcolor);
+  width: 247px;
+  height: auto;
+  position: absolute;
+  font-size: 10px;
+  font-style: SemiBold;
+  text-align: left;
+  font-family: Encode Sans Semi Expanded;
+  font-weight: 600;
+  line-height: 179.99999523162842%;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.account-text28 {
+  font-weight: 600;
+}
+.account-text30 {
+  top: 101px;
+  left: 695px;
+  color: var(--dl-color-default-textcolor);
+  width: 298px;
+  height: auto;
+  position: absolute;
+  font-size: 18px;
+  font-style: Bold;
+  text-align: left;
+  font-family: Encode Sans Semi Expanded;
+  font-weight: 700;
+  line-height: 180%;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.account-text33 {
+  font-style: normal;
+  font-weight: 400;
+}
+.account-navbaraccount {
+  top: 39px;
+  left: 329px;
+  width: 1261px;
+  height: 80px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+.account-user {
+  top: 6px;
+  left: 1208px;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+}
+.account-vuesaxlinearuser {
+  top: 0px;
+  left: 0px;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+.account-user1 {
+  top: 0px;
+  left: 0px;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+.account-vector {
+  top: 2.5px;
+  left: 8.75px;
+  width: 12px;
+  height: 12px;
+  position: absolute;
+}
+.account-vector1 {
+  top: 18.75px;
+  left: 4.262504577636719px;
+  width: 21px;
+  height: 9px;
+  position: absolute;
+}
+.account-navlink {
+  display: contents;
+}
+.account-vector2 {
+  top: 0px;
+  left: 0px;
+  width: 30px;
+  height: 30px;
+  opacity: 0.00;
+  position: absolute;
+  text-decoration: none;
+}
+.account-navbaricon {
+  gap: 12px;
+  top: 0px;
+  left: 0px;
+  display: flex;
+  position: absolute;
+  align-items: center;
+  justify-content: center;
+}
+.account-navlink1 {
+  display: contents;
+}
+.account-home-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+.account-u-iprimarylogoprintblue11 {
+  width: 88px;
+  height: 57px;
+  border-radius: 20px;
+}
+.account-text35 {
+  color: rgba(0, 0, 0, 1);
+  height: auto;
+  font-size: 32px;
+  font-style: SemiBold;
+  text-align: left;
+  font-family: Encode Sans Semi Expanded;
+  font-weight: 600;
+  line-height: 179.99999523162842%;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.account-text37 {
+  top: 3px;
+  left: 408px;
+  color: var(--dl-color-default-textcolor);
+  height: auto;
+  position: absolute;
+  font-size: 20px;
+  font-style: SemiExpanded Regular;
+  text-align: left;
+  font-family: Encode Sans;
+  font-weight: 400;
+  line-height: 179.99999523162842%;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.account-text39 {
+  top: 3px;
+  left: 565px;
+  color: rgba(0, 0, 0, 1);
+  height: auto;
+  position: absolute;
+  font-size: 20px;
+  font-style: Expanded Regular;
+  text-align: left;
+  font-family: Encode Sans;
+  font-weight: 400;
+  line-height: 179.99999523162842%;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.account-text41 {
+  top: 3px;
+  left: 752px;
+  color: rgba(0, 0, 0, 1);
+  height: auto;
+  position: absolute;
+  font-size: 20px;
+  font-style: SemiExpanded Regular;
+  text-align: left;
+  font-family: Encode Sans;
+  font-weight: 400;
+  line-height: 179.99999523162842%;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.account-line3 {
+  top: 80px;
+  left: 1185px;
+  width: 76px;
+  height: auto;
+  position: absolute;
+}

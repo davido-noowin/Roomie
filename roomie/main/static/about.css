@@ -1,0 +1,426 @@
+.about-container {
+  width: 100%;
+  display: flex;
+  overflow: auto;
+  min-height: 100vh;
+  align-items: center;
+  flex-direction: column;
+}
+.about-about {
+  width: 100%;
+  height: 1024px;
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  align-items: flex-start;
+  flex-shrink: 0;
+  background-color: rgba(255, 255, 255, 1);
+}
+.about-text {
+  top: 378px;
+  left: 591px;
+  color: var(--dl-color-default-paragraphcolor);
+  width: 1239px;
+  height: auto;
+  position: absolute;
+  font-size: 34px;
+  font-style: Regular;
+  text-align: left;
+  font-family: Encode Sans Semi Expanded;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.about-text05 {
+  top: 595px;
+  left: 102px;
+  color: rgba(21, 20, 17, 1);
+  width: 138px;
+  height: auto;
+  position: absolute;
+  font-size: 32px;
+  font-style: Bold;
+  text-align: left;
+  font-family: Encode Sans Semi Expanded;
+  font-weight: 700;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.about-text06 {
+  color: var(--dl-color-default-textcolor);
+  font-weight: 700;
+}
+.about-text16 {
+  top: 668px;
+  left: 160px;
+  color: var(--dl-color-default-paragraphcolor);
+  width: 134px;
+  height: auto;
+  position: absolute;
+  font-size: 20px;
+  font-style: Regular;
+  text-align: left;
+  font-family: Encode Sans Semi Expanded;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.about-text17 {
+  top: 668px;
+  left: 660px;
+  color: var(--dl-color-default-paragraphcolor);
+  width: 130px;
+  height: auto;
+  position: absolute;
+  font-size: 20px;
+  font-style: Regular;
+  text-align: left;
+  font-family: Encode Sans Semi Expanded;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.about-text19 {
+  top: 668px;
+  left: 1560px;
+  color: var(--dl-color-default-paragraphcolor);
+  width: 147px;
+  height: auto;
+  position: absolute;
+  font-size: 20px;
+  font-style: Regular;
+  text-align: left;
+  font-family: Encode Sans Semi Expanded;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.about-text21 {
+  top: 668px;
+  left: 1160px;
+  color: var(--dl-color-default-paragraphcolor);
+  width: 130px;
+  height: auto;
+  position: absolute;
+  font-size: 20px;
+  font-style: Regular;
+  text-align: left;
+  font-family: Encode Sans Semi Expanded;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.about-text23 {
+  top: 259px;
+  left: 830px;
+  color: var(--dl-color-default-paragraphcolor);
+  height: auto;
+  position: absolute;
+  font-size: 18px;
+  font-style: Medium;
+  text-align: center;
+  font-family: Encode Sans Semi Expanded;
+  font-weight: 500;
+  line-height: 179.99999523162842%;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.about-text25 {
+  top: 162px;
+  left: 863px;
+  color: var(--dl-color-default-textcolor);
+  height: auto;
+  position: absolute;
+  font-size: 64px;
+  font-style: Medium;
+  text-align: center;
+  font-family: Encode Sans Semi Expanded;
+  font-weight: 500;
+  line-height: 129.99999523162842%;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.about-footerabt {
+  top: 780px;
+  left: 160px;
+  width: 1600px;
+  height: 237px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+.about-ucilogo2 {
+  top: 116px;
+  left: 0px;
+  width: 80px;
+  height: 80px;
+  position: absolute;
+}
+.about-u-iprimarylogoprintblue1 {
+  top: 27px;
+  left: 0px;
+  width: 88px;
+  height: 74px;
+  position: absolute;
+  border-radius: 20px;
+}
+.about-text27 {
+  top: 35px;
+  left: 95px;
+  color: rgba(0, 0, 0, 1);
+  width: 120px;
+  height: auto;
+  position: absolute;
+  font-size: 32px;
+  font-style: SemiBold;
+  text-align: left;
+  font-family: Encode Sans Semi Expanded;
+  font-weight: 600;
+  line-height: 179.99999523162842%;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.about-text29 {
+  top: 103px;
+  left: 95px;
+  color: var(--dl-color-default-textcolor);
+  width: 267px;
+  height: auto;
+  position: absolute;
+  font-size: 18px;
+  font-style: Regular;
+  text-align: left;
+  font-family: Encode Sans Semi Expanded;
+  font-weight: 400;
+  line-height: 179.99999523162842%;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.about-line2 {
+  top: 0px;
+  left: -2.842170943040401e-14px;
+  width: 1600px;
+  height: auto;
+  position: absolute;
+}
+.about-text40 {
+  top: 101px;
+  left: 1295px;
+  color: var(--dl-color-default-paragraphcolor);
+  width: 247px;
+  height: auto;
+  position: absolute;
+  font-size: 10px;
+  font-style: SemiBold;
+  text-align: left;
+  font-family: Encode Sans Semi Expanded;
+  font-weight: 600;
+  line-height: 179.99999523162842%;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.about-text41 {
+  font-weight: 600;
+}
+.about-text43 {
+  top: 101px;
+  left: 695px;
+  color: var(--dl-color-default-textcolor);
+  width: 298px;
+  height: auto;
+  position: absolute;
+  font-size: 18px;
+  font-style: Bold;
+  text-align: left;
+  font-family: Encode Sans Semi Expanded;
+  font-weight: 700;
+  line-height: 180%;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.about-text46 {
+  font-style: normal;
+  font-weight: 400;
+}
+.about-titlecard {
+  gap: 14px;
+  top: 341px;
+  left: 102px;
+  width: 427px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-direction: column;
+}
+.about-text48 {
+  color: var(--dl-color-default-secondarycolor);
+  height: auto;
+  text-align: left;
+  line-height: 129.99999523162842%;
+}
+.about-text50 {
+  color: var(--dl-color-default-textcolor);
+  height: auto;
+  text-align: left;
+  line-height: 129.99999523162842%;
+}
+.about-navbarabt {
+  top: 39px;
+  left: 341px;
+  width: 1238px;
+  height: 80px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+.about-user {
+  top: 6px;
+  left: 1208px;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+}
+.about-vuesaxlinearuser {
+  top: 0px;
+  left: 0px;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+.about-user1 {
+  top: 0px;
+  left: 0px;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+.about-vector {
+  top: 2.5px;
+  left: 8.75px;
+  width: 12px;
+  height: 12px;
+  position: absolute;
+}
+.about-vector1 {
+  top: 18.75px;
+  left: 4.262504577636719px;
+  width: 21px;
+  height: 9px;
+  position: absolute;
+}
+.about-navlink {
+  display: contents;
+}
+.about-vector2 {
+  top: 0px;
+  left: 0px;
+  width: 30px;
+  height: 30px;
+  opacity: 0.00;
+  position: absolute;
+  text-decoration: none;
+}
+.about-navbaricon {
+  gap: 12px;
+  top: 0px;
+  left: 0px;
+  display: flex;
+  position: absolute;
+  align-items: center;
+  justify-content: center;
+}
+.about-navlink1 {
+  display: contents;
+}
+.about-mainbutton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+.about-u-iprimarylogoprintblue11 {
+  width: 88px;
+  height: 57px;
+  border-radius: 20px;
+}
+.about-text52 {
+  color: rgba(0, 0, 0, 1);
+  height: auto;
+  font-size: 32px;
+  font-style: SemiBold;
+  text-align: left;
+  font-family: Encode Sans Semi Expanded;
+  font-weight: 600;
+  line-height: 179.99999523162842%;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.about-text54 {
+  top: 3px;
+  left: 408px;
+  color: var(--dl-color-default-textcolor);
+  height: auto;
+  position: absolute;
+  font-size: 20px;
+  font-style: SemiExpanded Regular;
+  text-align: left;
+  font-family: Encode Sans;
+  font-weight: 400;
+  line-height: 179.99999523162842%;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.about-text56 {
+  top: 3px;
+  left: 565px;
+  color: rgba(0, 0, 0, 1);
+  height: auto;
+  position: absolute;
+  font-size: 20px;
+  font-style: Expanded Regular;
+  text-align: left;
+  font-family: Encode Sans;
+  font-weight: 400;
+  line-height: 179.99999523162842%;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.about-text58 {
+  top: 3px;
+  left: 752px;
+  color: var(--dl-color-default-maincolor);
+  height: auto;
+  position: absolute;
+  font-size: 20px;
+  font-style: SemiExpanded Regular;
+  text-align: left;
+  font-family: Encode Sans;
+  font-weight: 400;
+  line-height: 179.99999523162842%;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.about-line3 {
+  top: 80px;
+  left: 743px;
+  width: 76px;
+  height: auto;
+  position: absolute;
+}

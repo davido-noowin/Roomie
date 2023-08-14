@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="english">
+  <head>
+    <title>Reserve A Room</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <meta property="twitter:card" content="summary_large_image" />
+
+    <style data-tag="reset-style-sheet">
+      html {  line-height: 1.15;}body {  margin: 0;}* {  box-sizing: border-box;  border-width: 0;  border-style: solid;}p,li,ul,pre,div,h1,h2,h3,h4,h5,h6,figure,blockquote,figcaption {  margin: 0;  padding: 0;}button {  background-color: transparent;}button,input,optgroup,select,textarea {  font-family: inherit;  font-size: 100%;  line-height: 1.15;  margin: 0;}button,select {  text-transform: none;}button,[type="button"],[type="reset"],[type="reset"]::-moz-focus-inner,[type="submit"]::-moz-focus-inner {  border-style: none;  padding: 0;}button:-moz-focus,[type="button"]:-moz-focus,[type="reset"]:-moz-focus,[type="submit"]:-moz-focus {  outline: 1px dotted ButtonText;}a {  color: inherit;  text-decoration: inherit;}input {  padding: 2px 4px;}img {  display: block;}html { scroll-behavior: smooth  }
+    </style>
+    <style data-tag="default-style-sheet">
+      html {
+        font-family: Inter;
+        font-size: 16px;
+      }
+
+      body {
+        font-weight: 400;
+        font-style:normal;
+        text-decoration: none;
+        text-transform: none;
+        letter-spacing: normal;
+        line-height: 1.15;
+        color: var(--dl-color-gray-black);
+        background-color: var(--dl-color-gray-white);
+
+      }
+    </style>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Encode+Sans+Semi+Expanded:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Encode+Sans+Semi+Condensed:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Encode+Sans+Condensed:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Encode+Sans:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+      data-tag="font"
+    />
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'style.css' %}" />
+  </head>
+  <body>
+    <div>
+      <link href="{% static 'reserve1.css' %}" rel="stylesheet" />
+
+      <div class="reserve1-container">
+        <div class="reserve1-reserve1">
+          <div class="reserve1-searchbar">
+            <div class="reserve1-group1 button">
+              <span class="reserve1-text HeadingsH5-Bold18">
+                <span>Change</span>
+              </span>
+            </div>
+            <div class="reserve1-frame162633">
+              <span class="reserve1-text002">
+                <span>Current center: Multimedia Resources Center</span>
+              </span>
+            </div>
+          </div>
+          <img
+            alt="Rectangle373037"
+            src="{% static 'rectangle373037-65i-500w.png' %}"
+            class="reserve1-rectangle37"
+          />
+          <div class="reserve1-filter-title">
+            <div class="reserve1-filter">
+              <div class="reserve1-vuesaxlinearfilter">
+                <div class="reserve1-filter1">
+                  <img
+                    alt="VectorI303"
+                    src="{% static 'vectori303-ff66.svg' %}"
+                    class="reserve1-vector"
+                  />
+                  <img
+                    alt="VectorI303"
+                    src="{% static 'vectori303-8zj5.svg' %}"
+                    class="reserve1-vector01"
+                  />
+                  <img alt="VectorI303" src="" class="reserve1-vector02" />
+                </div>
+              </div>
+            </div>
+            <span class="reserve1-text004"><span>Filters</span></span>
+          </div>
+          <div class="reserve1-checkbox button">
+            <img
+              alt="Rectangle81I322"
+              src="{% static 'rectangle81i322-7xiw-200h.png' %}"
+              class="reserve1-rectangle81"
+            />
+          </div>
+          <div class="reserve1-checkbox01 button">
+            <img
+              alt="Rectangle81I322"
+              src="{% static 'rectangle81i322-yesu-200h.png' %}"
+              class="reserve1-rectangle8101"
+            />
+          </div>
+          <div class="reserve1-checkbox02 button">
+            <img
+              alt="Rectangle81I322"
+              src="{% static 'rectangle81i322-k5qg-200h.png' %}"
+              class="reserve1-rectangle8102"
+            />
+          </div>
+          <div class="reserve1-checkbox03 button">
+            <img
+              alt="Rectangle81I322"
+              src="{% static 'rectangle81i322-qnrq-200h.png' %}"
+              class="reserve1-rectangle8103"
+            />
+          </div>
+          <div class="reserve1-checkbox04 button">
+            <img
+              alt="Rectangle81I322"
+              src="{% static 'rectangle81i322-84t-200h.png' %}"
+              class="reserve1-rectangle8104"
+            />
+          </div>
+          <div class="reserve1-checkbox05 button">
+            <img
+              alt="Rectangle81I322"
+              src="{% static 'rectangle81i322-ynk-200h.png' %}"
+              class="reserve1-rectangle8105"
+            />
+          </div>
+          <div class="reserve1-checkbox06 button">
+            <img
+              alt="Rectangle81I322"
+              src="{% static 'rectangle81i322-z6t-200h.png' %}"
+              class="reserve1-rectangle8106"
+            />
+          </div>
+          <div class="reserve1-checkbox07 button">
+            <img
+              alt="Rectangle81I322"
+              src="{% static 'rectangle81i322-myik-200h.png' %}"
+              class="reserve1-rectangle8107"
+            />
+          </div>
+          <div class="reserve1-checkbox08 button">
+            <img
+              alt="Rectangle81I322"
+              src="{% static 'rectangle81i322-73g6-200h.png' %}"
+              class="reserve1-rectangle8108"
+            />
+          </div>
+          <span class="reserve1-text006">
+            <span>Amenities</span>
+            <br />
+            <span></span>
+            <span class="reserve1-text010">Group Study</span>
+            <br class="reserve1-text011" />
+            <span class="reserve1-text012">Individual Study</span>
+            <br class="reserve1-text013" />
+            <span class="reserve1-text014">Libraries Spaces</span>
+            <br class="reserve1-text015" />
+            <span class="reserve1-text016">Open Late</span>
+            <br class="reserve1-text017" />
+            <span class="reserve1-text018">Public Computer</span>
+            <br class="reserve1-text019" />
+            <span class="reserve1-text020">Quiet Study</span>
+            <br class="reserve1-text021" />
+            <span class="reserve1-text022">Whiteboard</span>
+            <br class="reserve1-text023" />
+            <span class="reserve1-text024">TV</span>
+            <br class="reserve1-text025" />
+            <span class="reserve1-text026">Power Outlet</span>
+          </span>
+          <div class="reserve1-checkbox09 button">
+            <img
+              alt="Rectangle81I322"
+              src="{% static 'rectangle81i322-h2a-200h.png' %}"
+              class="reserve1-rectangle8109"
+            />
+          </div>
+          <div class="reserve1-checkbox10 button">
+            <img
+              alt="Rectangle81I322"
+              src="{% static 'rectangle81i322-i6en-200h.png' %}"
+              class="reserve1-rectangle8110"
+            />
+          </div>
+          <div class="reserve1-checkbox11 button">
+            <img
+              alt="Rectangle81I322"
+              src="{% static 'rectangle81i322-t1cc-200h.png' %}"
+              class="reserve1-rectangle8111"
+            />
+          </div>
+          <div class="reserve1-checkbox12 button">
+            <img
+              alt="Rectangle81I322"
+              src="{% static 'rectangle81i322-r96jh-200h.png' %}"
+              class="reserve1-rectangle8112"
+            />
+          </div>
+          <span class="reserve1-text027">
+            <span>Libraries</span>
+            <br />
+            <span></span>
+            <span class="reserve1-text031">Multimedia Resources</span>
+            <br class="reserve1-text032" />
+            <span class="reserve1-text033">Center</span>
+            <br class="reserve1-text034" />
+            <span class="reserve1-text035">Langson Library</span>
+            <br class="reserve1-text036" />
+            <span class="reserve1-text037">Gateway Study Center</span>
+            <br class="reserve1-text038" />
+            <span class="reserve1-text039">Science Library</span>
+          </span>
+          <div class="reserve1-checkbox13 button">
+            <img
+              alt="Rectangle81I322"
+              src="{% static 'rectangle81i322-vui-200h.png' %}"
+              class="reserve1-rectangle8113"
+            />
+          </div>
+          <div class="reserve1-checkbox14 button">
+            <img
+              alt="Rectangle81I322"
+              src="{% static 'rectangle81i322-k67b-200h.png' %}"
+              class="reserve1-rectangle8114"
+            />
+          </div>
+          <div class="reserve1-checkbox15 button">
+            <img
+              alt="Rectangle81I322"
+              src="{% static 'rectangle81i322-inpr-200h.png' %}"
+              class="reserve1-rectangle8115"
+            />
+          </div>
+          <div class="reserve1-checkbox16 button">
+            <img
+              alt="Rectangle81I322"
+              src="{% static 'rectangle81i322-36gd-200h.png' %}"
+              class="reserve1-rectangle8116"
+            />
+          </div>
+          <div class="reserve1-checkbox17 button">
+            <img
+              alt="Rectangle81I322"
+              src="{% static 'rectangle81i322-ys4-200h.png' %}"
+              class="reserve1-rectangle8117"
+            />
+          </div>
+          <div class="reserve1-checkbox18 button">
+            <img
+              alt="Rectangle81I322"
+              src="{% static 'rectangle81i322-vnv-200h.png' %}"
+              class="reserve1-rectangle8118"
+            />
+          </div>
+          <span class="reserve1-text040">
+            <span>Equipment</span>
+            <br />
+            <span></span>
+            <span class="reserve1-text044">3D Printer</span>
+            <br class="reserve1-text045" />
+            <span class="reserve1-text046">3D Scanner</span>
+            <br class="reserve1-text047" />
+            <span class="reserve1-text048">Digital Display</span>
+            <br class="reserve1-text049" />
+            <span class="reserve1-text050">Poster Printer</span>
+            <br class="reserve1-text051" />
+            <span class="reserve1-text052">Printers</span>
+            <br class="reserve1-text053" />
+            <span class="reserve1-text054">Scanners</span>
+          </span>
+          <div id="slider" class="reserve1-slide5">
+            <img
+              alt="backgroundI354"
+              src="{% static 'backgroundi354-z87-200h.png' %}"
+              class="reserve1-background"
+            />
+            <div class="reserve1-adjuster">
+              <img
+                alt="handleI354"
+                src="{% static 'handlei354-ete-200h.png' %}"
+                class="reserve1-handle"
+              />
+              <img
+                alt="spacerI354"
+                src="{% static 'spaceri354-g0y-200w.png' %}"
+                class="reserve1-spacer"
+              />
+            </div>
+          </div>
+          <span class="reserve1-text055">
+            1 person&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+            &nbsp; &nbsp; &nbsp; 8 people
+          </span>
+          <span id="capacity" class="reserve1-current-selection">
+            Selected: 5
+          </span>
+          <span class="reserve1-text056">
+            <span class="reserve1-text057">
+              <span>Capacity</span>
+              <br />
+              <span></span>
+            </span>
+            <span></span>
+          </span>
+          <span class="reserve1-text062">
+            <span></span>
+            <span>Reservation Window:</span>
+            <br />
+            <span class="reserve1-text066">July 11 - July 18</span>
+            <br />
+          </span>
+          <span class="reserve1-text068">
+            <span>Day:</span>
+            <br />
+            <span></span>
+            <span class="reserve1-text072">Tue (7/11/23)</span>
+            <br class="reserve1-text073" />
+            <span class="reserve1-text074">Wed (7/12/23)</span>
+            <br class="reserve1-text075" />
+            <span class="reserve1-text076">Thu (7/13/23)</span>
+            <br class="reserve1-text077" />
+            <span class="reserve1-text078">Fri (7/14/23)</span>
+            <br class="reserve1-text079" />
+            <span class="reserve1-text080">Sat (7/15/23)</span>
+            <br class="reserve1-text081" />
+            <span class="reserve1-text082">Sun (7/16/23)</span>
+            <br class="reserve1-text083" />
+            <span class="reserve1-text084">Mon (7/17/23)</span>
+            <br class="reserve1-text085" />
+            <span class="reserve1-text086">Tue (7/18/23)</span>
+          </span>
+          <div class="reserve1-checkbox19 button">
+            <img
+              alt="Rectangle81I365"
+              src="{% static 'rectangle81i365-msa-200h.png' %}"
+              class="reserve1-rectangle8119"
+            />
+          </div>
+          <div class="reserve1-checkbox20 button">
+            <img
+              alt="Rectangle81I365"
+              src="{% static 'rectangle81i365-u4ea-200h.png' %}"
+              class="reserve1-rectangle8120"
+            />
+          </div>
+          <div class="reserve1-checkbox21 button">
+            <img
+              alt="Rectangle81I365"
+              src="{% static 'rectangle81i365-ss41d-200h.png' %}"
+              class="reserve1-rectangle8121"
+            />
+          </div>
+          <div class="reserve1-checkbox22 button">
+            <img
+              alt="Rectangle81I365"
+              src="{% static 'rectangle81i365-a3kp-200h.png' %}"
+              class="reserve1-rectangle8122"
+            />
+          </div>
+          <div class="reserve1-checkbox23 button">
+            <img
+              alt="Rectangle81I365"
+              src="{% static 'rectangle81i365-4g3r-200h.png' %}"
+              class="reserve1-rectangle8123"
+            />
+          </div>
+          <div class="reserve1-checkbox24 button">
+            <img
+              alt="Rectangle81I365"
+              src="{% static 'rectangle81i365-fl4i-200h.png' %}"
+              class="reserve1-rectangle8124"
+            />
+          </div>
+          <div class="reserve1-checkbox25 button">
+            <img
+              alt="Rectangle81I365"
+              src="{% static 'rectangle81i365-xr7-200h.png' %}"
+              class="reserve1-rectangle8125"
+            />
+          </div>
+          <div class="reserve1-checkbox26 button">
+            <img
+              alt="Rectangle81I365"
+              src="{% static 'rectangle81i365-odd7-200h.png' %}"
+              class="reserve1-rectangle8126"
+            />
+          </div>
+          <div class="reserve1-rooms">
+            <div class="reserve1-studyroom4">
+              <div class="reserve1-frame162759">
+                <span class="reserve1-text087">
+                  <span>Study Room 175 (Capacity: 2)</span>
+                </span>
+                <span class="reserve1-text089">
+                  <span>
+                    This collaborative study room contains a table, 4 chairs,
+                    and a flat screen TV with HDMI cables.
+                  </span>
+                </span>
+              </div>
+              <img
+                alt="SL175SQ202213541"
+                src="{% static 'sl175sq202213541-znnn-600w.png' %}"
+                class="reserve1-sl175sq20221"
+              />
+              <div class="reserve1-frame1627591 button">
+                <div class="reserve1-frame162605">
+                  <span class="reserve1-text091 HeadingsH5-Bold18">
+                    <span>Reserve</span>
+                  </span>
+                  <div class="reserve1-vuesaxlineararrowright">
+                    <img
+                      alt="Vector3951"
+                      src="{% static 'vector3951-j5a.svg' %}"
+                      class="reserve1-vector03"
+                    />
+                    <img
+                      alt="Vector3951"
+                      src="{% static 'vector3951-vta.svg' %}"
+                      class="reserve1-vector04"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="reserve1-studyroom3">
+              <img
+                alt="SL174SPq2022013541"
+                src="{% static 'sl174spq2022013541-j033l-600w.png' %}"
+                class="reserve1-sl174-pq202201"
+              />
+              <div class="reserve1-frame162758">
+                <span class="reserve1-text093">
+                  <span>Study Room 174 (Capacity: 2)</span>
+                </span>
+                <span class="reserve1-text095">
+                  <span>
+                    This collaborative study room contains a table, 2 chairs,
+                    and a flat screen TV with HDMI cables.
+                  </span>
+                </span>
+              </div>
+              <div class="reserve1-frame1627581 button">
+                <div class="reserve1-frame1626051">
+                  <span class="reserve1-text097 HeadingsH5-Bold18">
+                    <span>Reserve</span>
+                  </span>
+                  <div class="reserve1-vuesaxlineararrowright1">
+                    <img
+                      alt="Vector3951"
+                      src="{% static 'vector3951-j7o.svg' %}"
+                      class="reserve1-vector05"
+                    />
+                    <img
+                      alt="Vector3951"
+                      src="{% static 'vector3951-52td.svg' %}"
+                      class="reserve1-vector06"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="reserve1-studyroom2">
+              <img
+                alt="SL173April202213541"
+                src="{% static 'sl173april202213541-lbeo-600w.png' %}"
+                class="reserve1-sl17-april20221"
+              />
+              <div class="reserve1-frame162757">
+                <span class="reserve1-text099">
+                  <span>Study Room 173 (Capacity: 7)</span>
+                </span>
+                <span class="reserve1-text101">
+                  <span>
+                    This room contains a table, 7 chairs, a whiteboard, a
+                    desktop, an overhead projector, and a flat screen TV with
+                    and HDMI cable.
+                  </span>
+                </span>
+              </div>
+              <div class="reserve1-frame1627571 button">
+                <div class="reserve1-frame1626052">
+                  <span class="reserve1-text103 HeadingsH5-Bold18">
+                    <span>Reserve</span>
+                  </span>
+                  <div class="reserve1-vuesaxlineararrowright2">
+                    <img
+                      alt="Vector3951"
+                      src="{% static 'vector3951-azzn.svg' %}"
+                      class="reserve1-vector07"
+                    />
+                    <img
+                      alt="Vector3951"
+                      src="{% static 'vector3951-p6s.svg' %}"
+                      class="reserve1-vector08"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="reserve1-studyroom1">
+              <div class="reserve1-frame162756">
+                <span class="reserve1-text105">
+                  <span>Study Room 172 (Capacity: 4)</span>
+                </span>
+                <span class="reserve1-text107">
+                  <span>
+                    This collaborative study room contains a table, 4 chairs,
+                    and a flat screen TV with HDMI cables.
+                  </span>
+                </span>
+              </div>
+              <img
+                alt="SL17213541"
+                src="{% static 'sl17213541-s9sr-600w.png' %}"
+                class="reserve1-sl1721"
+              />
+              <div class="reserve1-frame162607 button">
+                <div class="reserve1-frame1626053">
+                  <span class="reserve1-text109 HeadingsH5-Bold18">
+                    <span>Reserve</span>
+                  </span>
+                  <div class="reserve1-vuesaxlineararrowright3">
+                    <img
+                      alt="Vector3871"
+                      src="{% static 'vector3871-cbgc.svg' %}"
+                      class="reserve1-vector09"
+                    />
+                    <img
+                      alt="Vector3871"
+                      src="{% static 'vector3871-jsll.svg' %}"
+                      class="reserve1-vector10"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="reserve1-resultsforcenter">
+            <span class="reserve1-text111 HeadingsH2-Bold44">
+              <span>Results for center</span>
+            </span>
+            <div class="reserve1-frame162691">
+              <span class="reserve1-text113 HeadingsH6-Bold16">4</span>
+            </div>
+          </div>
+          <div class="reserve1-page-selector">
+            <div class="reserve1-frame1626331">
+              <div class="reserve1-arrowright">
+                <div class="reserve1-vuesaxlineararrowright4">
+                  <div class="reserve1-arrowright1">
+                    <img
+                      alt="VectorI303"
+                      src="{% static 'vectori303-kklq.svg' %}"
+                      class="reserve1-vector11"
+                    />
+                    <img alt="VectorI303" src="" class="reserve1-vector12" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="reserve1-frame162631">
+              <div class="reserve1-frame162628">
+                <span class="reserve1-text114">1</span>
+              </div>
+              <div class="reserve1-frame1626311">
+                <span class="reserve1-text115">2</span>
+              </div>
+              <div class="reserve1-frame162632">
+                <span class="reserve1-text116">3</span>
+              </div>
+              <div class="reserve1-frame162629">
+                <span class="reserve1-text117"><span>...</span></span>
+              </div>
+              <div class="reserve1-frame162630">
+                <span class="reserve1-text119"><span>10</span></span>
+              </div>
+            </div>
+            <div class="reserve1-frame1626321">
+              <div class="reserve1-arrowright2">
+                <div class="reserve1-vuesaxlineararrowright5">
+                  <div class="reserve1-arrowright3">
+                    <img
+                      alt="VectorI303"
+                      src="{% static 'vectori303-h0d.svg' %}"
+                      class="reserve1-vector13"
+                    />
+                    <img alt="VectorI303" src="" class="reserve1-vector14" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <span class="reserve1-text121"><span>Reserve</span></span>
+          <span class="reserve1-text123">
+            <span>
+              Filter accommodations and schedule a time slot for your desired
+              study room
+            </span>
+          </span>
+          <div class="reserve1-footerreserve1">
+            <img
+              alt="ucilogo23167"
+              src="{% static 'ucilogo23167-ig0t-200h.png' %}"
+              class="reserve1-ucilogo2"
+            />
+            <img
+              alt="UCIprimarylogoprintblue13167"
+              src="{% static 'uciprimarylogoprintblue13167-8at-200h.png' %}"
+              class="reserve1-u-iprimarylogoprintblue1"
+            />
+            <span class="reserve1-text125"><span>Roomie</span></span>
+            <span class="reserve1-text127">
+              <span>
+                <span>University of California, Irvine</span>
+                <br />
+                <span>CA 92697</span>
+                <br />
+                <span>(949) 824-5011</span>
+                <br />
+                <span></span>
+                <br />
+                <span></span>
+              </span>
+            </span>
+            <img
+              alt="Line23167"
+              src="{% static 'line23167-bj9g.svg' %}"
+              class="reserve1-line2"
+            />
+            <span class="reserve1-text138">
+              <span class="reserve1-text139">Disclaimer:</span>
+              <span>
+                This web page is not an official UCI web page. It is a project
+                from the 2023 VenusHacks hackathon. No harm to UCI and its
+                affiliates were intended in the creation of this website.
+              </span>
+            </span>
+            <span class="reserve1-text141">
+              <span>UCI Libraries</span>
+              <br />
+              <span class="reserve1-text144">
+                Hours of different libraries will vary
+              </span>
+              <br />
+            </span>
+          </div>
+          <div class="reserve1-navbar">
+            <div class="reserve1-user">
+              <div class="reserve1-vuesaxlinearuser">
+                <div class="reserve1-user1">
+                  <img
+                    alt="VectorI321"
+                    src="{% static 'vectori321-yzf8.svg' %}"
+                    class="reserve1-vector15"
+                  />
+                  <img
+                    alt="VectorI321"
+                    src="{% static 'vectori321-e81.svg' %}"
+                    class="reserve1-vector16"
+                  />
+                  <a href="{% url 'account' %}" class="reserve1-navlink">
+                    <img alt="VectorI321" src="" class="reserve1-vector17" />
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="reserve1-navbaricon">
+              <a href="{% url 'home' %}" class="reserve1-navlink1">
+                <div class="reserve1-logo-home">
+                  <img
+                    alt="UCIprimarylogoprintblue13218"
+                    src="{% static 'uciprimarylogoprintblue13218-o3x9h-200h.png' %}"
+                    class="reserve1-u-iprimarylogoprintblue11"
+                  />
+                  <span class="reserve1-text146"><span>Roomie</span></span>
+                </div>
+              </a>
+            </div>
+            <a href="{% url 'reserve' %}" class="reserve1-text148">
+              <span>Reserve</span>
+            </a>
+            <a href="{% url 'my-rooms' %}" class="reserve1-text150">
+              <span>My Rooms</span>
+            </a>
+            <a href="{% url 'about' %}"" class="reserve1-text152"><span>About</span></a>
+            <img
+              alt="Line32481"
+              src="{% static 'line32481-fsied.svg' %}"
+              class="reserve1-line3"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

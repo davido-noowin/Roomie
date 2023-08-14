@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="english">
+  <head>
+    <title>Account</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <meta property="twitter:card" content="summary_large_image" />
+
+    <style data-tag="reset-style-sheet">
+      html {  line-height: 1.15;}body {  margin: 0;}* {  box-sizing: border-box;  border-width: 0;  border-style: solid;}p,li,ul,pre,div,h1,h2,h3,h4,h5,h6,figure,blockquote,figcaption {  margin: 0;  padding: 0;}button {  background-color: transparent;}button,input,optgroup,select,textarea {  font-family: inherit;  font-size: 100%;  line-height: 1.15;  margin: 0;}button,select {  text-transform: none;}button,[type="button"],[type="reset"],[type="submit"]:-moz-focus {  outline: 1px dotted ButtonText;}a {  color: inherit;  text-decoration: inherit;}input {  padding: 2px 4px;}img {  display: block;}html { scroll-behavior: smooth  }
+    </style>
+    <style data-tag="default-style-sheet">
+      html {
+        font-family: Inter;
+        font-size: 16px;
+      }
+
+      body {
+        font-weight: 400;
+        font-style:normal;
+        text-decoration: none;
+        text-transform: none;
+        letter-spacing: normal;
+        line-height: 1.15;
+        color: var(--dl-color-gray-black);
+        background-color: var(--dl-color-gray-white);
+
+      }
+    </style>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Encode+Sans+Semi+Expanded:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Encode+Sans+Semi+Condensed:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Encode+Sans+Condensed:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Encode+Sans:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+      data-tag="font"
+    />
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'style.css' %}" />
+  </head>
+  <body>
+    <div>
+      <link href="{% static 'account.css' %}" rel="stylesheet" />
+
+      <div class="account-container">
+        <div class="account-account">
+          <div class="account-loginbox">
+            <button type="submit" class="account-loginbutton">
+              <span class="account-text"><span>Login</span></span>
+            </button>
+            <div class="account-createaccbutton">
+              <span class="account-text02 button">
+                <span>Create Account</span>
+              </span>
+            </div>
+            <span class="account-text04"><span>Forgot Password?</span></span>
+            <span class="account-text06">
+              <span>Forgot Email Address?</span>
+            </span>
+            <span class="account-text08 input">Email Address</span>
+            <span class="account-text09 input">Password</span>
+            <img
+              alt="Line62747"
+              src="{% static 'line62747-8v4c.svg' %}"
+              class="account-line7"
+            />
+            <img
+              alt="Line62747"
+              src="{% static 'line62747-8v4c.svg' %}"
+              class="account-line6"
+            />
+          </div>
+          <span class="account-text10"><span>Account</span></span>
+          <span class="account-text12">
+            <span>Login or register to reserve</span>
+          </span>
+          <div class="account-footer">
+            <img
+              alt="ucilogo23101"
+              src="{% static 'ucilogo23101-hy2-200h.png' %}"
+              class="account-ucilogo2"
+            />
+            <img
+              alt="UCIprimarylogoprintblue13101"
+              src="{% static 'uciprimarylogoprintblue13101-muhg-200h.png' %}"
+              class="account-u-iprimarylogoprintblue1"
+            />
+            <span class="account-text14"><span>Roomie</span></span>
+            <span class="account-text16">
+              <span>
+                <span>University of California, Irvine</span>
+                <br />
+                <span>CA 92697</span>
+                <br />
+                <span>(949) 824-5011</span>
+                <br />
+                <span></span>
+                <br />
+                <span></span>
+              </span>
+            </span>
+            <img
+              alt="Line23101"
+              src="{% static 'line23101-60ykk.svg' %}"
+              class="account-line2"
+            />
+            <span class="account-text27">
+              <span class="account-text28">Disclaimer:</span>
+              <span>
+                This web page is not an official UCI web page. It is a project
+                from the 2023 VenusHacks hackathon. No harm to UCI and its
+                affiliates were intended in the creation of this website.
+              </span>
+            </span>
+            <span class="account-text30">
+              <span>UCI Libraries</span>
+              <br />
+              <span class="account-text33">
+                Hours of different libraries will vary
+              </span>
+              <br />
+            </span>
+          </div>
+          <div class="account-navbaraccount">
+            <div class="account-user">
+              <div class="account-vuesaxlinearuser">
+                <div class="account-user1">
+                  <img
+                    alt="VectorI321"
+                    src="{% static 'vectori321-idm.svg' %}"
+                    class="account-vector"
+                  />
+                  <img
+                    alt="VectorI321"
+                    src="{% static 'vectori321-508j.svg' %}"
+                    class="account-vector1"
+                  />
+                  <a href="{% url 'account' %}" class="account-navlink">
+                    <img alt="VectorI321" src="" class="account-vector2" />
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="account-navbaricon">
+              <a href="{% url 'home' %}" class="account-navlink1">
+                <div class="account-home-logo">
+                  <img
+                    alt="UCIprimarylogoprintblue13218"
+                    src="{% static 'uciprimarylogoprintblue13218-9z6a-200h.png' %}"
+                    class="account-u-iprimarylogoprintblue11"
+                  />
+                  <span class="account-text35"><span>Roomie</span></span>
+                </div>
+              </a>
+            </div>
+            <a href="{% url 'reserve' %}" class="account-text37">
+              <span>Reserve</span>
+            </a>
+            <a href="{% url 'my-rooms' %}" class="account-text39">
+              <span>My Rooms</span>
+            </a>
+            <a href="{% url 'about' %}" class="account-text41"><span>About</span></a>
+            <img
+              alt="Line33218"
+              src="{% static 'line33218-cowo.svg' %}"
+              class="account-line3"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

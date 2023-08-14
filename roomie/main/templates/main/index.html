@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="english">
+  <head>
+    <title>Roomie</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <meta property="twitter:card" content="summary_large_image" />
+
+    <style data-tag="reset-style-sheet">
+      html {  line-height: 1.15;}body {  margin: 0;}* {  box-sizing: border-box;  border-width: 0;  border-style: solid;}p,li,ul,pre,div,h1,h2,h3,h4,h5,h6,figure,blockquote,figcaption {  margin: 0;  padding: 0;}button {  background-color: transparent;}button,input,optgroup,select,textarea {  font-family: inherit;  font-size: 100%;  line-height: 1.15;  margin: 0;}button,select {  text-transform: none;}button,[type="button"],[type="reset"],[type="button"]::-moz-focus-inner,[type="reset"]::-moz-focus-inner,[type="submit"]::-moz-focus-inner {  border-style: none;  padding: 0;}button:-moz-focus,[type="button"]:-moz-focus,[type="reset"]:-moz-focus,[type="submit"]:-moz-focus {  outline: 1px dotted ButtonText;}a {  color: inherit;  text-decoration: inherit;}input {  padding: 2px 4px;}img {  display: block;}html { scroll-behavior: smooth  }
+    </style>
+    <style data-tag="default-style-sheet">
+      html {
+        font-family: Inter;
+        font-size: 16px;
+      }
+
+      body {
+        font-weight: 400;
+        font-style:normal;
+        text-decoration: none;
+        text-transform: none;
+        letter-spacing: normal;
+        line-height: 1.15;
+        color: var(--dl-color-gray-black);
+        background-color: var(--dl-color-gray-white);
+
+      }
+    </style>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Encode+Sans+Semi+Expanded:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Encode+Sans+Semi+Condensed:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Encode+Sans+Condensed:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Encode+Sans:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+      data-tag="font"
+    />
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'style.css' %}" />
+  </head>
+  <body>
+    <div>
+      <link href="{% static 'index.css' %}" rel="stylesheet" />
+
+      <div class="home-container">
+        <div class="home-home">
+          <div class="home-selectrooms">
+            <div class="home-langson-info">
+              <img
+                alt="Langsonbackground4541"
+                src="{% static 'langsonbackground4541-cayb-900w.png' %}"
+                class="home-langsonbackground"
+              />
+              <span class="home-text">
+                <span>
+                  Enjoy a quiet, rustic place to study with comfortable sofa
+                  chairs and a wide variety of books.
+                </span>
+              </span>
+              <span class="home-text002">
+                <span>Contact Info:</span>
+                <br />
+                <br />
+                <span></span>
+                <span class="home-text007">(949)-824-6842</span>
+                <br />
+              </span>
+              <span class="home-text009">
+                <span>Operating Hours:</span>
+                <br class="home-text011" />
+                <br class="home-text012" />
+                <span class="home-text013">Sunday:&nbsp;</span>
+                <span class="home-text014">1 - 5 p.m.</span>
+                <br class="home-text015" />
+                <span class="home-text016">Monday-Thursday:&nbsp;</span>
+                <span class="home-text017">8 a.m. - 11 p.m.</span>
+                <br class="home-text018" />
+                <span class="home-text019">Friday:&nbsp;</span>
+                <span class="home-text020">8 a.m. - 6 p.m.</span>
+                <br class="home-text021" />
+                <span class="home-text022"></span>
+                <span class="home-text023">Saturday:</span>
+                <span class="home-text024"></span>
+                <span class="home-text025">1 - 9 p.m.</span>
+                <br />
+                <br />
+                <br />
+              </span>
+              <span class="home-text029 HeadingsH5-Bold18">
+                <span>Available centers and libraries</span>
+              </span>
+              <span class="home-text031 HeadingsH2-Bold44">
+                <span>Daily limit: 2 hours across all study rooms</span>
+              </span>
+              <img
+                alt="langsonindoors12747"
+                src="{% static 'langsonindoors12747-in6q-700w.png' %}"
+                class="home-langsonindoors1"
+              />
+              <span class="home-text033"><span>Langson Library</span></span>
+              <img
+                alt="phone44502"
+                src="{% static 'phone44502-bxnf.svg' %}"
+                class="home-phone4"
+              />
+              <div class="home-book4">
+                <div class="home-frame162605">
+                  <span class="home-text035 HeadingsH5-Bold18">
+                    <span>Book</span>
+                  </span>
+                  <div class="home-vuesaxlineararrowright">
+                    <img
+                      alt="Vector4591"
+                      src="{% static 'vector4591-fgp.svg' %}"
+                      class="home-vector"
+                    />
+                    <img
+                      alt="Vector4591"
+                      src="{% static 'vector4591-wuok.svg' %}"
+                      class="home-vector01"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="home-science-library-info">
+              <img
+                alt="scilibbackground4541"
+                src="{% static 'scilibbackground4541-oii-900w.png' %}"
+                class="home-scilibbackground"
+              />
+              <img
+                alt="scilib12747"
+                src="{% static 'scilib12747-e9m-400h.png' %}"
+                class="home-scilib1"
+              />
+              <img
+                alt="phone34502"
+                src="{% static 'phone34502-74o9.svg' %}"
+                class="home-phone3"
+              />
+              <span class="home-text037">
+                <span>Operating Hours:</span>
+                <br class="home-text039" />
+                <br class="home-text040" />
+                <span class="home-text041">Sunday:&nbsp;</span>
+                <span class="home-text042">1 - 5 p.m.</span>
+                <br class="home-text043" />
+                <span class="home-text044">Monday-Friday:&nbsp;</span>
+                <span class="home-text045">8 a.m. - 11 p.m.</span>
+                <br class="home-text046" />
+                <span class="home-text047">Saturday:</span>
+                <span class="home-text048"></span>
+                <span class="home-text049">1 - 5 p.m.</span>
+                <br />
+              </span>
+              <span class="home-text051">
+                <span>
+                  One of the largest consolidated science, technology, and
+                  medicine libraries in the nation, this environment is sleek
+                  yet confortable.
+                </span>
+              </span>
+              <span class="home-text053">
+                <span>Contact Info:</span>
+                <br />
+                <br />
+                <span></span>
+                <span class="home-text058">(949)-824-6842</span>
+                <br />
+              </span>
+              <span class="home-text060"><span>Science Library</span></span>
+              <div class="home-book3">
+                <div class="home-frame1626051">
+                  <span class="home-text062 HeadingsH5-Bold18">
+                    <span>Book</span>
+                  </span>
+                  <div class="home-vuesaxlineararrowright1">
+                    <img
+                      alt="Vector4591"
+                      src="{% static 'vector4591-k19m.svg' %}"
+                      class="home-vector02"
+                    />
+                    <img
+                      alt="Vector4591"
+                      src="{% static 'vector4591-itd7.svg' %}"
+                      class="home-vector03"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="home-gateway-info">
+              <img
+                alt="gatewaybackgroundbox4502"
+                src="{% static 'gatewaybackgroundbox4502-eawn-900w.png' %}"
+                class="home-gatewaybackgroundbox"
+              />
+              <img
+                alt="gateway12747"
+                src="{% static 'gateway12747-j5v-400h.png' %}"
+                class="home-gateway1"
+              />
+              <img
+                alt="phone23631"
+                src="{% static 'phone23631-4mpj.svg' %}"
+                class="home-phone2"
+              />
+              <span class="home-text064">
+                <span>Contact Info:</span>
+                <br />
+                <br />
+                <span></span>
+                <span class="home-text069">(949)-824-4968</span>
+                <br />
+              </span>
+              <span class="home-text071">
+                <span>Operating Hours:</span>
+                <br class="home-text073" />
+                <br class="home-text074" />
+                <span class="home-text075">Sunday:&nbsp;</span>
+                <span class="home-text076">5 p.m. - 3 a.m.</span>
+                <br class="home-text077" />
+                <span class="home-text078">Monday-Thursday:&nbsp;</span>
+                <span class="home-text079">8 a.m. - 3 a.m.</span>
+                <br class="home-text080" />
+                <span class="home-text081">Friday:&nbsp;</span>
+                <span class="home-text082">8 a.m. - 9 p.m.</span>
+                <br class="home-text083" />
+                <span class="home-text084">Saturday:</span>
+                <span class="home-text085"></span>
+                <span class="home-text086">5 - 9 p.m.</span>
+                <br />
+                <br />
+                <br />
+              </span>
+              <span class="home-text090">
+                <span>
+                  The tall ceilings and windows here encourage a collaborative
+                  work space to study.
+                </span>
+              </span>
+              <span class="home-text092">
+                <span>Gateway Study Center</span>
+              </span>
+              <div class="home-book2">
+                <div class="home-frame1626052">
+                  <span class="home-text094 HeadingsH5-Bold18">
+                    <span>Book</span>
+                  </span>
+                  <div class="home-vuesaxlineararrowright2">
+                    <img
+                      alt="Vector4591"
+                      src="{% static 'vector4591-xyf.svg' %}"
+                      class="home-vector04"
+                    />
+                    <img
+                      alt="Vector4591"
+                      src="{% static 'vector4591-774n.svg' %}"
+                      class="home-vector05"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="home-mr-info">
+              <img
+                alt="mrcbackgroundbox4502"
+                src="{% static 'mrcbackgroundbox4502-a0g4-900w.png' %}"
+                class="home-mrcbackgroundbox"
+              />
+              <span class="home-text096">
+                <span>Contact Info:</span>
+                <br />
+                <br />
+                <span></span>
+                <span class="home-text101">(949)-824-7072</span>
+                <br class="home-text102" />
+                <span class="home-text103">libmrc@uci.edu</span>
+              </span>
+              <img
+                alt="phone14502"
+                src="{% static 'phone14502-p0ua.svg' %}"
+                class="home-phone1"
+              />
+              <img
+                alt="asl1mrc212747"
+                src="{% static 'asl1mrc212747-8rym-400h.png' %}"
+                class="home-asl1mrc21"
+              />
+              <span class="home-text104">
+                <span>Operating Hours:</span>
+                <br class="home-text106" />
+                <br class="home-text107" />
+                <span class="home-text108">Sunday:&nbsp;</span>
+                <span class="home-text109">Closed</span>
+                <br class="home-text110" />
+                <span class="home-text111">Monday-Friday:</span>
+                <span class="home-text112">1</span>
+                <span class="home-text113">- 5 p.m.</span>
+                <br class="home-text114" />
+                <span class="home-text115"></span>
+                <span class="home-text116">Saturday:</span>
+                <span class="home-text117"></span>
+                <span class="home-text118">Closed</span>
+                <br />
+              </span>
+              <span class="home-text120">
+                A center filled with the latest and greatest technology for
+                students.
+              </span>
+              <span class="home-text121">
+                <span>Multimedia Resources Center</span>
+              </span>
+              <div class="home-book1">
+                <div class="home-frame1626053">
+                  <span class="home-text123 HeadingsH5-Bold18">
+                    <span>Book</span>
+                  </span>
+                  <div class="home-vuesaxlineararrowright3">
+                    <img
+                      alt="Vector4591"
+                      src="{% static 'vector4591-lnmt.svg' %}"
+                      class="home-vector06"
+                    />
+                    <img
+                      alt="Vector4591"
+                      src="{% static 'vector4591-syre.svg' %}"
+                      class="home-vector07"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <span class="home-text125">
+            <span>Reserve a room from our available centers and libraries</span>
+          </span>
+          <img
+            alt="Line42906"
+            src="{% static 'line42906-jg4k.svg' %}"
+            class="home-line4"
+          />
+          <section class="container">
+            <div class="home-langsonframe">
+              <img
+                alt="langsonI229"
+                src="{% static 'langsoni229-qve-2000w.png' %}"
+                class="home-langson"
+              />
+              <div class="home-frame162648">
+                <div class="home-frame162644">
+                  <span class="home-text127"><span>Book Now!</span></span>
+                </div>
+                <div class="home-frame162643">
+                  <span class="home-text129 HeadingsH2-Bold44">
+                    <span>Jack Langson Library</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="home-sciencelibraryframe">
+              <img
+                alt="sciencelibraryI229"
+                src="{% static 'sciencelibraryi229-utrg-2000w.png' %}"
+                class="home-sciencelibrary"
+              />
+              <div class="home-frame162647">
+                <div class="home-frame1626441">
+                  <span class="home-text131"><span>Book Now!</span></span>
+                </div>
+                <div class="home-frame1626431">
+                  <span class="home-text133 HeadingsH2-Bold44">
+                    <span>Science Library</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="home-gatewaycenterframe">
+              <img
+                alt="studycenterI229"
+                src="{% static 'studycenteri229-9wye-2000w.png' %}"
+                class="home-studycenter"
+              />
+              <div class="home-frame162646">
+                <div class="home-frame1626442">
+                  <span class="home-text135"><span>Book Now!</span></span>
+                </div>
+                <div class="home-frame1626432">
+                  <span class="home-text137 HeadingsH2-Bold44">
+                    <span>Gateway Study Center</span>
+                  </span>
+                </div>
+              </div>
+              <div class="home-frame162754"></div>
+            </div>
+            <div class="home-mrcframe">
+              <img
+                alt="mrcI229"
+                src="{% static 'mrci229-jmkj-2000w.png' %}"
+                class="home-mrc"
+              />
+              <div class="home-location">
+                <div class="home-frame1626443">
+                  <span class="home-text139"><span>Book Now</span></span>
+                </div>
+                <div class="home-frame1626433">
+                  <span class="home-text141 HeadingsH2-Bold44">
+                    Multimedia Resources Center
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="home-indicator">
+              <img
+                alt="Ellipse21I229"
+                src="{% static 'ellipse21i229-gnp2-200h.png' %}"
+                class="home-ellipse21"
+              />
+              <img
+                alt="Ellipse24I229"
+                src="{% static 'ellipse24i229-b4tc-200h.png' %}"
+                class="home-ellipse24"
+              />
+              <img
+                alt="Ellipse22I229"
+                src="{% static 'ellipse22i229-pha3z-200h.png' %}"
+                class="home-ellipse22"
+              />
+              <img
+                alt="Ellipse23I229"
+                src="{% static 'ellipse23i229-1oq-200h.png' %}"
+                class="home-ellipse23"
+              />
+            </div>
+            <button type="button" class="home-rightbutton">
+              <div class="home-arrowright">
+                <div class="home-vuesaxlineararrowright4">
+                  <div class="home-arrowright1">
+                    <img
+                      alt="VectorI229"
+                      src="{% static 'vectori229-syqk.svg' %}"
+                      class="home-vector08"
+                    />
+                    <img alt="VectorI229" src="" class="home-vector09" />
+                  </div>
+                </div>
+              </div>
+            </button>
+            <button type="button" class="home-leftbutton1">
+              <div class="home-arrowright2">
+                <div class="home-vuesaxlineararrowright5">
+                  <div class="home-arrowright3">
+                    <img
+                      alt="VectorI229"
+                      src="{% static 'vectori229-terr.svg' %}"
+                      class="home-vector10"
+                    />
+                    <img alt="VectorI229" src="" class="home-vector11" />
+                  </div>
+                </div>
+              </div>
+            </button>
+          </section>
+          <div class="home-footerhome">
+            <img
+              alt="ucilogo22956"
+              src="{% static 'ucilogo22956-kle-200h.png' %}"
+              class="home-ucilogo2"
+            />
+            <img
+              alt="UCIprimarylogoprintblue12956"
+              src="{% static 'uciprimarylogoprintblue12956-d4vp-200h.png' %}"
+              class="home-u-iprimarylogoprintblue1"
+            />
+            <span class="home-text142"><span>Roomie</span></span>
+            <span class="home-text144">
+              <span>
+                <span>University of California, Irvine</span>
+                <br />
+                <span>CA 92697</span>
+                <br />
+                <span>(949) 824-5011</span>
+                <br />
+                <span></span>
+                <br />
+                <span></span>
+              </span>
+            </span>
+            <img
+              alt="Line22956"
+              src="{% static 'line22956-3sp.svg' %}"
+              class="home-line2"
+            />
+            <span class="home-text155">
+              <span class="home-text156">Disclaimer:</span>
+              <span>
+                This web page is not an official UCI web page. It is a project
+                from the 2023 VenusHacks hackathon. No harm to UCI and its
+                affiliates were intended in the creation of this website.
+              </span>
+            </span>
+            <span class="home-text158">
+              <span>UCI Libraries</span>
+              <br />
+              <span class="home-text161">
+                Hours of different libraries will vary
+              </span>
+              <br />
+            </span>
+          </div>
+          <span class="home-text163"><span>Study Rooms</span></span>
+          <div class="home-navbar">
+            <div class="home-user">
+              <div class="home-vuesaxlinearuser">
+                <div class="home-user1">
+                  <img
+                    alt="VectorI512"
+                    src="{% static 'vectori512-o5ti.svg' %}"
+                    class="home-vector12"
+                  />
+                  <img
+                    alt="VectorI512"
+                    src="{% static 'vectori512-p3uk.svg' %}"
+                    class="home-vector13"
+                  />
+                  <a href="/account" class="home-navlink">
+                    <img alt="VectorI512" src="" class="home-vector14" />
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="home-navbaricon">
+              <img
+                alt="UCIprimarylogoprintblue15128"
+                src="{% static 'uciprimarylogoprintblue15128-zkmn-200h.png' %}"
+                class="home-u-iprimarylogoprintblue11"
+              />
+              <span class="home-text165">Roomie</span>
+            </div>
+            <a href="/reserve" class="home-text166">
+              <span>Reserve</span>
+            </a>
+            <a href="/my-rooms" class="home-text168">
+              <span>My Rooms</span>
+            </a>
+            <a href="/about" class="home-text170"><span>About</span></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
