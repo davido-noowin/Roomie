@@ -222,6 +222,10 @@
   justify-content: center;
   background-color: var(--dl-color-default-maincolor);
 }
+.home-book4:active {
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
 .home-frame162605 {
   gap: 18px;
   width: 113px;
@@ -418,6 +422,10 @@
   flex-direction: column;
   justify-content: center;
   background-color: var(--dl-color-default-maincolor);
+}
+.home-book3:active {
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
 }
 .home-frame1626051 {
   gap: 18px;
@@ -628,6 +636,10 @@
   flex-direction: column;
   justify-content: center;
   background-color: var(--dl-color-default-maincolor);
+}
+.home-book2:active {
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
 }
 .home-frame1626052 {
   gap: 18px;
@@ -844,6 +856,10 @@
   flex-direction: column;
   justify-content: center;
   background-color: var(--dl-color-default-maincolor);
+}
+.home-book1:active {
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
 }
 .home-frame1626053 {
   gap: 18px;

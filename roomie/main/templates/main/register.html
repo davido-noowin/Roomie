@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="english">
   <head>
-    <title>exported project</title>
+    <title>Register</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta charset="utf-8" />
     <meta property="twitter:card" content="summary_large_image" />
 
     <style data-tag="reset-style-sheet">
-      html {  line-height: 1.15;}body {  margin: 0;}* {  box-sizing: border-box;  border-width: 0;  border-style: solid;}p,li,ul,pre,div,h1,h2,h3,h4,h5,h6,figure,blockquote,figcaption {  margin: 0;  padding: 0;}button {  background-color: transparent;}button,input,optgroup,select,textarea {  font-family: inherit;  font-size: 100%;  line-height: 1.15;  margin: 0;}button,select {  text-transform: none;}button,[type="button"],[type="reset"],[type="submit"] {  -webkit-appearance: button;}button::-moz-focus-inner,[type="button"]::-moz-focus-inner,[type="reset"]::-moz-focus-inner,[type="submit"]::-moz-focus-inner {  border-style: none;  padding: 0;}button:-moz-focus,[type="button"]:-moz-focus,[type="reset"]:-moz-focus,[type="submit"]:-moz-focus {  outline: 1px dotted ButtonText;}a {  color: inherit;  text-decoration: inherit;}input {  padding: 2px 4px;}img {  display: block;}html { scroll-behavior: smooth  }
+      html {  line-height: 1.15;}body {  margin: 0;}* {  box-sizing: border-box;  border-width: 0;  border-style: solid;}p,li,ul,pre,div,h1,h2,h3,h4,h5,h6,figure,blockquote,figcaption {  margin: 0;  padding: 0;}button {  background-color: transparent;}button,input,optgroup,select,textarea {  font-family: inherit;  font-size: 100%;  line-height: 1.15;  margin: 0;}button,select {  text-transform: none;}button,[type="button"],[type="reset"],[type="button"]::-moz-focus-inner,[type="reset"]::-moz-focus-inner,[type="submit"]::-moz-focus-inner {  border-style: none;  padding: 0;}button:-moz-focus,[type="button"]:-moz-focus,[type="reset"]:-moz-focus,[type="submit"]:-moz-focus {  outline: 1px dotted ButtonText;}a {  color: inherit;  text-decoration: inherit;}input {  padding: 2px 4px;}img {  display: block;}html { scroll-behavior: smooth  }
     </style>
     <style data-tag="default-style-sheet">
       html {
@@ -52,11 +52,12 @@
       href="https://fonts.googleapis.com/css2?family=Encode+Sans:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
       data-tag="font"
     />
-    <link rel="stylesheet" href="./style.css" />
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'style.css' %}" />
   </head>
   <body>
     <div>
-      <link href="./register.css" rel="stylesheet" />
+      <link href="{% static 'register.css' %}" rel="stylesheet" />
 
       <div class="register-container">
         <div class="register-register">
@@ -69,7 +70,7 @@
             </span>
             <img
               alt="Line62877"
-              src="public/external/line62877-6bn.svg"
+              src="{% static 'line62877-6bn.svg' %}"
               class="register-line6"
             />
             <span id="pw" class="register-text04 input">
@@ -77,7 +78,7 @@
             </span>
             <img
               alt="Line62876"
-              src="public/external/line62876-o46.svg"
+              src="{% static 'line62876-o46.svg' %}"
               class="register-line61"
             />
             <span class="register-text06">
@@ -96,7 +97,7 @@
             </span>
             <img
               alt="Line62877"
-              src="public/external/line62877-4s8.svg"
+              src="{% static 'line62877-4s8.svg' %}"
               class="register-line62"
             />
             <span id="email" class="register-text17 input">
@@ -104,7 +105,7 @@
             </span>
             <img
               alt="Line62876"
-              src="public/external/line62876-0wo.svg"
+              src="{% static 'line62876-0wo.svg' %}"
               class="register-line63"
             />
             <span id="lastname" class="register-text19 input">
@@ -112,7 +113,7 @@
             </span>
             <img
               alt="Line62877"
-              src="public/external/line62877-he3m.svg"
+              src="{% static 'line62877-he3m.svg' %}"
               class="register-line64"
             />
             <span id="firstname" class="register-text21 input">
@@ -120,7 +121,7 @@
             </span>
             <img
               alt="Line62877"
-              src="public/external/line62877-9456.svg"
+              src="{% static 'line62877-9456.svg' %}"
               class="register-line65"
             />
             <span id="middlename" class="register-text23 input">
@@ -128,19 +129,19 @@
             </span>
             <img
               alt="Line63037"
-              src="public/external/line63037-f335.svg"
+              src="{% static 'line63037-f335.svg' %}"
               class="register-line66"
             />
           </div>
           <div class="register-footer">
             <img
               alt="ucilogo23101"
-              src="public/external/ucilogo23101-8hyi-200h.png"
+              src="{% static 'ucilogo23101-8hyi-200h.png' %}"
               class="register-ucilogo2"
             />
             <img
               alt="UCIprimarylogoprintblue13101"
-              src="public/external/uciprimarylogoprintblue13101-x7hk-200h.png"
+              src="{% static 'uciprimarylogoprintblue13101-x7hk-200h.png' %}"
               class="register-u-iprimarylogoprintblue1"
             />
             <span class="register-text25"><span>Roomie</span></span>
@@ -159,7 +160,7 @@
             </span>
             <img
               alt="Line23101"
-              src="public/external/line23101-3sc.svg"
+              src="{% static 'line23101-3sc.svg' %}"
               class="register-line2"
             />
             <span class="register-text38">
@@ -189,42 +190,42 @@
                 <div class="register-user1">
                   <img
                     alt="VectorI321"
-                    src="public/external/vectori321-nv6b.svg"
+                    src="{% static 'vectori321-nv6b.svg' %}"
                     class="register-vector"
                   />
                   <img
                     alt="VectorI321"
-                    src="public/external/vectori321-8dk.svg"
+                    src="{% static 'vectori321-8dk.svg' %}"
                     class="register-vector1"
                   />
-                  <a href="account.html" class="register-navlink">
+                  <a href="{% url 'account' %}" class="register-navlink">
                     <img alt="VectorI321" src="" class="register-vector2" />
                   </a>
                 </div>
               </div>
             </div>
             <div class="register-navbaricon">
-              <a href="index.html" class="register-navlink1">
+              <a href="{% url 'home' %}" class="register-navlink1">
                 <div class="register-logo-home">
                   <img
                     alt="UCIprimarylogoprintblue13218"
-                    src="public/external/uciprimarylogoprintblue13218-2uw-200h.png"
+                    src="{% static 'uciprimarylogoprintblue13218-2uw-200h.png' %}"
                     class="register-u-iprimarylogoprintblue11"
                   />
                   <span class="register-text50"><span>Roomie</span></span>
                 </div>
               </a>
             </div>
-            <a href="reserve1.html" class="register-text52">
+            <a href="{% url 'reserve' %}" class="register-text52">
               <span>Reserve</span>
             </a>
-            <a href="my-rooms.html" class="register-text54">
+            <a href="{% url 'my-rooms' %}"class="register-text54">
               <span>My Rooms</span>
             </a>
-            <a href="about.html" class="register-text56"><span>About</span></a>
+            <a href="{% url 'about' %}" class="register-text56"><span>About</span></a>
             <img
               alt="Line33219"
-              src="public/external/line33219-r8rh.svg"
+              src="{% static 'line33219-r8rh.svg' %}"
               class="register-line3"
             />
           </div>

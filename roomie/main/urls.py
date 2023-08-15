@@ -6,5 +6,6 @@ urlpatterns = [
     path("reserve/", views.reserve, name="reserve"),
     path("my-rooms/", views.myrooms, name="my-rooms"),
     path("about/", views.about, name="about"),
-    path("account/", views.account, name="account")
+    path("account/", views.account, name="account"),
+    path("register/", views.createAccount, name="register"),
 ]

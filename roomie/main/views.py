@@ -19,3 +19,7 @@ def about(response:HttpResponse) -> HttpResponse:
 
 def account(response:HttpResponse) -> HttpResponse:
     return render(response, 'main/account.html', {})
+
+
+def createAccount(response:HttpResponse) -> HttpResponse:
+    return render(response, 'main/register.html')

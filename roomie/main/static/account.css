@@ -40,6 +40,9 @@
   justify-content: center;
   background-color: var(--dl-color-default-maincolor);
 }
+.account-loginbutton:hover {
+  background-color: rgba(63, 66, 151, .5);
+}
 .account-text {
   color: var(--dl-color-default-screencolor);
   height: auto;
@@ -60,6 +63,9 @@
   display: flex;
   position: absolute;
   align-items: flex-start;
+}
+.account-text02:hover {
+  background-color: rgba(102, 102, 102, 0.5);
 }
 .account-text02 {
   top: 0px;
