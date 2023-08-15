@@ -1,7 +1,11 @@
 from django.shortcuts import render
 from django.http import HttpResponse, HttpResponseRedirect
+from .models import Room, Roomaccomodations
 
 def home(response:HttpResponse) -> HttpResponse:
+    #room_info = Room.objects.all()
+    #print(room_info)
+
     return render(response, 'main/index.html', {})
 
 
