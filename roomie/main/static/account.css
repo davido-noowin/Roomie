@@ -131,6 +131,8 @@
   border-width: 0px;
   font-stretch: normal;
   text-decoration: none;
+  outline: none;
+  border: none;
 }
 .account-text09 {
   top: 104px;
@@ -148,6 +150,8 @@
   border-width: 0px;
   font-stretch: normal;
   text-decoration: none;
+  outline: none;
+  border: none;
 }
 .account-line7 {
   top: 35px;

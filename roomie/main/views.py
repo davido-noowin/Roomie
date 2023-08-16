@@ -1,7 +1,9 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
+from django.contrib.auth import login, authenticate, logout
 from django.http import HttpResponse, HttpResponseRedirect
 from django.contrib.auth.forms import UserCreationForm
 from .models import Room, Roomaccomodations
+from django.contrib import messages
 from .forms import NewUserForm
 
 def home(response:HttpResponse) -> HttpResponse:
@@ -24,7 +26,23 @@ def about(response:HttpResponse) -> HttpResponse:
 
 
 def account(response:HttpResponse) -> HttpResponse:
-    return render(response, 'main/account.html', {})
+    if response.method == 'POST':
+        username = response.POST.get('username')
+        print(username)
+        password = response.POST.get('password')
+        print(password)
+
+        user = authenticate(response, username=username, password=password)
+
+        if user is not None:
+            login(response, user)
+            return redirect('home') # TODO: change this to a confirmation page that you logged in
+        else:
+            messages.info(response, 'Email or Password is incorrect') # FIX
+            print('wrong login') # TODO: change this to a page that tells you that you got your login info wrong
+
+    context = {}
+    return render(response, 'main/account.html', context)
 
 
 def createAccount(response:HttpResponse) -> HttpResponse:
@@ -33,8 +51,13 @@ def createAccount(response:HttpResponse) -> HttpResponse:
     if response.method == 'POST':
         form = NewUserForm(response.POST)
         if form.is_valid():
-            form.save()
-    
+            inital = form.save(commit=False)
+            inital.username = form.cleaned_data['email']
+            inital.save()
+            login(response, inital)
+            return redirect('home') # TODO: change this to a confirmation page that you registered
+        else:
+            return redirect('register') # TODO: change this to a confirmation page that you did not fill in info correctly
     context = {
         'form' : form
     }

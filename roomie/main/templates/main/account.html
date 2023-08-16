@@ -62,9 +62,18 @@
       <div class="account-container">
         <div class="account-account">
           <div class="account-loginbox">
-            <button type="submit" class="account-loginbutton">
-              <span class="account-text"><span>Login</span></span>
-            </button>
+            <form method="POST" action="">
+              {% csrf_token %}
+
+              <input type="text" name="username" placeholder="Email Address" class="account-text08 input"></input>
+
+              <input type="password" name="password" placeholder="Password" class="account-text09 input"></input>
+
+              <button type="submit" class="account-loginbutton">
+                <span class="account-text"><span>Login</span></span>
+              </button>
+
+            </form>
             <a href="{% url 'register'%}" class="account-createaccbutton">
               <span class="account-text02"><span>Create Account</span></span>
             </a>
@@ -72,8 +81,6 @@
             <span class="account-text06">
               <span>Forgot Email Address?</span>
             </span>
-            <span class="account-text08 input">Email Address</span>
-            <span class="account-text09 input">Password</span>
             <img
               alt="Line62747"
               src="{% static 'line62747-8v4c.svg' %}"

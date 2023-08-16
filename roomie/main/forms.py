@@ -34,7 +34,7 @@ class NewUserForm(UserCreationForm):
     email= forms.EmailField(
         label="Email",
         required=True,
-        max_length=64, 
+        max_length=64,
         widget=forms.TextInput(
             attrs={
                 'placeholder': 'Email (Required)',
@@ -46,6 +46,7 @@ class NewUserForm(UserCreationForm):
     password1 = forms.CharField(
         label="Password",
         required=True,
+        
         widget=forms.PasswordInput(
             attrs={
                 'placeholder': 'Enter your password',

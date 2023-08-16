@@ -1,5 +1,6 @@
 from django.db import models
 
+
 class Student(models.Model):
     name_first = models.CharField(max_length=50, blank=True, null=True)
     name_last = models.CharField(max_length=50, blank=True, null=True)
