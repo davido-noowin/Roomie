@@ -40,7 +40,11 @@
   border-radius: 16px;
   justify-content: center;
   background-color: var(--dl-color-default-linecolor);
+  cursor: pointer;
 }
+.register-create-account-button:hover {
+  background-color: rgba(102, 102, 102, 0.5);
+} 
 .register-text {
   color: var(--dl-color-default-maincolor);
   height: auto;
@@ -54,7 +58,7 @@
   text-decoration: none;
 }
 .register-text02 {
-  top: 542px;
+  top: 260px;
   color: var(--dl-color-default-paragraphcolor);
   width: 700px;
   height: auto;
@@ -69,16 +73,18 @@
   border-width: 0px;
   font-stretch: normal;
   text-decoration: none;
+  border: none;
+  outline: none;
 }
 .register-line6 {
-  top: 574px;
+  top: 555px;
   left: 0px;
   width: 700px;
   height: auto;
   position: absolute;
 }
 .register-text04 {
-  top: 365px;
+  top: 140px;
   color: var(--dl-color-default-paragraphcolor);
   width: 700px;
   height: auto;
@@ -93,18 +99,20 @@
   border-width: 0px;
   font-stretch: normal;
   text-decoration: none;
+  outline: none;
+  border: none;
 }
 .register-line61 {
-  top: 397px;
+  top: 322px;
   left: 0px;
   width: 700px;
   height: auto;
   position: absolute;
 }
 .register-text06 {
-  top: 413px;
+  top: 370px;
   left: 16.568077087402344px;
-  color: var(--dl-color-default-paragraphcolor);
+  color: var(--dl-color-default-maincolor);
   width: 350px;
   height: auto;
   position: absolute;
@@ -142,7 +150,7 @@
   position: absolute;
 }
 .register-text17 {
-  top: 219px;
+  top: 105px;
   color: var(--dl-color-default-paragraphcolor);
   width: 700px;
   height: auto;
@@ -157,6 +165,8 @@
   border-width: 0px;
   font-stretch: normal;
   text-decoration: none;
+  border: none;
+  outline: none;
 }
 .register-line63 {
   top: 251px;
@@ -166,7 +176,7 @@
   position: absolute;
 }
 .register-text19 {
-  top: 146px;
+  top: 70px;
   color: var(--dl-color-default-paragraphcolor);
   width: 700px;
   height: auto;
@@ -181,6 +191,8 @@
   border-width: 0px;
   font-stretch: normal;
   text-decoration: none;
+  border: none;
+  outline: none;
 }
 .register-line64 {
   top: 178px;
@@ -191,6 +203,7 @@
 }
 .register-text21 {
   color: var(--dl-color-default-paragraphcolor);
+  top: 30px;
   width: 700px;
   height: auto;
   padding: 0px;
@@ -204,9 +217,11 @@
   border-width: 0px;
   font-stretch: normal;
   text-decoration: none;
+  border: none;
+  outline: none;
 }
 .register-line65 {
-  top: 32px;
+  top: 95px;
   left: 0px;
   width: 700px;
   height: auto;
@@ -228,13 +243,6 @@
   border-width: 0px;
   font-stretch: normal;
   text-decoration: none;
-}
-.register-line66 {
-  top: 105px;
-  left: 0px;
-  width: 700px;
-  height: auto;
-  position: absolute;
 }
 .register-footer {
   top: 1122px;

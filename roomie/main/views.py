@@ -1,6 +1,8 @@
 from django.shortcuts import render
 from django.http import HttpResponse, HttpResponseRedirect
+from django.contrib.auth.forms import UserCreationForm
 from .models import Room, Roomaccomodations
+from .forms import NewUserForm
 
 def home(response:HttpResponse) -> HttpResponse:
     #room_info = Room.objects.all()
@@ -26,4 +28,15 @@ def account(response:HttpResponse) -> HttpResponse:
 
 
 def createAccount(response:HttpResponse) -> HttpResponse:
-    return render(response, 'main/register.html')
+    form = NewUserForm()
+
+    if response.method == 'POST':
+        form = NewUserForm(response.POST)
+        if form.is_valid():
+            form.save()
+    
+    context = {
+        'form' : form
+    }
+
+    return render(response, 'main/register.html', context)

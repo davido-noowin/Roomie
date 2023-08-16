@@ -62,20 +62,40 @@
       <div class="register-container">
         <div class="register-register">
           <div class="register-registerinfo">
-            <button class="register-create-account-button button">
-              <span class="register-text"><span>Create Account</span></span>
-            </button>
-            <span id="confirmpw" class="register-text02 input">
-              <span>Confirm Password (Required)</span>
-            </span>
+            <form method="POST" action="">
+              {% csrf_token %}
+              
+              <span id="firstname" class="register-text21 input">
+                <span>{{form.first_name}}</span>
+              </span>
+
+              <span id="lastname" class="register-text19 input">
+                <span>{{form.last_name}}</span>
+              </span>
+              
+              <span id="email" class="register-text17 input">
+                <span>{{form.email}}</span>
+              </span>
+              
+              <span id="pw" class="register-text04 input">
+                <span>{{form.password1}}</span>
+              </span>
+              
+              <span id="confirmpw" class="register-text02 input">
+                <span>{{form.password2}}</span>
+              </span>
+
+              <button type="submit" class="register-create-account-button button">
+                <span class="register-text"><span>Create Account</span></span>
+              </button>
+      
+            </form>
+            
             <img
               alt="Line62877"
               src="{% static 'line62877-6bn.svg' %}"
               class="register-line6"
             />
-            <span id="pw" class="register-text04 input">
-              <span>Password (Required)</span>
-            </span>
             <img
               alt="Line62876"
               src="{% static 'line62876-o46.svg' %}"
@@ -92,45 +112,21 @@
                 <span>One special character</span>
               </span>
             </span>
-            <span id="cofirmemail" class="register-text15 input">
-              <span>Confirm Email Address (Required)</span>
-            </span>
-            <img
-              alt="Line62877"
-              src="{% static 'line62877-4s8.svg' %}"
-              class="register-line62"
-            />
-            <span id="email" class="register-text17 input">
-              <span>Email Address (Required)</span>
-            </span>
+        
             <img
               alt="Line62876"
               src="{% static 'line62876-0wo.svg' %}"
               class="register-line63"
             />
-            <span id="lastname" class="register-text19 input">
-              <span>Last Name (Required)</span>
-            </span>
             <img
               alt="Line62877"
               src="{% static 'line62877-he3m.svg' %}"
               class="register-line64"
             />
-            <span id="firstname" class="register-text21 input">
-              <span>First Name (Required)</span>
-            </span>
             <img
               alt="Line62877"
               src="{% static 'line62877-9456.svg' %}"
               class="register-line65"
-            />
-            <span id="middlename" class="register-text23 input">
-              <span>Middle Name (Optional)</span>
-            </span>
-            <img
-              alt="Line63037"
-              src="{% static 'line63037-f335.svg' %}"
-              class="register-line66"
             />
           </div>
           <div class="register-footer">
