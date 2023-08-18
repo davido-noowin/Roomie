@@ -25,6 +25,22 @@ def about(response:HttpResponse) -> HttpResponse:
     return render(response, 'main/about.html', {})
 
 
+def bookSuccess(response:HttpResponse) -> HttpResponse:
+    context = {}
+    return render(response, 'main/book-success.html', context)
+
+
+def loginSuccess(response:HttpResponse) -> HttpResponse:
+    context = {}
+    return render(response, 'main/login-success.html', context)
+
+
+def logoutSuccess(response:HttpResponse) -> HttpResponse:
+    logout(response)
+    context = {}
+    return render(response, 'main/logout.html', context)
+
+
 def account(response:HttpResponse) -> HttpResponse:
     if response.method == 'POST':
         username = response.POST.get('username')
@@ -36,13 +52,12 @@ def account(response:HttpResponse) -> HttpResponse:
 
         if user is not None:
             login(response, user)
-            return redirect('home') # TODO: change this to a confirmation page that you logged in
+            return redirect(loginSuccess) # TODO: change this to a confirmation page that you logged in
         else:
             messages.info(response, 'Email or Password is incorrect') # FIX
             print('wrong login') # TODO: change this to a page that tells you that you got your login info wrong
 
-    context = {}
-    return render(response, 'main/account.html', context)
+    return render(response, 'main/account.html', {})
 
 
 def createAccount(response:HttpResponse) -> HttpResponse:

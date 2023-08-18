@@ -542,8 +542,24 @@
                     class="home-vector13"
                   />
                   <a href="/account" class="home-navlink">
+                    <span class="home-username">
+                      {% if user.is_authenticated %}
+                        {{user.get_short_name}}
+                      {% else %}
+                        {{''}}
+                      {% endif %}
+                    </span>
                     <img alt="VectorI512" src="" class="home-vector14" />
                   </a>
+                  {% if user.is_authenticated %}
+                    <a href="{% url 'logout' %}">
+                      <span class="home-logout">
+                        Logout
+                      </span>
+                    </a>
+                  {% else %}
+                    {{''}}
+                  {% endif %}
                 </div>
               </div>
             </div>

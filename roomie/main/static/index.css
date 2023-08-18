@@ -176,6 +176,36 @@
   text-align: left;
   line-height: 129.99999523162842%;
 }
+.home-username {
+    top: -3px;
+    left: 35px;
+    color: rgba(0, 0, 0, 1);
+    height: auto;
+    position: absolute;
+    font-size: 20px;
+    font-style: SemiExpanded Regular;
+    text-align: left;
+    font-family: Encode Sans;
+    font-weight: 400;
+    line-height: 179.99999523162842%;
+    font-stretch: normal;
+    text-decoration: none;
+}
+.home-logout {
+  top: -3px;
+    left: 125px;
+    color: rgba(0, 0, 0, 1);
+    height: auto;
+    position: absolute;
+    font-size: 20px;
+    font-style: SemiExpanded Regular;
+    text-align: left;
+    font-family: Encode Sans;
+    font-weight: 400;
+    line-height: 179.99999523162842%;
+    font-stretch: normal;
+    text-decoration: none;
+}
 .home-langsonindoors1 {
   top: 1428px;
   left: 0px;
