@@ -179,7 +179,7 @@
             </span>
           </div>
           <span class="register-text46">
-            <span>Register for a Roomie account</span>
+            <span>{{ message }}</span>
           </span>
           <span class="register-text48"><span>Register</span></span>
           <div class="register-navbarregister">
@@ -217,7 +217,7 @@
             <a href="{% url 'reserve' %}" class="register-text52">
               <span>Reserve</span>
             </a>
-            <a href="{% url 'my-rooms' %}"class="register-text54">
+            <a href="/my-rooms/{{user}}/"class="register-text54">
               <span>My Rooms</span>
             </a>
             <a href="{% url 'about' %}" class="register-text56"><span>About</span></a>

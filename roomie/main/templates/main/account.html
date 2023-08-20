@@ -97,7 +97,7 @@
           </div>
           <span class="account-text10"><span>Account</span></span>
           <span class="account-text12">
-            <span>Login or register to reserve</span>
+            <span>{{ message }}</span>
           </span>
           <div class="account-footer">
             <img
@@ -181,7 +181,7 @@
             <a href="{% url 'reserve' %}" class="account-text37">
               <span>Reserve</span>
             </a>
-            <a href="{% url 'my-rooms' %}" class="account-text39">
+            <a href="/my-rooms/{{user}}/" class="account-text39">
               <span>My Rooms</span>
             </a>
             <a href="{% url 'about' %}" class="account-text41"><span>About</span></a>

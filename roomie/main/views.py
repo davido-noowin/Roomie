@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect
 from django.contrib.auth import login, authenticate, logout
 from django.http import HttpResponse, HttpResponseRedirect
 from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth.decorators import login_required
 from .models import Room, Roomaccomodations
 from django.contrib import messages
 from .forms import NewUserForm
@@ -17,7 +18,10 @@ def reserve(response:HttpResponse) -> HttpResponse:
     return render(response, 'main/reserve1.html', {})
 
 
-def myrooms(response:HttpResponse) -> HttpResponse:
+@login_required(login_url='account')
+def myrooms(response:HttpResponse, user:str) -> HttpResponse:
+    if response.user.email != user:
+        return redirect('home')
     return render(response, 'main/my-rooms.html', {})
 
 
@@ -35,6 +39,7 @@ def loginSuccess(response:HttpResponse) -> HttpResponse:
     return render(response, 'main/login-success.html', context)
 
 
+@login_required(login_url='account')
 def logoutSuccess(response:HttpResponse) -> HttpResponse:
     logout(response)
     context = {}
@@ -42,26 +47,34 @@ def logoutSuccess(response:HttpResponse) -> HttpResponse:
 
 
 def account(response:HttpResponse) -> HttpResponse:
+    if response.user.is_authenticated:
+        return redirect('home')
+
+    message = 'Login or register to reserve'
     if response.method == 'POST':
         username = response.POST.get('username')
-        print(username)
+        # print(username)
         password = response.POST.get('password')
-        print(password)
+        # print(password)
 
         user = authenticate(response, username=username, password=password)
 
         if user is not None:
             login(response, user)
-            return redirect(loginSuccess) # TODO: change this to a confirmation page that you logged in
+            return redirect(loginSuccess)
         else:
-            messages.info(response, 'Email or Password is incorrect') # FIX
-            print('wrong login') # TODO: change this to a page that tells you that you got your login info wrong
+            message = 'Email or Password is incorrect'
+            print('wrong login')
 
-    return render(response, 'main/account.html', {})
+    return render(response, 'main/account.html', {'message' : message})
 
 
 def createAccount(response:HttpResponse) -> HttpResponse:
+    if response.user.is_authenticated:
+        return redirect('home')
+
     form = NewUserForm()
+    message = 'Register for a Roomie account'
 
     if response.method == 'POST':
         form = NewUserForm(response.POST)
@@ -70,11 +83,12 @@ def createAccount(response:HttpResponse) -> HttpResponse:
             inital.username = form.cleaned_data['email']
             inital.save()
             login(response, inital)
-            return redirect('home') # TODO: change this to a confirmation page that you registered
+            return redirect('home')
         else:
-            return redirect('register') # TODO: change this to a confirmation page that you did not fill in info correctly
+            message = 'Email or password not valid'
     context = {
-        'form' : form
+        'form' : form,
+        'message' : message
     }
 
     return render(response, 'main/register.html', context)
