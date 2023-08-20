@@ -53,6 +53,7 @@
       data-tag="font"
     />
     {% load static %}
+    {% load filters %}
     <link rel="stylesheet" href="{% static 'style.css' %}" />
   </head>
   <body>
@@ -247,125 +248,223 @@
                     src="{% static 'divider3631-32qr.svg' %}"
                     class="my-rooms-divider"
                   />
-                  <div class="my-rooms-day">
-                    <span class="my-rooms-text059">3</span>
-                  </div>
-                  <div class="my-rooms-day01">
-                    <span class="my-rooms-text060"><span>10</span></span>
-                  </div>
-                  <div class="my-rooms-day02">
-                    <span class="my-rooms-text062"><span>17</span></span>
-                  </div>
-                  <div class="my-rooms-day03">
-                    <span class="my-rooms-text064"><span>24</span></span>
-                  </div>
-                  <div class="my-rooms-day04">
-                    <span class="my-rooms-text066"><span>31</span></span>
-                  </div>
+                  <!--Monday Dates for Calendar-->
                   <div class="my-rooms-day05">
                     <span class="my-rooms-text068"><span>Mo</span></span>
                   </div>
+                  <div class="my-rooms-day39">
+                    <span class="my-rooms-text124"><span>{% with mon|index:0 as my_item %}
+                      {{ my_item }}
+                    {% endwith %}</span></span>
+                  </div>
+                  <div class="my-rooms-day">
+                    <span class="my-rooms-text059">
+                      {% with mon|index:1 as my_item %}
+                        {{ my_item }}
+                      {% endwith %}</span>
+                  </div>
+                  <div class="my-rooms-day01">
+                    <span class="my-rooms-text060"><span>{% with mon|index:2 as my_item %}
+                      {{ my_item }}
+                    {% endwith %}</span></span>
+                  </div>
+                  <div class="my-rooms-day02">
+                    <span class="my-rooms-text062"><span>{% with mon|index:3 as my_item %}
+                      {{ my_item }}
+                    {% endwith %}</span></span>
+                  </div>
+                  <div class="my-rooms-day03">
+                    <span class="my-rooms-text064"><span>{% with mon|index:4 as my_item %}
+                      {{ my_item }}
+                    {% endwith %}</span></span>
+                  </div>
+
+                  <!--Tuesday Dates for Calendar-->
                   <div class="my-rooms-day06">
                     <span class="my-rooms-text070"><span>Tu</span></span>
                   </div>
+                  <div class="my-rooms-day41">
+                    <span class="my-rooms-text124"><span>{% with tue|index:0 as my_item %}
+                      {{ my_item }}
+                    {% endwith %}</span></span>
+                  </div>
+                  <div class="my-rooms-day12">
+                    <span class="my-rooms-text082">{% with tue|index:1 as my_item %}
+                      {{ my_item }}
+                    {% endwith %}</span>
+                  </div>
+                  <div class="my-rooms-day13">
+                    <span class="my-rooms-text083"><span>{% with tue|index:2 as my_item %}
+                      {{ my_item }}
+                    {% endwith %}</span></span>
+                  </div>
+                  <div class="my-rooms-day14">
+                    <span class="my-rooms-text085"><span>{% with tue|index:3 as my_item %}
+                      {{ my_item }}
+                    {% endwith %}</span></span>
+                  </div>
+                  <div class="my-rooms-day15">
+                    <span class="my-rooms-text087"><span>{% with tue|index:4 as my_item %}
+                      {{ my_item }}
+                    {% endwith %}</span></span>
+                  </div>
+
+                  <!--Wed Dates for Calendar-->
                   <div class="my-rooms-day07">
                     <span class="my-rooms-text072"><span>We</span></span>
                   </div>
+                  <div class="my-rooms-day40">
+                    <span class="my-rooms-text124"><span>{% with wed|index:0 as my_item %}
+                      {{ my_item }}
+                    {% endwith %}</span></span>
+                  </div>
+                  <div class="my-rooms-day16">
+                    <span class="my-rooms-text089">{% with wed|index:1 as my_item %}
+                      {{ my_item }}
+                    {% endwith %}</span>
+                  </div>
+                  <div class="my-rooms-day17">
+                    <span class="my-rooms-text090"><span>{% with wed|index:2 as my_item %}
+                      {{ my_item }}
+                    {% endwith %}</span></span>
+                  </div>
+                  <div class="my-rooms-day18">
+                    <span class="my-rooms-text092"><span>{% with wed|index:3 as my_item %}
+                      {{ my_item }}
+                    {% endwith %}</span></span>
+                  </div>
+                  <div class="my-rooms-day19">
+                    <span class="my-rooms-text094"><span>{% with wed|index:4 as my_item %}
+                      {{ my_item }}
+                    {% endwith %}</span></span>
+                  </div>
+
+                  <!--Thur Dates for Calendar-->
                   <div class="my-rooms-day08">
                     <span class="my-rooms-text074"><span>Th</span></span>
                   </div>
+                  <div class="my-rooms-day42">
+                    <span class="my-rooms-text124"><span>{% with thu|index:0 as my_item %}
+                      {{ my_item }}
+                    {% endwith %}</span></span>
+                  </div>
+                  <div class="my-rooms-day20">
+                    <span class="my-rooms-text096">{% with thu|index:1 as my_item %}
+                      {{ my_item }}
+                    {% endwith %}</span>
+                  </div>
+                  <div class="my-rooms-day21">
+                    <span class="my-rooms-text097"><span>{% with thu|index:2 as my_item %}
+                      {{ my_item }}
+                    {% endwith %}</span></span>
+                  </div>
+                  <div class="my-rooms-day22">
+                    <span class="my-rooms-text099"><span>{% with thu|index:3 as my_item %}
+                      {{ my_item }}
+                    {% endwith %}</span></span>
+                  </div>
+                  <div class="my-rooms-day23">
+                    <span class="my-rooms-text101"><span>{% with thu|index:4 as my_item %}
+                      {{ my_item }}
+                    {% endwith %}</span></span>
+                  </div>
+
+                  <!--Fri Dates for Calendar-->
                   <div class="my-rooms-day09">
                     <span class="my-rooms-text076"><span>Fr</span></span>
                   </div>
+                  <div class="my-rooms-day43">
+                    <span class="my-rooms-text124"><span>{% with fri|index:0 as my_item %}
+                      {{ my_item }}
+                    {% endwith %}</span></span>
+                  </div>
+                  <div class="my-rooms-day24">
+                    <span class="my-rooms-text103">{% with fri|index:1 as my_item %}
+                      {{ my_item }}
+                    {% endwith %}</span>
+                  </div>
+                  <div class="my-rooms-day25">
+                    <span class="my-rooms-text104"><span>{% with mon|index:2 as my_item %}
+                      {{ my_item }}
+                    {% endwith %}</span></span>
+                  </div>
+                  <div class="my-rooms-day26">
+                    <span class="my-rooms-text106"><span>{% with mon|index:3 as my_item %}
+                      {{ my_item }}
+                    {% endwith %}</span></span>
+                  </div>
+                  <div class="my-rooms-day27">
+                    <span class="my-rooms-text108"><span>{% with fri|index:4 as my_item %}
+                      {{ my_item }}
+                    {% endwith %}</span></span>
+                  </div>
+
+                  <!--Sat Dates for Calendar-->
                   <div class="my-rooms-day10">
                     <span class="my-rooms-text078"><span>Sa</span></span>
                   </div>
+                  <div class="my-rooms-day28">
+                    <span class="my-rooms-text110">{% with sat|index:0 as my_item %}
+                      {{ my_item }}
+                    {% endwith %}</span>
+                  </div>
+                  <div class="my-rooms-day29">
+                    <span class="my-rooms-text111">{% with sat|index:1 as my_item %}
+                      {{ my_item }}
+                    {% endwith %}</span>
+                  </div>
+                  <div class="my-rooms-day30">
+                    <span class="my-rooms-text112"><span>{% with sat|index:2 as my_item %}
+                      {{ my_item }}
+                    {% endwith %}</span></span>
+                  </div>
+                  <div class="my-rooms-day31">
+                    <span class="my-rooms-text114"><span>{% with sat|index:3 as my_item %}
+                      {{ my_item }}
+                    {% endwith %}</span></span>
+                  </div>
+                  <div class="my-rooms-day32">
+                    <span class="my-rooms-text116"><span>{% with sat|index:4 as my_item %}
+                      {{ my_item }}
+                    {% endwith %}</span></span>
+                  </div>
+
+                  <!--Sun Dates for Calendar-->
                   <div class="my-rooms-day11">
                     <span class="my-rooms-text080"><span>Su</span></span>
                   </div>
-                  <div class="my-rooms-day12">
-                    <span class="my-rooms-text082">4</span>
-                  </div>
-                  <div class="my-rooms-day13">
-                    <span class="my-rooms-text083"><span>11</span></span>
-                  </div>
-                  <div class="my-rooms-day14">
-                    <span class="my-rooms-text085"><span>18</span></span>
-                  </div>
-                  <div class="my-rooms-day15">
-                    <span class="my-rooms-text087"><span>25</span></span>
-                  </div>
-                  <div class="my-rooms-day16">
-                    <span class="my-rooms-text089">5</span>
-                  </div>
-                  <div class="my-rooms-day17">
-                    <span class="my-rooms-text090"><span>12</span></span>
-                  </div>
-                  <div class="my-rooms-day18">
-                    <span class="my-rooms-text092"><span>19</span></span>
-                  </div>
-                  <div class="my-rooms-day19">
-                    <span class="my-rooms-text094"><span>26</span></span>
-                  </div>
-                  <div class="my-rooms-day20">
-                    <span class="my-rooms-text096">6</span>
-                  </div>
-                  <div class="my-rooms-day21">
-                    <span class="my-rooms-text097"><span>13</span></span>
-                  </div>
-                  <div class="my-rooms-day22">
-                    <span class="my-rooms-text099"><span>20</span></span>
-                  </div>
-                  <div class="my-rooms-day23">
-                    <span class="my-rooms-text101"><span>27</span></span>
-                  </div>
-                  <div class="my-rooms-day24">
-                    <span class="my-rooms-text103">7</span>
-                  </div>
-                  <div class="my-rooms-day25">
-                    <span class="my-rooms-text104"><span>14</span></span>
-                  </div>
-                  <div class="my-rooms-day26">
-                    <span class="my-rooms-text106"><span>21</span></span>
-                  </div>
-                  <div class="my-rooms-day27">
-                    <span class="my-rooms-text108"><span>28</span></span>
-                  </div>
-                  <div class="my-rooms-day28">
-                    <span class="my-rooms-text110">1</span>
-                  </div>
-                  <div class="my-rooms-day29">
-                    <span class="my-rooms-text111">8</span>
-                  </div>
-                  <div class="my-rooms-day30">
-                    <span class="my-rooms-text112"><span>15</span></span>
-                  </div>
-                  <div class="my-rooms-day31">
-                    <span class="my-rooms-text114"><span>22</span></span>
-                  </div>
-                  <div class="my-rooms-day32">
-                    <span class="my-rooms-text116"><span>29</span></span>
-                  </div>
                   <div class="my-rooms-day33">
-                    <span class="my-rooms-text118">2</span>
+                    <span class="my-rooms-text118">{% with sun|index:0 as my_item %}
+                      {{ my_item }}
+                    {% endwith %}</span>
                   </div>
                   <div class="my-rooms-day34">
-                    <span class="my-rooms-text119">9</span>
+                    <span class="my-rooms-text119">{% with sun|index:1 as my_item %}
+                      {{ my_item }}
+                    {% endwith %}</span>
                   </div>
                   <div class="my-rooms-day35">
-                    <span class="my-rooms-text120"><span>16</span></span>
+                    <span class="my-rooms-text120"><span>{% with sun|index:2 as my_item %}
+                      {{ my_item }}
+                    {% endwith %}</span></span>
                   </div>
                   <div class="my-rooms-day36">
-                    <span class="my-rooms-text122"><span>23</span></span>
+                    <span class="my-rooms-text122"><span>{% with sun|index:3 as my_item %}
+                      {{ my_item }}
+                    {% endwith %}</span></span>
                   </div>
                   <div class="my-rooms-day37">
-                    <span class="my-rooms-text124"><span>30</span></span>
+                    <span class="my-rooms-text124"><span>{% with sun|index:4 as my_item %}
+                      {{ my_item }}
+                    {% endwith %}</span></span>
                   </div>
+                 
+
                   <div class="my-rooms-month">
                     <div class="my-rooms-group18">
                       <div class="my-rooms-day38">
                         <span class="my-rooms-text126">
-                          <span>July 2023</span>
+                          <span>{{month}} {{year}}</span>
                         </span>
                       </div>
                       <img
@@ -383,8 +482,8 @@
                     <div class="my-rooms-left-content">
                       <div class="my-rooms-typography">
                         <span class="my-rooms-text128">
-                          <span class="my-rooms-text129">01 January</span>
-                          <span>2022</span>
+                          <span class="my-rooms-text129">{{day}} {{month}}</span>
+                          <span>{{year}}</span>
                         </span>
                       </div>
                     </div>

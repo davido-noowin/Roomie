@@ -6,6 +6,9 @@ from django.contrib.auth.decorators import login_required
 from .models import Room, Roomaccomodations
 from django.contrib import messages
 from .forms import NewUserForm
+from collections import defaultdict
+import datetime
+import calendar
 
 def home(response:HttpResponse) -> HttpResponse:
     #room_info = Room.objects.all()
@@ -22,7 +25,40 @@ def reserve(response:HttpResponse) -> HttpResponse:
 def myrooms(response:HttpResponse, user:str) -> HttpResponse:
     if response.user.email != user:
         return redirect('home')
-    return render(response, 'main/my-rooms.html', {})
+    
+    today = datetime.date.today()
+    current_year = today.year
+    current_month = calendar.month_name[today.month]
+    current_day = today.day
+
+    cal = calendar.Calendar()
+    formatted = cal.monthdayscalendar(current_year, today.month)
+    days_in_month = defaultdict(list)
+
+    for weeks in formatted:
+        for i in range(len(weeks)):
+            if weeks[i] == 0:
+                 days_in_month[i].append('')
+            else:
+                days_in_month[i].append(weeks[i])
+
+    print(days_in_month)
+
+    context = {
+        'year' : current_year,
+        'month' : current_month,
+        'day' : current_day,
+        'calendar' : formatted,
+        'mon' : days_in_month[0],
+        'tue' : days_in_month[1],
+        'wed' : days_in_month[2],
+        'thu' : days_in_month[3],
+        'fri' : days_in_month[4],
+        'sat' : days_in_month[5],
+        'sun' : days_in_month[6],
+    }
+
+    return render(response, 'main/my-rooms.html', context)
 
 
 def about(response:HttpResponse) -> HttpResponse:
@@ -34,6 +70,7 @@ def bookSuccess(response:HttpResponse) -> HttpResponse:
     return render(response, 'main/book-success.html', context)
 
 
+@login_required(login_url='account')
 def loginSuccess(response:HttpResponse) -> HttpResponse:
     context = {}
     return render(response, 'main/login-success.html', context)

@@ -1689,6 +1689,160 @@
   flex-direction: column;
   justify-content: center;
 }
+.my-rooms-day39 {
+  gap: 10px;
+  top: 150px;
+  left: 10px;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  padding: 10px;
+  position: absolute;
+  align-items: center;
+  flex-shrink: 0;
+  flex-direction: column;
+  justify-content: center;
+}
+.my-rooms-day40 {
+  gap: 10px;
+  top: 150px;
+  left: 130px;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  padding: 10px;
+  position: absolute;
+  align-items: center;
+  flex-shrink: 0;
+  flex-direction: column;
+  justify-content: center;
+}
+.my-rooms-day41 {
+  gap: 10px;
+  top: 150px;
+  left: 70px;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  padding: 10px;
+  position: absolute;
+  align-items: center;
+  flex-shrink: 0;
+  flex-direction: column;
+  justify-content: center;
+}
+.my-rooms-day42 {
+  gap: 10px;
+  top: 150px;
+  left: 190px;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  padding: 10px;
+  position: absolute;
+  align-items: center;
+  flex-shrink: 0;
+  flex-direction: column;
+  justify-content: center;
+}
+.my-rooms-day43 {
+  gap: 10px;
+  top: 150px;
+  left: 250px;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  padding: 10px;
+  position: absolute;
+  align-items: center;
+  flex-shrink: 0;
+  flex-direction: column;
+  justify-content: center;
+}
+.my-rooms-day44 {
+  gap: 10px;
+  top: 450px;
+  left: 70px;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  padding: 10px;
+  position: absolute;
+  align-items: center;
+  flex-shrink: 0;
+  flex-direction: column;
+  justify-content: center;
+}
+.my-rooms-day45 {
+  gap: 10px;
+  top: 450px;
+  left: 130px;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  padding: 10px;
+  position: absolute;
+  align-items: center;
+  flex-shrink: 0;
+  flex-direction: column;
+  justify-content: center;
+}
+.my-rooms-day46 {
+  gap: 10px;
+  top: 450px;
+  left: 190px;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  padding: 10px;
+  position: absolute;
+  align-items: center;
+  flex-shrink: 0;
+  flex-direction: column;
+  justify-content: center;
+}
+.my-rooms-day47 {
+  gap: 10px;
+  top: 450px;
+  left: 250px;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  padding: 10px;
+  position: absolute;
+  align-items: center;
+  flex-shrink: 0;
+  flex-direction: column;
+  justify-content: center;
+}
+.my-rooms-day48 {
+  gap: 10px;
+  top: 450px;
+  left: 310px;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  padding: 10px;
+  position: absolute;
+  align-items: center;
+  flex-shrink: 0;
+  flex-direction: column;
+  justify-content: center;
+}
+.my-rooms-day49 {
+  gap: 10px;
+  top: 450px;
+  left: 370px;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  padding: 10px;
+  position: absolute;
+  align-items: center;
+  flex-shrink: 0;
+  flex-direction: column;
+  justify-content: center;
+}
 .my-rooms-text126 {
   color: rgba(0, 0, 0, 1);
   height: auto;
