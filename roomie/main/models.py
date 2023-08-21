@@ -23,7 +23,7 @@ class Room(models.Model):
         db_table = 'room'
 
 
-class Roomaccomodations(models.Model):
+class RoomAccomodations(models.Model):
     room = models.OneToOneField(Room, models.DO_NOTHING, primary_key=True)  # The composite primary key (room_id, accomodation) found, that is not supported. The first column is selected.
     accomodation = models.CharField(max_length=20)
 

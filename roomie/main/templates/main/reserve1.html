@@ -6,6 +6,8 @@
     <meta charset="utf-8" />
     <meta property="twitter:card" content="summary_large_image" />
 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+
     <style data-tag="reset-style-sheet">
       html {  line-height: 1.15;}body {  margin: 0;}* {  box-sizing: border-box;  border-width: 0;  border-style: solid;}p,li,ul,pre,div,h1,h2,h3,h4,h5,h6,figure,blockquote,figcaption {  margin: 0;  padding: 0;}button {  background-color: transparent;}button,input,optgroup,select,textarea {  font-family: inherit;  font-size: 100%;  line-height: 1.15;  margin: 0;}button,select {  text-transform: none;}button,[type="button"],[type="reset"],[type="reset"]::-moz-focus-inner,[type="submit"]::-moz-focus-inner {  border-style: none;  padding: 0;}button:-moz-focus,[type="button"]:-moz-focus,[type="reset"]:-moz-focus,[type="submit"]:-moz-focus {  outline: 1px dotted ButtonText;}a {  color: inherit;  text-decoration: inherit;}input {  padding: 2px 4px;}img {  display: block;}html { scroll-behavior: smooth  }
     </style>
@@ -53,9 +55,12 @@
       data-tag="font"
     />
     {% load static %}
+    {% load filters %}
     <link rel="stylesheet" href="{% static 'style.css' %}" />
   </head>
   <body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    
     <div>
       <link href="{% static 'reserve1.css' %}" rel="stylesheet" />
 
@@ -69,7 +74,7 @@
             </div>
             <div class="reserve1-frame162633">
               <span class="reserve1-text002">
-                <span>Current center: Multimedia Resources Center</span>
+                <span>Current center: {{ center }}</span>
               </span>
             </div>
           </div>
@@ -322,28 +327,28 @@
             <span></span>
             <span>Reservation Window:</span>
             <br />
-            <span class="reserve1-text066">July 11 - July 18</span>
+            <span class="reserve1-text066">{{current_month}} {{current_day}} - {{altered_month}} {{altered_day}}</span>
             <br />
           </span>
           <span class="reserve1-text068">
             <span>Day:</span>
             <br />
             <span></span>
-            <span class="reserve1-text072">Tue (7/11/23)</span>
+            <span class="reserve1-text072">{{ d1 }}</span>
             <br class="reserve1-text073" />
-            <span class="reserve1-text074">Wed (7/12/23)</span>
+            <span class="reserve1-text074">{{ d2 }}</span>
             <br class="reserve1-text075" />
-            <span class="reserve1-text076">Thu (7/13/23)</span>
+            <span class="reserve1-text076">{{ d3 }}</span>
             <br class="reserve1-text077" />
-            <span class="reserve1-text078">Fri (7/14/23)</span>
+            <span class="reserve1-text078">{{ d4 }}</span>
             <br class="reserve1-text079" />
-            <span class="reserve1-text080">Sat (7/15/23)</span>
+            <span class="reserve1-text080">{{ d5 }}</span>
             <br class="reserve1-text081" />
-            <span class="reserve1-text082">Sun (7/16/23)</span>
+            <span class="reserve1-text082">{{ d6 }}</span>
             <br class="reserve1-text083" />
-            <span class="reserve1-text084">Mon (7/17/23)</span>
+            <span class="reserve1-text084">{{ d7 }}</span>
             <br class="reserve1-text085" />
-            <span class="reserve1-text086">Tue (7/18/23)</span>
+            <span class="reserve1-text086">{{ d8 }}</span>
           </span>
           <div class="reserve1-checkbox19 button">
             <img
@@ -402,10 +407,76 @@
             />
           </div>
           <div class="reserve1-rooms">
-            <div class="reserve1-studyroom4">
+            <div class="reserve1-studyroom1">
+              <div class="reserve1-frame162756">
+                <span class="reserve1-text105">
+                  {% with rooms|index:0 as room %}
+                  <span>{{room.location}} {{room.room_number}} (Capacity: {{room.room_size}})</span>
+                  {% endwith %}
+                </span>
+                <span class="reserve1-text107">
+                  <span>
+                    This collaborative study room contains a table, 4 chairs,
+                    and a flat screen TV with HDMI cables.
+                  </span>
+                </span>
+              </div>
+
+            
+              <div class="reserve1-studyroom2">
+                <img
+                  alt="SL173April202213541"
+                  src="{% static 'sl173april202213541-lbeo-600w.png' %}"
+                  class="reserve1-sl17-april20221"
+                />
+                <div class="reserve1-frame162757">
+                  <span class="reserve1-text099">
+                    {% with rooms|index:1 as room %}
+                    <span>{{room.location}} {{room.room_number}} (Capacity: {{room.room_size}})</span>
+                    {% endwith %}
+                  </span>
+                  <span class="reserve1-text101">
+                    <span>
+                      This room contains a table, 7 chairs, a whiteboard, a
+                      desktop, an overhead projector, and a flat screen TV with
+                      and HDMI cable.
+                    </span>
+                  </span>
+              </div>
+
+              
+              <div class="reserve1-studyroom3">
+                <img
+                  alt="SL174SPq2022013541"
+                  src="{% static 'sl174spq2022013541-j033l-600w.png' %}"
+                  class="reserve1-sl174-pq202201"
+                />
+                <div class="reserve1-frame162758">
+                  <span class="reserve1-text093">
+                    {% with rooms|index:2 as room %}
+                    <span>{{room.location}} {{room.room_number}} (Capacity: {{room.room_size}})</span>
+                    {% endwith %}
+                  </span>
+                  <span class="reserve1-text095">
+                    <span>
+                      This collaborative study room contains a table, 2 chairs,
+                      and a flat screen TV with HDMI cables.
+                    </span>
+                  </span>
+              </div>
+
+              
+              <div class="reserve1-studyroom4">
+                <img
+                  alt="SL175SQ202213541"
+                  src="{% static 'sl175sq202213541-znnn-600w.png' %}"
+                  class="reserve1-sl175sq20221"
+                />
               <div class="reserve1-frame162759">
                 <span class="reserve1-text087">
-                  <span>Study Room 175 (Capacity: 2)</span>
+                  {% with rooms|index:3 as room %}
+                  <span>{{room.location}} {{room.room_number}} (Capacity: {{room.room_size}})</span>
+                  {% endwith %}
                 </span>
                 <span class="reserve1-text089">
                   <span>
@@ -414,11 +485,7 @@
                   </span>
                 </span>
               </div>
-              <img
-                alt="SL175SQ202213541"
-                src="{% static 'sl175sq202213541-znnn-600w.png' %}"
-                class="reserve1-sl175sq20221"
-              />
+
               <div class="reserve1-frame1627591 button">
                 <div class="reserve1-frame162605">
                   <span class="reserve1-text091 HeadingsH5-Bold18">
@@ -439,23 +506,7 @@
                 </div>
               </div>
             </div>
-            <div class="reserve1-studyroom3">
-              <img
-                alt="SL174SPq2022013541"
-                src="{% static 'sl174spq2022013541-j033l-600w.png' %}"
-                class="reserve1-sl174-pq202201"
-              />
-              <div class="reserve1-frame162758">
-                <span class="reserve1-text093">
-                  <span>Study Room 174 (Capacity: 2)</span>
-                </span>
-                <span class="reserve1-text095">
-                  <span>
-                    This collaborative study room contains a table, 2 chairs,
-                    and a flat screen TV with HDMI cables.
-                  </span>
-                </span>
-              </div>
+            
               <div class="reserve1-frame1627581 button">
                 <div class="reserve1-frame1626051">
                   <span class="reserve1-text097 HeadingsH5-Bold18">
@@ -475,25 +526,7 @@
                   </div>
                 </div>
               </div>
-            </div>
-            <div class="reserve1-studyroom2">
-              <img
-                alt="SL173April202213541"
-                src="{% static 'sl173april202213541-lbeo-600w.png' %}"
-                class="reserve1-sl17-april20221"
-              />
-              <div class="reserve1-frame162757">
-                <span class="reserve1-text099">
-                  <span>Study Room 173 (Capacity: 7)</span>
-                </span>
-                <span class="reserve1-text101">
-                  <span>
-                    This room contains a table, 7 chairs, a whiteboard, a
-                    desktop, an overhead projector, and a flat screen TV with
-                    and HDMI cable.
-                  </span>
-                </span>
-              </div>
+            </div>    
               <div class="reserve1-frame1627571 button">
                 <div class="reserve1-frame1626052">
                   <span class="reserve1-text103 HeadingsH5-Bold18">
@@ -514,18 +547,6 @@
                 </div>
               </div>
             </div>
-            <div class="reserve1-studyroom1">
-              <div class="reserve1-frame162756">
-                <span class="reserve1-text105">
-                  <span>Study Room 172 (Capacity: 4)</span>
-                </span>
-                <span class="reserve1-text107">
-                  <span>
-                    This collaborative study room contains a table, 4 chairs,
-                    and a flat screen TV with HDMI cables.
-                  </span>
-                </span>
-              </div>
               <img
                 alt="SL17213541"
                 src="{% static 'sl17213541-s9sr-600w.png' %}"
@@ -557,52 +578,56 @@
               <span>Results for center</span>
             </span>
             <div class="reserve1-frame162691">
-              <span class="reserve1-text113 HeadingsH6-Bold16">4</span>
+              <span class="reserve1-text113 HeadingsH6-Bold16">{{ result_count }}</span>
             </div>
           </div>
           <div class="reserve1-page-selector">
             <div class="reserve1-frame1626331">
               <div class="reserve1-arrowright">
                 <div class="reserve1-vuesaxlineararrowright4">
-                  <div class="reserve1-arrowright1">
-                    <img
-                      alt="VectorI303"
-                      src="{% static 'vectori303-kklq.svg' %}"
-                      class="reserve1-vector11"
-                    />
-                    <img alt="VectorI303" src="" class="reserve1-vector12" />
-                  </div>
                 </div>
               </div>
             </div>
             <div class="reserve1-frame162631">
-              <div class="reserve1-frame162628">
-                <span class="reserve1-text114">1</span>
-              </div>
-              <div class="reserve1-frame1626311">
-                <span class="reserve1-text115">2</span>
-              </div>
-              <div class="reserve1-frame162632">
-                <span class="reserve1-text116">3</span>
-              </div>
-              <div class="reserve1-frame162629">
-                <span class="reserve1-text117"><span>...</span></span>
-              </div>
-              <div class="reserve1-frame162630">
-                <span class="reserve1-text119"><span>10</span></span>
-              </div>
+
+              <nav aria-label="Page navigation">
+                <ul class="pagination reserve-paginator">
+                  <li class="page-item">
+                    {% if rooms.has_previous %}
+                    <a class="page-link" href="?page=1" aria-label="Previous">
+                      <span aria-hidden="true">&laquo;</span>
+                    </a>
+                    {% endif %}
+                  </li>
+                  {% for pages in rooms.paginator.page_range %}
+                  <li class="page-item"><a class="page-link" href="?page={{ pages }}">{{ pages }}</a></li>
+                  {% endfor %}
+
+                  <li class="page-item">
+                    {% if rooms.has_next %}
+                    <a class="page-link" href="?page={{ rooms.paginator.num_pages }}" aria-label="Next">
+                      <span aria-hidden="true">&raquo;</span>
+                    </a>
+                    {% endif %}
+                  </li>
+                </ul>
+              </nav>
+
             </div>
+            
+            {% if rooms.has_previous %}
+              <a href="?page=1"></a>
+              <a href="?page={{rooms.previous_page_number}}"></a>
+            {% endif %}
+
+            {% if rooms.has_next %}
+              <a href="?page={{ rooms.next_page_number }}"></a>
+              <a href="?page={{ rooms.paginator.num_pages }}"></a>
+            {% endif %}
+
             <div class="reserve1-frame1626321">
               <div class="reserve1-arrowright2">
                 <div class="reserve1-vuesaxlineararrowright5">
-                  <div class="reserve1-arrowright3">
-                    <img
-                      alt="VectorI303"
-                      src="{% static 'vectori303-h0d.svg' %}"
-                      class="reserve1-vector13"
-                    />
-                    <img alt="VectorI303" src="" class="reserve1-vector14" />
-                  </div>
                 </div>
               </div>
             </div>
