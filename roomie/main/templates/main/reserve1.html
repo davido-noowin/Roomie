@@ -345,81 +345,141 @@
 
           
           <div class="reserve1-rooms">
+            {% with rooms|index:0 as room %}
             <div class="reserve1-studyroom1">
+              <img
+                alt="SL17213541"
+                src="{% static room.image %}"
+                class="reserve1-sl1721"
+              />
               <div class="reserve1-frame162756">
                 <span class="reserve1-text105">
-                  {% with rooms|index:0 as room %}
                   <span>{{room.location}} {{room.room_number}} (Capacity: {{room.room_size}})</span>
-                  {% endwith %}
                 </span>
                 <span class="reserve1-text107">
                   <span>
-                    This collaborative study room contains a table, 4 chairs,
-                    and a flat screen TV with HDMI cables.
+                    {{room.room_desc}}
                   </span>
                 </span>
               </div>
+              
+              <div class="reserve1-frame162607 button">
+                <div class="reserve1-frame1626053">
+                  <span class="reserve1-text109 HeadingsH5-Bold18">
+                    <span>Reserve</span>
+                  </span>
+                  <div class="reserve1-vuesaxlineararrowright3">
+                    <img
+                      alt="Vector3871"
+                      src="{% static 'vector3871-cbgc.svg' %}"
+                      class="reserve1-vector09"
+                    />
+                    <img
+                      alt="Vector3871"
+                      src="{% static 'vector3871-jsll.svg' %}"
+                      class="reserve1-vector10"
+                    />
+                  </div>
+                </div>
+              </div>
+              {% endwith %}
 
-            
+              {% with rooms|index:1 as room %}
+              {% if room %}
               <div class="reserve1-studyroom2">
                 <img
                   alt="SL173April202213541"
-                  src="{% static 'sl173april202213541-lbeo-600w.png' %}"
+                  src="{% static room.image %}"
                   class="reserve1-sl17-april20221"
                 />
                 <div class="reserve1-frame162757">
                   <span class="reserve1-text099">
-                    {% with rooms|index:1 as room %}
                     <span>{{room.location}} {{room.room_number}} (Capacity: {{room.room_size}})</span>
-                    {% endwith %}
                   </span>
                   <span class="reserve1-text101">
                     <span>
-                      This room contains a table, 7 chairs, a whiteboard, a
-                      desktop, an overhead projector, and a flat screen TV with
-                      and HDMI cable.
+                      {{room.room_desc}}
                     </span>
                   </span>
               </div>
+              <div class="reserve1-frame1627571 button">
+                <div class="reserve1-frame1626052">
+                  <span class="reserve1-text103 HeadingsH5-Bold18">
+                    <span>Reserve</span>
+                  </span>
+                  <div class="reserve1-vuesaxlineararrowright2">
+                    <img
+                      alt="Vector3951"
+                      src="{% static 'vector3951-azzn.svg' %}"
+                      class="reserve1-vector07"
+                    />
+                    <img
+                      alt="Vector3951"
+                      src="{% static 'vector3951-p6s.svg' %}"
+                      class="reserve1-vector08"
+                    />
+                  </div>
+                </div>
+              </div>
+              {% endif %}
+              {% endwith %}
 
-              
+              {% with rooms|index:2 as room %}
+              {% if room %}
               <div class="reserve1-studyroom3">
                 <img
                   alt="SL174SPq2022013541"
-                  src="{% static 'sl174spq2022013541-j033l-600w.png' %}"
+                  src="{% static room.image %}"
                   class="reserve1-sl174-pq202201"
                 />
                 <div class="reserve1-frame162758">
                   <span class="reserve1-text093">
-                    {% with rooms|index:2 as room %}
                     <span>{{room.location}} {{room.room_number}} (Capacity: {{room.room_size}})</span>
-                    {% endwith %}
                   </span>
                   <span class="reserve1-text095">
                     <span>
-                      This collaborative study room contains a table, 2 chairs,
-                      and a flat screen TV with HDMI cables.
+                      {{room.room_desc}}
                     </span>
                   </span>
               </div>
 
-              
+              <div class="reserve1-frame1627581 button">
+                <div class="reserve1-frame1626051">
+                  <span class="reserve1-text097 HeadingsH5-Bold18">
+                    <span>Reserve</span>
+                  </span>
+                  <div class="reserve1-vuesaxlineararrowright1">
+                    <img
+                      alt="Vector3951"
+                      src="{% static 'vector3951-j7o.svg' %}"
+                      class="reserve1-vector05"
+                    />
+                    <img
+                      alt="Vector3951"
+                      src="{% static 'vector3951-52td.svg' %}"
+                      class="reserve1-vector06"
+                    />
+                  </div>
+                </div>
+              </div>
+              {% endif %}
+              {% endwith %}
+
+              {% with rooms|index:3 as room %}
+              {% if room %}
               <div class="reserve1-studyroom4">
                 <img
                   alt="SL175SQ202213541"
-                  src="{% static 'sl175sq202213541-znnn-600w.png' %}"
+                  src="{% static room.image %}"
                   class="reserve1-sl175sq20221"
                 />
               <div class="reserve1-frame162759">
                 <span class="reserve1-text087">
-                  {% with rooms|index:3 as room %}
                   <span>{{room.location}} {{room.room_number}} (Capacity: {{room.room_size}})</span>
-                  {% endwith %}
                 </span>
                 <span class="reserve1-text089">
                   <span>
-                    This collaborative study room contains a table, 4 chairs,
-                    and a flat screen TV with HDMI cables.
+                    {{room.room_desc}}
                   </span>
                 </span>
               </div>
@@ -443,72 +503,13 @@
                   </div>
                 </div>
               </div>
+              {% endif %}
+              {% endwith %}
+
+
             </div>
-            
-              <div class="reserve1-frame1627581 button">
-                <div class="reserve1-frame1626051">
-                  <span class="reserve1-text097 HeadingsH5-Bold18">
-                    <span>Reserve</span>
-                  </span>
-                  <div class="reserve1-vuesaxlineararrowright1">
-                    <img
-                      alt="Vector3951"
-                      src="{% static 'vector3951-j7o.svg' %}"
-                      class="reserve1-vector05"
-                    />
-                    <img
-                      alt="Vector3951"
-                      src="{% static 'vector3951-52td.svg' %}"
-                      class="reserve1-vector06"
-                    />
-                  </div>
-                </div>
-              </div>
             </div>    
-              <div class="reserve1-frame1627571 button">
-                <div class="reserve1-frame1626052">
-                  <span class="reserve1-text103 HeadingsH5-Bold18">
-                    <span>Reserve</span>
-                  </span>
-                  <div class="reserve1-vuesaxlineararrowright2">
-                    <img
-                      alt="Vector3951"
-                      src="{% static 'vector3951-azzn.svg' %}"
-                      class="reserve1-vector07"
-                    />
-                    <img
-                      alt="Vector3951"
-                      src="{% static 'vector3951-p6s.svg' %}"
-                      class="reserve1-vector08"
-                    />
-                  </div>
-                </div>
-              </div>
             </div>
-              <img
-                alt="SL17213541"
-                src="{% static 'sl17213541-s9sr-600w.png' %}"
-                class="reserve1-sl1721"
-              />
-              <div class="reserve1-frame162607 button">
-                <div class="reserve1-frame1626053">
-                  <span class="reserve1-text109 HeadingsH5-Bold18">
-                    <span>Reserve</span>
-                  </span>
-                  <div class="reserve1-vuesaxlineararrowright3">
-                    <img
-                      alt="Vector3871"
-                      src="{% static 'vector3871-cbgc.svg' %}"
-                      class="reserve1-vector09"
-                    />
-                    <img
-                      alt="Vector3871"
-                      src="{% static 'vector3871-jsll.svg' %}"
-                      class="reserve1-vector10"
-                    />
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
           <div class="reserve1-resultsforcenter">

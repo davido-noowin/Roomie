@@ -23,7 +23,9 @@ CREATE TABLE Room(
 	room_id VARCHAR(20) PRIMARY KEY,
     location VARCHAR(50) NOT NULL,
     room_size int,
-    room_number int
+    room_number int,
+    image VARCHAR(100),
+    room_desc VARCHAR(999)
 );
 
 

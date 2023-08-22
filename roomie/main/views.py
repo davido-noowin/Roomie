@@ -27,7 +27,7 @@ def reserve(response:HttpResponse, study_room:str='MRC') -> HttpResponse:
         'Gateway' : 'Gateway Study Center',
     }
 
-    #study_room = 'Langson'
+    study_room = 'Gateway'
     accomodations = RoomAccomodations.objects.all()
     rooms_list = Room.objects.all().filter(room_id__startswith=study_room)
 

@@ -17,6 +17,8 @@ class Room(models.Model):
     location = models.CharField(max_length=50)
     room_size = models.IntegerField(blank=True, null=True)
     room_number = models.IntegerField(blank=True, null=True)
+    image = models.CharField(max_length=100)
+    room_desc = models.CharField(max_length=999)
 
     class Meta:
         managed = False
