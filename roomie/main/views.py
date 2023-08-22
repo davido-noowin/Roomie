@@ -36,8 +36,8 @@ def reserve(response:HttpResponse, study_room:str='MRC') -> HttpResponse:
     page = response.GET.get('page')
     rooms = pager.get_page(page)
 
-    #for item in accomodations:
-    #    print(item.room, item.accomodation)
+    for item in accomodations:
+        print(item.room, item.accomodation)
     #print()
     #for item in rooms:
     #    print(item.room_id, item.room_number, item.room_size, item.location)
