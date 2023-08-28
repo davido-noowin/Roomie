@@ -10,5 +10,6 @@ urlpatterns = [
     path("register/", views.createAccount, name="register"),
     path("book-success/", views.bookSuccess, name="book-success"),
     path("login-success/", views.loginSuccess, name="login-success"),
-    path("logout/", views.logoutSuccess, name="logout")
+    path("logout/", views.logoutSuccess, name="logout"),
+    path("confirm-reservation/", views.confirmReservation, name="confirmation"),
 ]

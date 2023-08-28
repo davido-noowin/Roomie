@@ -54,6 +54,9 @@
       href="https://fonts.googleapis.com/css2?family=Encode+Sans:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
       data-tag="font"
     />
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
     {% load static %}
     {% load filters %}
     <link rel="stylesheet" href="{% static 'style.css' %}" />
@@ -104,465 +107,482 @@
             <span class="reserve1-text004"><span>Filters</span></span>
           </div>
           
-          <span class="reserve1-text006">
-            <span>Amenities</span>
-            <br />
-            <span></span>
-            <span class="reserve1-text010"><div class="form-check">
-              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-              <label class="form-check-label" for="flexCheckDefault">
-                Group Study
-              </label>
-            </div></span>
+          <form method="POST" action="">
+            {% csrf_token %}
 
-            <span class="reserve1-text012"><div class="form-check">
-              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-              <label class="form-check-label" for="flexCheckDefault">
-                Individual Study
-              </label>
-            </div></span>
-
-            <span class="reserve1-text014"><div class="form-check">
-              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-              <label class="form-check-label" for="flexCheckDefault">
-                Library Spaces
-              </label>
-            </div></span>
-
-            <span class="reserve1-text016"><div class="form-check">
-              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-              <label class="form-check-label" for="flexCheckDefault">
-                Open Late
-              </label>
-            </div></span>
-
-            <span class="reserve1-text018"><div class="form-check">
-              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-              <label class="form-check-label" for="flexCheckDefault">
-                Public Computer
-              </label>
-            </div></span>
-
-            <span class="reserve1-text020"><div class="form-check">
-              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-              <label class="form-check-label" for="flexCheckDefault">
-                Quiet Study
-              </label>
-            </div></span>
-
-            <span class="reserve1-text022"><div class="form-check">
-              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-              <label class="form-check-label" for="flexCheckDefault">
-                whiteboard
-              </label>
-            </div></span>
-
-            <span class="reserve1-text024"><div class="form-check">
-              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-              <label class="form-check-label" for="flexCheckDefault">
-                TV
-              </label>
-            </div></span>
-
-            <span class="reserve1-text026"><div class="form-check">
-              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-              <label class="form-check-label" for="flexCheckDefault">
-                Power Outlet
-              </label>
-            </div></span>
-          </span>
-          
-          <span class="reserve1-text027">
-            <span>Libraries</span>
-            <br />
-            <span></span>
-            <span class="reserve1-text031"><div class="form-check">
-              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-              <label class="form-check-label" for="flexCheckDefault">
-                Multimedia Resources Center
-              </label>
-            </div></span>
-
-            <span class="reserve1-text035"><div class="form-check">
-              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-              <label class="form-check-label" for="flexCheckDefault">
-                Langson Library
-              </label>
-            </div></span>
-
-            <span class="reserve1-text037"><div class="form-check">
-              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-              <label class="form-check-label" for="flexCheckDefault">
-                Gateway Study Center
-              </label>
-            </div></span>
-
-            <span class="reserve1-text039"><div class="form-check">
-              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-              <label class="form-check-label" for="flexCheckDefault">
-                Science Library
-              </label>
-            </div></span>
-          </span>
-          
-          <span class="reserve1-text040">
-            <span>Equipment</span>
-            <br />
-            <span></span>
-            <span class="reserve1-text044"><div class="form-check">
-              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-              <label class="form-check-label" for="flexCheckDefault">
-                3D Printer
-              </label>
-            </div></span>
-
-            <span class="reserve1-text046"><div class="form-check">
-              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-              <label class="form-check-label" for="flexCheckDefault">
-                3D Scanner
-              </label>
-            </div></span>
-
-            <span class="reserve1-text048"><div class="form-check">
-              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-              <label class="form-check-label" for="flexCheckDefault">
-                Digital Display
-              </label>
-            </div></span>
-
-            <span class="reserve1-text050"><div class="form-check">
-              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-              <label class="form-check-label" for="flexCheckDefault">
-                Poster Printer
-              </label>
-            </div></span>
-
-            <span class="reserve1-text052"><div class="form-check">
-              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-              <label class="form-check-label" for="flexCheckDefault">
-                Printers
-              </label>
-            </div></span>
-
-            <span class="reserve1-text054"><div class="form-check">
-              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-              <label class="form-check-label" for="flexCheckDefault">
-                Scanners
-              </label>
-            </div></span>
-
-          </span>
-          <div class="box">
-            <div id="slider" class="reserve1-slide5">
-              <input class="reserve-slider" type="range" min="1" max="8" value="5">
-              </div>
-          </div>
-          
-          </div>
-          <span class="reserve1-text055">
-            1 person&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-            &nbsp; &nbsp; &nbsp; 8 people
-          </span>
-          <span id="capacity" class="reserve1-current-selection">
-            Selected: 5
-          </span>
-          <span class="reserve1-text056">
-            <span class="reserve1-text057">
-              <span>Capacity</span>
+            <span class="reserve1-text006">
+              <span>Amenities</span>
               <br />
               <span></span>
+              <span class="reserve1-text010"><div class="form-check">
+                <input class="form-check-input" type="checkbox" name="group_study"  value="group study" id="flexCheckDefault">
+                <label class="form-check-label" for="flexCheckDefault">
+                  Group Study
+                </label>
+              </div></span>
+  
+              <span class="reserve1-text012"><div class="form-check">
+                <input class="form-check-input" type="checkbox" name="individual_study" value="Individual Study" id="flexCheckDefault">
+                <label class="form-check-label" for="flexCheckDefault">
+                  Individual Study
+                </label>
+              </div></span>
+  
+              <span class="reserve1-text014"><div class="form-check">
+                <input class="form-check-input" type="checkbox" name="library_spaces" value="Library Spaces" id="flexCheckDefault">
+                <label class="form-check-label" for="flexCheckDefault">
+                  Library Spaces
+                </label>
+              </div></span>
+  
+              <span class="reserve1-text016"><div class="form-check">
+                <input class="form-check-input" type="checkbox" name="open_late" value="Open Late" id="flexCheckDefault">
+                <label class="form-check-label" for="flexCheckDefault">
+                  Open Late
+                </label>
+              </div></span>
+  
+              <span class="reserve1-text018"><div class="form-check">
+                <input class="form-check-input" type="checkbox" name="public_computer" value="Computer" id="flexCheckDefault">
+                <label class="form-check-label" for="flexCheckDefault">
+                  Public Computer
+                </label>
+              </div></span>
+  
+              <span class="reserve1-text020"><div class="form-check">
+                <input class="form-check-input" type="checkbox" name="quiet_study" value="Quiet Study" id="flexCheckDefault">
+                <label class="form-check-label" for="flexCheckDefault">
+                  Quiet Study
+                </label>
+              </div></span>
+  
+              <span class="reserve1-text022"><div class="form-check">
+                <input class="form-check-input" type="checkbox" name="whiteboard" value="Whiteboard" id="flexCheckDefault">
+                <label class="form-check-label" for="flexCheckDefault">
+                  Whiteboard
+                </label>
+              </div></span>
+  
+              <span class="reserve1-text024"><div class="form-check">
+                <input class="form-check-input" type="checkbox" name="tv" value="TV" id="flexCheckDefault">
+                <label class="form-check-label" for="flexCheckDefault">
+                  TV
+                </label>
+              </div></span>
+  
+              <span class="reserve1-text026"><div class="form-check">
+                <input class="form-check-input" type="checkbox" name="power_outlet" value="Power Outlet" id="flexCheckDefault">
+                <label class="form-check-label" for="flexCheckDefault">
+                  Power Outlet
+                </label>
+              </div></span>
             </span>
-            <span></span>
-          </span>
-          <span class="reserve1-text062">
-            <span></span>
-            <span>Reservation Window:</span>
-            <br />
-            <span class="reserve1-text066">{{current_month}} {{current_day}} - {{altered_month}} {{altered_day}}</span>
-            <br />
-          </span>
-          <span class="reserve1-text068">
-            <span>Day:</span>
-            <br />
-            <span></span>
-            <span class="reserve1-text072"><div class="form-check">
-              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-              <label class="form-check-label" for="flexCheckDefault">
-                {{ d1 }}
-              </label>
-            </div></span>
-
-            <span class="reserve1-text074"><div class="form-check">
-              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-              <label class="form-check-label" for="flexCheckDefault">
-                {{ d2 }}
-              </label>
-            </div></span>
-
-            <span class="reserve1-text076"><div class="form-check">
-              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-              <label class="form-check-label" for="flexCheckDefault">
-                {{ d3 }}
-              </label>
-            </div></span>
-
-            <span class="reserve1-text078"><div class="form-check">
-              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-              <label class="form-check-label" for="flexCheckDefault">
-                {{ d4 }}
-              </label>
-            </div></span>
-
-            <span class="reserve1-text080"><div class="form-check">
-              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-              <label class="form-check-label" for="flexCheckDefault">
-                {{ d5 }}
-              </label>
-            </div></span>
-
-            <span class="reserve1-text082"><div class="form-check">
-              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-              <label class="form-check-label" for="flexCheckDefault">
-                {{ d6 }}
-              </label>
-            </div></span>
-
-            <span class="reserve1-text084"><div class="form-check">
-              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-              <label class="form-check-label" for="flexCheckDefault">
-                {{ d7 }}
-              </label>
-            </div></span>
-
-            <span class="reserve1-text086"><div class="form-check">
-              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-              <label class="form-check-label" for="flexCheckDefault">
-                {{ d8 }}
-              </label>
-            </div></span>
-          </span>
-
-          
-          <div class="reserve1-rooms">
-            {% with rooms|index:0 as room %}
-            <div class="reserve1-studyroom1">
-              <img
-                alt="SL17213541"
-                src="{% static room.image %}"
-                class="reserve1-sl1721"
-              />
-              <div class="reserve1-frame162756">
-                <span class="reserve1-text105">
-                  <span>{{room.location}} {{room.room_number}} (Capacity: {{room.room_size}})</span>
-                </span>
-                <span class="reserve1-text107">
-                  <span>
-                    {{room.room_desc}}
-                  </span>
-                </span>
-              </div>
-              
-              <div class="reserve1-frame162607 button">
-                <div class="reserve1-frame1626053">
-                  <span class="reserve1-text109 HeadingsH5-Bold18">
-                    <span>Reserve</span>
-                  </span>
-                  <div class="reserve1-vuesaxlineararrowright3">
-                    <img
-                      alt="Vector3871"
-                      src="{% static 'vector3871-cbgc.svg' %}"
-                      class="reserve1-vector09"
-                    />
-                    <img
-                      alt="Vector3871"
-                      src="{% static 'vector3871-jsll.svg' %}"
-                      class="reserve1-vector10"
-                    />
-                  </div>
-                </div>
-              </div>
-              {% endwith %}
-
-              {% with rooms|index:1 as room %}
-              {% if room %}
-              <div class="reserve1-studyroom2">
-                <img
-                  alt="SL173April202213541"
-                  src="{% static room.image %}"
-                  class="reserve1-sl17-april20221"
-                />
-                <div class="reserve1-frame162757">
-                  <span class="reserve1-text099">
-                    <span>{{room.location}} {{room.room_number}} (Capacity: {{room.room_size}})</span>
-                  </span>
-                  <span class="reserve1-text101">
-                    <span>
-                      {{room.room_desc}}
-                    </span>
-                  </span>
-              </div>
-              <div class="reserve1-frame1627571 button">
-                <div class="reserve1-frame1626052">
-                  <span class="reserve1-text103 HeadingsH5-Bold18">
-                    <span>Reserve</span>
-                  </span>
-                  <div class="reserve1-vuesaxlineararrowright2">
-                    <img
-                      alt="Vector3951"
-                      src="{% static 'vector3951-azzn.svg' %}"
-                      class="reserve1-vector07"
-                    />
-                    <img
-                      alt="Vector3951"
-                      src="{% static 'vector3951-p6s.svg' %}"
-                      class="reserve1-vector08"
-                    />
-                  </div>
-                </div>
-              </div>
-              {% endif %}
-              {% endwith %}
-
-              {% with rooms|index:2 as room %}
-              {% if room %}
-              <div class="reserve1-studyroom3">
-                <img
-                  alt="SL174SPq2022013541"
-                  src="{% static room.image %}"
-                  class="reserve1-sl174-pq202201"
-                />
-                <div class="reserve1-frame162758">
-                  <span class="reserve1-text093">
-                    <span>{{room.location}} {{room.room_number}} (Capacity: {{room.room_size}})</span>
-                  </span>
-                  <span class="reserve1-text095">
-                    <span>
-                      {{room.room_desc}}
-                    </span>
-                  </span>
-              </div>
-
-              <div class="reserve1-frame1627581 button">
-                <div class="reserve1-frame1626051">
-                  <span class="reserve1-text097 HeadingsH5-Bold18">
-                    <span>Reserve</span>
-                  </span>
-                  <div class="reserve1-vuesaxlineararrowright1">
-                    <img
-                      alt="Vector3951"
-                      src="{% static 'vector3951-j7o.svg' %}"
-                      class="reserve1-vector05"
-                    />
-                    <img
-                      alt="Vector3951"
-                      src="{% static 'vector3951-52td.svg' %}"
-                      class="reserve1-vector06"
-                    />
-                  </div>
-                </div>
-              </div>
-              {% endif %}
-              {% endwith %}
-
-              {% with rooms|index:3 as room %}
-              {% if room %}
-              <div class="reserve1-studyroom4">
-                <img
-                  alt="SL175SQ202213541"
-                  src="{% static room.image %}"
-                  class="reserve1-sl175sq20221"
-                />
-              <div class="reserve1-frame162759">
-                <span class="reserve1-text087">
-                  <span>{{room.location}} {{room.room_number}} (Capacity: {{room.room_size}})</span>
-                </span>
-                <span class="reserve1-text089">
-                  <span>
-                    {{room.room_desc}}
-                  </span>
-                </span>
-              </div>
-
-              <div class="reserve1-frame1627591 button">
-                <div class="reserve1-frame162605">
-                  <span class="reserve1-text091 HeadingsH5-Bold18">
-                    <span>Reserve</span>
-                  </span>
-                  <div class="reserve1-vuesaxlineararrowright">
-                    <img
-                      alt="Vector3951"
-                      src="{% static 'vector3951-j5a.svg' %}"
-                      class="reserve1-vector03"
-                    />
-                    <img
-                      alt="Vector3951"
-                      src="{% static 'vector3951-vta.svg' %}"
-                      class="reserve1-vector04"
-                    />
-                  </div>
-                </div>
-              </div>
-              {% endif %}
-              {% endwith %}
-
-
-            </div>
-            </div>    
-            </div>
-            </div>
-          </div>
-          <div class="reserve1-resultsforcenter">
-            <span class="reserve1-text111 HeadingsH2-Bold44">
-              <span>Results for center</span>
+            
+            <span class="reserve1-text027">
+              <span>Libraries</span>
+              <br />
+              <span></span>
+              <span class="reserve1-text031"><div class="form-check">
+                <input class="form-check-input" type="checkbox" name="MRC" value="Multimedia Resources Center" id="flexCheckDefault">
+                <label class="form-check-label" for="flexCheckDefault">
+                  Multimedia Resources Center
+                </label>
+              </div></span>
+  
+              <span class="reserve1-text035"><div class="form-check">
+                <input class="form-check-input" type="checkbox" name="Langson" value="Langson Library" id="flexCheckDefault">
+                <label class="form-check-label" for="flexCheckDefault">
+                  Langson Library
+                </label>
+              </div></span>
+  
+              <span class="reserve1-text037"><div class="form-check">
+                <input class="form-check-input" type="checkbox" name="Gateway" value="Gateway Study Center" id="flexCheckDefault">
+                <label class="form-check-label" for="flexCheckDefault">
+                  Gateway Study Center
+                </label>
+              </div></span>
+  
+              <span class="reserve1-text039"><div class="form-check">
+                <input class="form-check-input" type="checkbox" name="Science" value="Science Library" id="flexCheckDefault">
+                <label class="form-check-label" for="flexCheckDefault">
+                  Science Library
+                </label>
+              </div></span>
             </span>
-            <div class="reserve1-frame162691">
-              <span class="reserve1-text113 HeadingsH6-Bold16">{{ result_count }}</span>
-            </div>
-          </div>
-          <div class="reserve1-page-selector">
-            <div class="reserve1-frame1626331">
-              <div class="reserve1-arrowright">
-                <div class="reserve1-vuesaxlineararrowright4">
+            
+            <span class="reserve1-text040">
+              <span>Equipment</span>
+              <br />
+              <span></span>
+              <span class="reserve1-text044"><div class="form-check">
+                <input class="form-check-input" type="checkbox" name="3d_printer" value="3d printer" id="flexCheckDefault">
+                <label class="form-check-label" for="flexCheckDefault">
+                  3D Printer
+                </label>
+              </div></span>
+  
+              <span class="reserve1-text046"><div class="form-check">
+                <input class="form-check-input" type="checkbox" name="3d_scanner" value="3d scanner" id="flexCheckDefault">
+                <label class="form-check-label" for="flexCheckDefault">
+                  3D Scanner
+                </label>
+              </div></span>
+  
+              <span class="reserve1-text048"><div class="form-check">
+                <input class="form-check-input" type="checkbox" name="digital display" value="digital display" id="flexCheckDefault">
+                <label class="form-check-label" for="flexCheckDefault">
+                  Digital Display
+                </label>
+              </div></span>
+  
+              <span class="reserve1-text050"><div class="form-check">
+                <input class="form-check-input" type="checkbox" name="poster printer" value="poster printer" id="flexCheckDefault">
+                <label class="form-check-label" for="flexCheckDefault">
+                  Poster Printer
+                </label>
+              </div></span>
+  
+              <span class="reserve1-text052"><div class="form-check">
+                <input class="form-check-input" type="checkbox" name="printers" value="printer" id="flexCheckDefault">
+                <label class="form-check-label" for="flexCheckDefault">
+                  Printers
+                </label>
+              </div></span>
+  
+              <span class="reserve1-text054"><div class="form-check">
+                <input class="form-check-input" type="checkbox" name="scanners" value="scanner" id="flexCheckDefault">
+                <label class="form-check-label" for="flexCheckDefault">
+                  Scanners
+                </label>
+              </div></span>
+  
+            </span>
+            <div class="box">
+              <div id="slider" class="reserve1-slide5">
+                <input class="reserve-slider" name="filter-room-size" type="range" min="1" max="8" value="1" >
                 </div>
-              </div>
-            </div>
-            <div class="reserve1-frame162631">
-
-              <nav aria-label="Page navigation">
-                <ul class="pagination reserve-paginator">
-                  <li class="page-item">
-                    {% if rooms.has_previous %}
-                    <a class="page-link" href="?page=1" aria-label="Previous">
-                      <span aria-hidden="true">&laquo;</span>
-                    </a>
-                    {% endif %}
-                  </li>
-                  {% for pages in rooms.paginator.page_range %}
-                  <li class="page-item"><a class="page-link" href="?page={{ pages }}">{{ pages }}</a></li>
-                  {% endfor %}
-
-                  <li class="page-item">
-                    {% if rooms.has_next %}
-                    <a class="page-link" href="?page={{ rooms.paginator.num_pages }}" aria-label="Next">
-                      <span aria-hidden="true">&raquo;</span>
-                    </a>
-                    {% endif %}
-                  </li>
-                </ul>
-              </nav>
-
             </div>
             
-            {% if rooms.has_previous %}
-              <a href="?page=1"></a>
-              <a href="?page={{rooms.previous_page_number}}"></a>
-            {% endif %}
+            </div>
+            <span class="reserve1-text055">
+              1 person&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+              &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+              &nbsp; &nbsp; &nbsp; 8 people
+            </span>
+            <span id="capacity" class="reserve1-current-selection">
+              Selected: 1
+            </span>
+            <span class="reserve1-text056">
+              <span class="reserve1-text057">
+                <span>Capacity</span>
+                <br />
+                <span></span>
+              </span>
+              <span></span>
+            </span>
+            <span class="reserve1-text062">
+              <span></span>
+              <span>Reservation Window:</span>
+              <br />
+              <span class="reserve1-text066">{{current_month}} {{current_day}} - {{altered_month}} {{altered_day}}</span>
+              <br />
+            </span>
+            <span class="reserve1-text068">
+              <span>Day:</span>
+              <br />
+              <span></span>
+              <span class="reserve1-text072"><div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                <label class="form-check-label" for="flexCheckDefault">
+                  {{ d1 }}
+                </label>
+              </div></span>
+  
+              <span class="reserve1-text074"><div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                <label class="form-check-label" for="flexCheckDefault">
+                  {{ d2 }}
+                </label>
+              </div></span>
+  
+              <span class="reserve1-text076"><div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                <label class="form-check-label" for="flexCheckDefault">
+                  {{ d3 }}
+                </label>
+              </div></span>
+  
+              <span class="reserve1-text078"><div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                <label class="form-check-label" for="flexCheckDefault">
+                  {{ d4 }}
+                </label>
+              </div></span>
+  
+              <span class="reserve1-text080"><div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                <label class="form-check-label" for="flexCheckDefault">
+                  {{ d5 }}
+                </label>
+              </div></span>
+  
+              <span class="reserve1-text082"><div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                <label class="form-check-label" for="flexCheckDefault">
+                  {{ d6 }}
+                </label>
+              </div></span>
+  
+              <span class="reserve1-text084"><div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                <label class="form-check-label" for="flexCheckDefault">
+                  {{ d7 }}
+                </label>
+              </div></span>
+  
+              <span class="reserve1-text086"><div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                <label class="form-check-label" for="flexCheckDefault">
+                  {{ d8 }}
+                </label>
+              </div></span>
+            </span>
 
-            {% if rooms.has_next %}
-              <a href="?page={{ rooms.next_page_number }}"></a>
-              <a href="?page={{ rooms.paginator.num_pages }}"></a>
-            {% endif %}
+            <button class="reserve1-applychanges" type="submit">
+              <span>Apply Filters</span>
+            </button>
+
+            <button name="clear_filters" class="reserve1-clearchanges" type="submit">
+              <span>Clear Filters</span>
+            </button>
+
+          </form>
+          
+
+          <div id="reserve-rooms">
+            <div class="reserve1-rooms">
+              {% with rooms|index:0 as room %}
+              {% if room %}
+              <div class="reserve1-studyroom1">
+                <img
+                  alt="SL17213541"
+                  src="{% static room.image %}"
+                  class="reserve1-sl1721"
+                />
+                <div class="reserve1-frame162756">
+                  <span class="reserve1-text105">
+                    <span>{{room.location}} {{room.room_number}} (Capacity: {{room.room_size}})</span>
+                  </span>
+                  <span class="reserve1-text107">
+                    <span>
+                      {{room.room_desc}}
+                    </span>
+                  </span>
+                </div>
+                
+                <a href="{% url 'confirmation' %}?booking={{ room.room_id }}">
+                  <div class="reserve1-frame162607 button">
+                    <div class="reserve1-frame1626053">
+                      <span class="reserve1-text109 HeadingsH5-Bold18">
+                        <span>Reserve</span>
+                      </span>
+                      <div class="reserve1-vuesaxlineararrowright3">
+                        <img
+                          alt="Vector3871"
+                          src="{% static 'vector3871-cbgc.svg' %}"
+                          class="reserve1-vector09"
+                        />
+                        <img
+                          alt="Vector3871"
+                          src="{% static 'vector3871-jsll.svg' %}"
+                          class="reserve1-vector10"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </a>
+                {% endif %}
+                {% endwith %}
+
+                {% with rooms|index:1 as room %}
+                {% if room %}
+                <div class="reserve1-studyroom2">
+                  <img
+                    alt="SL173April202213541"
+                    src="{% static room.image %}"
+                    class="reserve1-sl17-april20221"
+                  />
+                  <div class="reserve1-frame162757">
+                    <span class="reserve1-text099">
+                      <span>{{room.location}} {{room.room_number}} (Capacity: {{room.room_size}})</span>
+                    </span>
+                    <span class="reserve1-text101">
+                      <span>
+                        {{room.room_desc}}
+                      </span>
+                    </span>
+                </div>
+
+                <a href="{% url 'confirmation' %}?booking={{ room.room_id }}">
+                  <div class="reserve1-frame1627571 button">
+                    <div class="reserve1-frame1626052">
+                      <span class="reserve1-text103 HeadingsH5-Bold18">
+                        <span>Reserve</span>
+                      </span>
+                      <div class="reserve1-vuesaxlineararrowright2">
+                        <img
+                          alt="Vector3951"
+                          src="{% static 'vector3951-azzn.svg' %}"
+                          class="reserve1-vector07"
+                        />
+                        <img
+                          alt="Vector3951"
+                          src="{% static 'vector3951-p6s.svg' %}"
+                          class="reserve1-vector08"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </a>
+                {% endif %}
+                {% endwith %}
+
+                {% with rooms|index:2 as room %}
+                {% if room %}
+                <div class="reserve1-studyroom3">
+                  <img
+                    alt="SL174SPq2022013541"
+                    src="{% static room.image %}"
+                    class="reserve1-sl174-pq202201"
+                  />
+                  <div class="reserve1-frame162758">
+                    <span class="reserve1-text093">
+                      <span>{{room.location}} {{room.room_number}} (Capacity: {{room.room_size}})</span>
+                    </span>
+                    <span class="reserve1-text095">
+                      <span>
+                        {{room.room_desc}}
+                      </span>
+                    </span>
+                </div>
+
+                <a href="{% url 'confirmation' %}?booking={{ room.room_id }}">
+                  <div class="reserve1-frame1627581 button">
+                    <div class="reserve1-frame1626051">
+                      <span class="reserve1-text097 HeadingsH5-Bold18">
+                        <span>Reserve</span>
+                      </span>
+                      <div class="reserve1-vuesaxlineararrowright1">
+                        <img
+                          alt="Vector3951"
+                          src="{% static 'vector3951-j7o.svg' %}"
+                          class="reserve1-vector05"
+                        />
+                        <img
+                          alt="Vector3951"
+                          src="{% static 'vector3951-52td.svg' %}"
+                          class="reserve1-vector06"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </a>
+                {% endif %}
+                {% endwith %}
+
+                {% with rooms|index:3 as room %}
+                {% if room %}
+                <div class="reserve1-studyroom4">
+                  <img
+                    alt="SL175SQ202213541"
+                    src="{% static room.image %}"
+                    class="reserve1-sl175sq20221"
+                  />
+                <div class="reserve1-frame162759">
+                  <span class="reserve1-text087">
+                    <span>{{room.location}} {{room.room_number}} (Capacity: {{room.room_size}})</span>
+                  </span>
+                  <span class="reserve1-text089">
+                    <span>
+                      {{room.room_desc}}
+                    </span>
+                  </span>
+                </div>
+
+                <a href="{% url 'confirmation' %}?booking={{ room.room_id }}">
+                  <div class="reserve1-frame1627591 button">
+                    <div class="reserve1-frame162605">
+                      <span class="reserve1-text091 HeadingsH5-Bold18">
+                        <span>Reserve</span>
+                      </span>
+                      <div class="reserve1-vuesaxlineararrowright">
+                        <img
+                          alt="Vector3951"
+                          src="{% static 'vector3951-j5a.svg' %}"
+                          class="reserve1-vector03"
+                        />
+                        <img
+                          alt="Vector3951"
+                          src="{% static 'vector3951-vta.svg' %}"
+                          class="reserve1-vector04"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </a>
+                {% endif %}
+                {% endwith %}
+
+
+              </div>
+              </div>    
+              </div>
+              </div>
+            </div>
+
+            <div class="reserve1-resultsforcenter">
+              <span class="reserve1-text111 HeadingsH2-Bold44">
+                <span>Results for center</span>
+              </span>
+              <div class="reserve1-frame162691">
+                <span class="reserve1-text113 HeadingsH6-Bold16">{{ result_count }}</span>
+              </div>
+            </div>
+            <div class="reserve1-page-selector">
+              <div class="reserve1-frame1626331">
+                <div class="reserve1-arrowright">
+                  <div class="reserve1-vuesaxlineararrowright4">
+                  </div>
+                </div>
+              </div>
+              <div class="reserve1-frame162631">
+
+                <nav aria-label="Page navigation">
+                  <ul class="pagination reserve-paginator">
+                    <li class="page-item">
+                      {% if rooms.has_previous %}
+                      <a class="page-link" href="?page=1}" aria-label="Previous">
+                        <span aria-hidden="true">&laquo;</span>
+                      </a>
+                      {% endif %}
+                    </li>
+                    {% for pages in rooms.paginator.page_range %}
+                    <li class="page-item"><a class="page-link" href="?page={{ pages }}">{{ pages }}</a></li>
+                    {% endfor %}
+
+                    <li class="page-item">
+                      {% if rooms.has_next %}
+                      <a class="page-link" href="?page={{ rooms.paginator.num_pages }}" aria-label="Next">
+                        <span aria-hidden="true">&raquo;</span>
+                      </a>
+                      {% endif %}
+                    </li>
+                  </ul>
+                </nav>
+
+              </div>
+            </div>
 
             <div class="reserve1-frame1626321">
               <div class="reserve1-arrowright2">
@@ -673,5 +693,25 @@
         </div>
       </div>
     </div>
+
+    </div>
+
+    <script>
+      if ( window.history.replaceState ) {
+        window.history.replaceState( null, null, window.location.href );
+      }
+
+      const slider = document.querySelector('.reserve-slider');
+
+      slider.addEventListener('input', function() {
+          const sliderValue = slider.value;
+
+          const valueLabel = document.querySelector('.reserve1-current-selection');
+          if (valueLabel) {
+              valueLabel.textContent = "Selected: " + slider.value;
+          }
+      });
+      
+    </script>
   </body>
 </html>

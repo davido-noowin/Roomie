@@ -321,7 +321,7 @@
 }
 .reserve2-text034 {
   color: var(--dl-color-default-textcolor);
-  width: 439px;
+  width: 600px;
   height: auto;
   position: absolute;
   font-size: 24px;
@@ -424,7 +424,7 @@
 }
 .reserve2-day {
   gap: 10px;
-  top: 210px;
+  top: 150px;
   left: 10px;
   width: 60px;
   height: 60px;
@@ -450,7 +450,7 @@
 }
 .reserve2-day01 {
   gap: 10px;
-  top: 270px;
+  top: 210px;
   left: 10px;
   width: 60px;
   height: 60px;
@@ -736,7 +736,7 @@
 }
 .reserve2-day12 {
   gap: 10px;
-  top: 210px;
+  top: 150px;
   left: 70px;
   width: 60px;
   height: 60px;
@@ -762,7 +762,7 @@
 }
 .reserve2-day13 {
   gap: 10px;
-  top: 270px;
+  top: 210px;
   left: 70px;
   width: 60px;
   height: 60px;
@@ -840,7 +840,7 @@
 }
 .reserve2-day16 {
   gap: 10px;
-  top: 210px;
+  top: 150px;
   left: 130px;
   width: 60px;
   height: 60px;
@@ -866,7 +866,7 @@
 }
 .reserve2-day17 {
   gap: 10px;
-  top: 270px;
+  top: 210px;
   left: 130px;
   width: 60px;
   height: 60px;
@@ -944,7 +944,7 @@
 }
 .reserve2-day20 {
   gap: 10px;
-  top: 210px;
+  top: 150px;
   left: 190px;
   width: 60px;
   height: 60px;
@@ -970,7 +970,7 @@
 }
 .reserve2-day21 {
   gap: 10px;
-  top: 270px;
+  top: 210px;
   left: 190px;
   width: 60px;
   height: 60px;
@@ -1048,7 +1048,7 @@
 }
 .reserve2-day24 {
   gap: 10px;
-  top: 210px;
+  top: 150px;
   left: 250px;
   width: 60px;
   height: 60px;
@@ -1074,7 +1074,7 @@
 }
 .reserve2-day25 {
   gap: 10px;
-  top: 270px;
+  top: 210px;
   left: 250px;
   width: 60px;
   height: 60px;
@@ -1433,8 +1433,8 @@
 .reserve2-day38 {
   gap: 10px;
   top: 0px;
-  left: 0px;
-  width: 225px;
+  left: -15px;
+  width: 380px;
   height: 60px;
   display: flex;
   padding: 10px;
@@ -1447,7 +1447,7 @@
 .reserve2-text109 {
   color: rgba(0, 0, 0, 1);
   height: auto;
-  font-size: 26px;
+  font-size: 24px;
   font-style: Bold;
   text-align: center;
   font-family: Encode Sans Semi Expanded;

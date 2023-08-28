@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="english">
   <head>
-    <title>exported project</title>
+    <title>Confrim Reservation</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta charset="utf-8" />
     <meta property="twitter:card" content="summary_large_image" />
 
     <style data-tag="reset-style-sheet">
-      html {  line-height: 1.15;}body {  margin: 0;}* {  box-sizing: border-box;  border-width: 0;  border-style: solid;}p,li,ul,pre,div,h1,h2,h3,h4,h5,h6,figure,blockquote,figcaption {  margin: 0;  padding: 0;}button {  background-color: transparent;}button,input,optgroup,select,textarea {  font-family: inherit;  font-size: 100%;  line-height: 1.15;  margin: 0;}button,select {  text-transform: none;}button,[type="button"],[type="reset"],[type="submit"] {  -webkit-appearance: button;}button::-moz-focus-inner,[type="button"]::-moz-focus-inner,[type="reset"]::-moz-focus-inner,[type="submit"]::-moz-focus-inner {  border-style: none;  padding: 0;}button:-moz-focus,[type="button"]:-moz-focus,[type="reset"]:-moz-focus,[type="submit"]:-moz-focus {  outline: 1px dotted ButtonText;}a {  color: inherit;  text-decoration: inherit;}input {  padding: 2px 4px;}img {  display: block;}html { scroll-behavior: smooth  }
+      html {  line-height: 1.15;}body {  margin: 0;}* {  box-sizing: border-box;  border-width: 0;  border-style: solid;}p,li,ul,pre,div,h1,h2,h3,h4,h5,h6,figure,blockquote,figcaption {  margin: 0;  padding: 0;}button {  background-color: transparent;}button,input,optgroup,select,textarea {  font-family: inherit;  font-size: 100%;  line-height: 1.15;  margin: 0;}button,select {  text-transform: none;}button,[type="button"],[type="reset"],[type="button"]::-moz-focus-inner,[type="reset"]::-moz-focus-inner,[type="submit"]::-moz-focus-inner {  border-style: none;  padding: 0;}button:-moz-focus,[type="button"]:-moz-focus,[type="reset"]:-moz-focus,[type="submit"]:-moz-focus {  outline: 1px dotted ButtonText;}a {  color: inherit;  text-decoration: inherit;}input {  padding: 2px 4px;}img {  display: block;}html { scroll-behavior: smooth  }
     </style>
     <style data-tag="default-style-sheet">
       html {
@@ -52,11 +52,14 @@
       href="https://fonts.googleapis.com/css2?family=Encode+Sans:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
       data-tag="font"
     />
-    <link rel="stylesheet" href="./style.css" />
+    {% load static %}
+    {% load filters %}
+
+    <link rel="stylesheet" href="{% static 'style.css' %}" />
   </head>
   <body>
     <div>
-      <link href="./reserve2.css" rel="stylesheet" />
+      <link href="{% static 'reserve2.css' %}" rel="stylesheet" />
 
       <div class="reserve2-container">
         <div class="reserve2-reserve2">
@@ -64,12 +67,12 @@
           <div class="reserve2-footer">
             <img
               alt="ucilogo23871"
-              src="public/external/ucilogo23871-m9y-200h.png"
+              src="{% static 'ucilogo23871-m9y-200h.png' %}"
               class="reserve2-ucilogo2"
             />
             <img
               alt="UCIprimarylogoprintblue13871"
-              src="public/external/uciprimarylogoprintblue13871-9njo-200h.png"
+              src="{% static 'uciprimarylogoprintblue13871-9njo-200h.png' %}"
               class="reserve2-u-iprimarylogoprintblue1"
             />
             <span class="reserve2-text002"><span>Roomie</span></span>
@@ -88,7 +91,7 @@
             </span>
             <img
               alt="Line23871"
-              src="public/external/line23871-6ecr.svg"
+              src="{% static 'line23871-6ecr.svg' %}"
               class="reserve2-line2"
             />
             <span class="reserve2-text015">
@@ -114,42 +117,42 @@
                 <div class="reserve2-user1">
                   <img
                     alt="VectorI387"
-                    src="public/external/vectori387-w3p.svg"
+                    src="{% static 'vectori387-w3p.svg' %}"
                     class="reserve2-vector"
                   />
                   <img
                     alt="VectorI387"
-                    src="public/external/vectori387-txsb.svg"
+                    src="{% static 'vectori387-txsb.svg' %}"
                     class="reserve2-vector1"
                   />
-                  <a href="account.html" class="reserve2-navlink">
+                  <a href="{% url 'account' %}" class="reserve2-navlink">
                     <img alt="VectorI387" src="" class="reserve2-vector2" />
                   </a>
                 </div>
               </div>
             </div>
             <div class="reserve2-navbaricon">
-              <a href="index.html" class="reserve2-navlink1">
+              <a href="{% url 'home' %}" class="reserve2-navlink1">
                 <div class="reserve2-logo-home">
                   <img
                     alt="UCIprimarylogoprintblue13871"
-                    src="public/external/uciprimarylogoprintblue13871-pddf-200h.png"
+                    src="{% static 'uciprimarylogoprintblue13871-pddf-200h.png' %}"
                     class="reserve2-u-iprimarylogoprintblue11"
                   />
                   <span class="reserve2-text024"><span>Roomie</span></span>
                 </div>
               </a>
             </div>
-            <a href="reserve1.html" class="reserve2-text026">
+            <a href="{% url 'reserve' %}" class="reserve2-text026">
               <span>Reserve</span>
             </a>
-            <a href="my-rooms.html" class="reserve2-text028">
+            <a href="/my-rooms/{{user}}/" class="reserve2-text028">
               <span>My Rooms</span>
             </a>
-            <a href="about.html" class="reserve2-text030"><span>About</span></a>
+            <a href="{% url 'about' %}" class="reserve2-text030"><span>About</span></a>
             <img
               alt="Line33871"
-              src="public/external/line33871-ex.svg"
+              src="{% static 'line33871-ex.svg' %}"
               class="reserve2-line3"
             />
           </div>
@@ -159,11 +162,11 @@
           <div class="reserve2-selectroom">
             <img
               alt="SL17213871"
-              src="public/external/sl17213871-593w-300h.png"
+              src="{% static room.image %}"
               class="reserve2-sl1721 container"
             />
             <span class="reserve2-text034">
-              <span>Study Room 172 (Capacity: 4)</span>
+              <span>{{room.location}} {{room.room_number}} (Capacity: {{room.room_size}} )</span>
             </span>
           </div>
           <div class="reserve2-room-selection">
@@ -173,141 +176,132 @@
           </div>
           <div class="reserve2-calendar-condensed">
             <div class="reserve2-group19">
-              <div class="reserve2-event">
-                <div class="reserve2-event1">
-                  <span class="reserve2-text038"><span>1 PM</span></span>
-                  <span class="reserve2-text040">
-                    <span>MRC Study Room 172</span>
-                  </span>
-                </div>
-              </div>
               <img
                 alt="Divider3871"
-                src="public/external/divider3871-nkke.svg"
+                src="{% static 'divider3871-nkke.svg' %}"
                 class="reserve2-divider"
               />
-              <div class="reserve2-day">
-                <span class="reserve2-text042">3</span>
-              </div>
-              <div class="reserve2-day01">
-                <span class="reserve2-text043"><span>10</span></span>
-              </div>
-              <div class="reserve2-day02">
-                <span class="reserve2-text045"><span>17</span></span>
-              </div>
-              <div class="reserve2-day03">
-                <span class="reserve2-text047"><span>24</span></span>
-              </div>
-              <div class="reserve2-day04">
-                <span class="reserve2-text049"><span>31</span></span>
-              </div>
+              
               <div class="reserve2-day05">
                 <span class="reserve2-text051"><span>Mo</span></span>
               </div>
+
+              <div class="reserve2-day">
+                <span class="reserve2-text042">{% with mon|index:0 as my_item %}
+                  {{ my_item }}
+                {% endwith %}</span>
+              </div>
+              <div class="reserve2-day01">
+                <span class="reserve2-text043"><span>{% with mon|index:1 as my_item %}
+                  {{ my_item }}
+                {% endwith %}</span></span>
+              </div>
+
+
               <div class="reserve2-day06">
                 <span class="reserve2-text053"><span>Tu</span></span>
               </div>
+
+              <div class="reserve2-day12">
+                <span class="reserve2-text065">{% with tue|index:0 as my_item %}
+                  {{ my_item }}
+                {% endwith %}</span>
+              </div>
+              <div class="reserve2-day13">
+                <span class="reserve2-text066"><span>{% with tue|index:1 as my_item %}
+                  {{ my_item }}
+                {% endwith %}</span></span>
+              </div>
+
+
               <div class="reserve2-day07">
                 <span class="reserve2-text055"><span>We</span></span>
               </div>
+
+              <div class="reserve2-day16">
+                <span class="reserve2-text072">{% with wed|index:0 as my_item %}
+                  {{ my_item }}
+                {% endwith %}</span>
+              </div>
+              <div class="reserve2-day17">
+                <span class="reserve2-text073"><span>{% with wed|index:1 as my_item %}
+                  {{ my_item }}
+                {% endwith %}</span></span>
+              </div>
+
+
               <div class="reserve2-day08">
                 <span class="reserve2-text057"><span>Th</span></span>
               </div>
+
+              <div class="reserve2-day20">
+                <span class="reserve2-text079">{% with thu|index:0 as my_item %}
+                  {{ my_item }}
+                {% endwith %}</span>
+              </div>
+              <div class="reserve2-day21">
+                <span class="reserve2-text080"><span>{% with thu|index:1 as my_item %}
+                  {{ my_item }}
+                {% endwith %}</span></span>
+              </div>
+
+
               <div class="reserve2-day09">
                 <span class="reserve2-text059"><span>Fr</span></span>
               </div>
+
+              <div class="reserve2-day24">
+                <span class="reserve2-text086">{% with fri|index:0 as my_item %}
+                  {{ my_item }}
+                {% endwith %}</span>
+              </div>
+              <div class="reserve2-day25">
+                <span class="reserve2-text087"><span>{% with fri|index:1 as my_item %}
+                  {{ my_item }}
+                {% endwith %}</span></span>
+              </div>
+
+
               <div class="reserve2-day10">
                 <span class="reserve2-text061"><span>Sa</span></span>
               </div>
+
+              <div class="reserve2-day28">
+                <span class="reserve2-text093">{% with sat|index:0 as my_item %}
+                  {{ my_item }}
+                {% endwith %}</span>
+              </div>
+              <div class="reserve2-day29">
+                <span class="reserve2-text094">{% with sat|index:1 as my_item %}
+                  {{ my_item }}
+                {% endwith %}</span>
+              </div>
+
+
               <div class="reserve2-day11">
                 <span class="reserve2-text063"><span>Su</span></span>
               </div>
-              <div class="reserve2-day12">
-                <span class="reserve2-text065">4</span>
-              </div>
-              <div class="reserve2-day13">
-                <span class="reserve2-text066"><span>11</span></span>
-              </div>
-              <div class="reserve2-day14">
-                <span class="reserve2-text068"><span>18</span></span>
-              </div>
-              <div class="reserve2-day15">
-                <span class="reserve2-text070"><span>25</span></span>
-              </div>
-              <div class="reserve2-day16">
-                <span class="reserve2-text072">5</span>
-              </div>
-              <div class="reserve2-day17">
-                <span class="reserve2-text073"><span>12</span></span>
-              </div>
-              <div class="reserve2-day18">
-                <span class="reserve2-text075"><span>19</span></span>
-              </div>
-              <div class="reserve2-day19">
-                <span class="reserve2-text077"><span>26</span></span>
-              </div>
-              <div class="reserve2-day20">
-                <span class="reserve2-text079">6</span>
-              </div>
-              <div class="reserve2-day21">
-                <span class="reserve2-text080"><span>13</span></span>
-              </div>
-              <div class="reserve2-day22">
-                <span class="reserve2-text082"><span>20</span></span>
-              </div>
-              <div class="reserve2-day23">
-                <span class="reserve2-text084"><span>27</span></span>
-              </div>
-              <div class="reserve2-day24">
-                <span class="reserve2-text086">7</span>
-              </div>
-              <div class="reserve2-day25">
-                <span class="reserve2-text087"><span>14</span></span>
-              </div>
-              <div class="reserve2-day26">
-                <span class="reserve2-text089"><span>21</span></span>
-              </div>
-              <div class="reserve2-day27">
-                <span class="reserve2-text091"><span>28</span></span>
-              </div>
-              <div class="reserve2-day28">
-                <span class="reserve2-text093">1</span>
-              </div>
-              <div class="reserve2-day29">
-                <span class="reserve2-text094">8</span>
-              </div>
-              <div class="reserve2-day30">
-                <span class="reserve2-text095"><span>15</span></span>
-              </div>
-              <div class="reserve2-day31">
-                <span class="reserve2-text097"><span>22</span></span>
-              </div>
-              <div class="reserve2-day32">
-                <span class="reserve2-text099"><span>29</span></span>
-              </div>
+
               <div class="reserve2-day33">
-                <span class="reserve2-text101">2</span>
+                <span class="reserve2-text101">{% with sun|index:0 as my_item %}
+                  {{ my_item }}
+                {% endwith %}</span>
               </div>
               <div class="reserve2-day34">
-                <span class="reserve2-text102">9</span>
+                <span class="reserve2-text102">{% with sun|index:1 as my_item %}
+                  {{ my_item }}
+                {% endwith %}</span>
               </div>
-              <div class="reserve2-day35">
-                <span class="reserve2-text103"><span>16</span></span>
-              </div>
-              <div class="reserve2-day36">
-                <span class="reserve2-text105"><span>23</span></span>
-              </div>
-              <div class="reserve2-day37">
-                <span class="reserve2-text107"><span>30</span></span>
-              </div>
+
+
               <div class="reserve2-month">
                 <div class="reserve2-group18">
                   <div class="reserve2-day38">
-                    <span class="reserve2-text109"><span>July 2023</span></span>
+                    <span class="reserve2-text109"><span>{{ header }}</span></span>
                   </div>
                   <img
                     alt="Arrows3871"
-                    src="public/external/arrows3871-mxr.svg"
+                    src="{% static 'arrows3871-mxr.svg' %}"
                     class="reserve2-arrows"
                   />
                 </div>
@@ -317,107 +311,107 @@
           <div class="reserve2-time-slot">
             <img
               alt="Line73881"
-              src="public/external/line73881-kz1.svg"
+              src="{% static 'line73881-kz1.svg' %}"
               class="reserve2-line7"
             />
             <img
               alt="Line93881"
-              src="public/external/line93881-6lm.svg"
+              src="{% static 'line93881-6lm.svg' %}"
               class="reserve2-line9"
             />
             <img
               alt="Line103881"
-              src="public/external/line103881-mzh.svg"
+              src="{% static 'line103881-mzh.svg' %}"
               class="reserve2-line10"
             />
             <img
               alt="Line113881"
-              src="public/external/line113881-udpi.svg"
+              src="{% static 'line113881-udpi.svg' %}"
               class="reserve2-line11"
             />
             <img
               alt="Line123881"
-              src="public/external/line123881-unxl.svg"
+              src="{% static 'line123881-unxl.svg' %}"
               class="reserve2-line12"
             />
             <img
               alt="Line133881"
-              src="public/external/line133881-gh16.svg"
+              src="{% static 'line133881-gh16.svg' %}"
               class="reserve2-line13"
             />
             <img
               alt="Line143881"
-              src="public/external/line143881-2x9.svg"
+              src="{% static 'line143881-2x9.svg' %}"
               class="reserve2-line14"
             />
             <img
               alt="Line153881"
-              src="public/external/line153881-gx9o.svg"
+              src="{% static 'line153881-gx9o.svg' %}"
               class="reserve2-line15"
             />
             <img
               alt="Line163881"
-              src="public/external/line163881-7k6z8.svg"
+              src="{% static 'line163881-7k6z8.svg' %}"
               class="reserve2-line16"
             />
             <img
               alt="Line173881"
-              src="public/external/line173881-fe8.svg"
+              src="{% static 'line173881-fe8.svg' %}"
               class="reserve2-line17"
             />
             <img
               alt="Line183881"
-              src="public/external/line183881-c6s.svg"
+              src="{% static 'line183881-c6s.svg' %}"
               class="reserve2-line18"
             />
             <img
               alt="Line193881"
-              src="public/external/line193881-6qi.svg"
+              src="{% static 'line193881-6qi.svg' %}"
               class="reserve2-line19"
             />
             <img
               alt="Line203881"
-              src="public/external/line203881-7qsb.svg"
+              src="{% static 'line203881-7qsb.svg' %}"
               class="reserve2-line20"
             />
             <img
               alt="Line213881"
-              src="public/external/line213881-yx6si.svg"
+              src="{% static 'line213881-yx6si.svg' %}"
               class="reserve2-line21"
             />
             <img
               alt="Line223881"
-              src="public/external/line223881-4o3b.svg"
+              src="{% static 'line223881-4o3b.svg' %}"
               class="reserve2-line22"
             />
             <img
               alt="Line233881"
-              src="public/external/line233881-ptbc.svg"
+              src="{% static 'line233881-ptbc.svg' %}"
               class="reserve2-line23"
             />
             <img
               alt="Line243881"
-              src="public/external/line243881-idzq.svg"
+              src="{% static 'line243881-idzq.svg' %}"
               class="reserve2-line24"
             />
             <img
               alt="Line253881"
-              src="public/external/line253881-atmc.svg"
+              src="{% static 'line253881-atmc.svg' %}"
               class="reserve2-line25"
             />
             <img
               alt="Line263881"
-              src="public/external/line263881-2vw.svg"
+              src="{% static 'line263881-2vw.svg' %}"
               class="reserve2-line26"
             />
             <img
               alt="Line273881"
-              src="public/external/line273881-zia.svg"
+              src="{% static 'line273881-zia.svg' %}"
               class="reserve2-line27"
             />
             <img
               alt="Line283881"
-              src="public/external/line283881-5mdb.svg"
+              src="{% static 'line283881-5mdb.svg' %}"
               class="reserve2-line28"
             />
             <span class="reserve2-text111">
@@ -425,7 +419,7 @@
             </span>
             <img
               alt="Line83881"
-              src="public/external/line83881-w22.svg"
+              src="{% static 'line83881-w22.svg' %}"
               class="reserve2-line8"
             />
             <span class="reserve2-text113"><span>8 AM</span></span>
@@ -449,26 +443,26 @@
             <span class="reserve2-text149"><span>1 PM</span></span>
             <span class="reserve2-text151"><span>2 PM</span></span>
             <div class="reserve2-availability">
-              <span class="reserve2-text153"><span>Unavailable</span></span>
-              <span class="reserve2-text155"><span>Unavailable</span></span>
-              <span class="reserve2-text157"><span>Unavailable</span></span>
-              <span class="reserve2-text159"><span>Unavailable</span></span>
-              <span class="reserve2-text161"><span>Unavailable</span></span>
-              <span class="reserve2-text163"><span>Booked</span></span>
-              <span class="reserve2-text165"><span>OPEN</span></span>
-              <span class="reserve2-text167"><span>OPEN</span></span>
-              <span class="reserve2-text169"><span>Unavailable</span></span>
-              <span class="reserve2-text171"><span>Booked</span></span>
-              <span class="reserve2-text173"><span>Unavailable</span></span>
-              <span class="reserve2-text175"><span>Unavailable</span></span>
-              <span class="reserve2-text177"><span>Unavailable</span></span>
-              <span class="reserve2-text179"><span>Unavailable</span></span>
-              <span class="reserve2-text181"><span>Unavailable</span></span>
-              <span class="reserve2-text183"><span>Unavailable</span></span>
-              <span class="reserve2-text185"><span>Unavailable</span></span>
-              <span class="reserve2-text187"><span>Unavailable</span></span>
-              <span class="reserve2-text189"><span>Unavailable</span></span>
-              <span class="reserve2-text191"><span>Unavailable</span></span>
+              <span class="reserve2-text153"><span>{{ ava }}</span></span>
+              <span class="reserve2-text155"><span>{{ avb }}</span></span>
+              <span class="reserve2-text157"><span>{{ avc }}</span></span>
+              <span class="reserve2-text159"><span>{{ avd }}</span></span>
+              <span class="reserve2-text161"><span>{{ ave }}</span></span>
+              <span class="reserve2-text163"><span>{{ avf }}</span></span>
+              <span class="reserve2-text171"><span>{{ avg }}</span></span>
+              <span class="reserve2-text165"><span>{{ avh }}</span></span>
+              <span class="reserve2-text167"><span>{{ avi }}</span></span>
+              <span class="reserve2-text169"><span>{{ avj }}</span></span>
+              <span class="reserve2-text173"><span>{{ avk }}</span></span>
+              <span class="reserve2-text175"><span>{{ avl }}</span></span>
+              <span class="reserve2-text177"><span>{{ avm }}</span></span>
+              <span class="reserve2-text179"><span>{{ avn }}</span></span>
+              <span class="reserve2-text181"><span>{{ avo }}</span></span>
+              <span class="reserve2-text183"><span>{{ avp }}</span></span>
+              <span class="reserve2-text185"><span>{{ avq }}</span></span>
+              <span class="reserve2-text187"><span>{{ avr }}</span></span>
+              <span class="reserve2-text189"><span>{{ avs }}</span></span>
+              <span class="reserve2-text191"><span>{{ avt }}</span></span>
             </div>
           </div>
           <button class="reserve2-confirmbutton button">
@@ -479,12 +473,12 @@
               <div class="reserve2-vuesaxlineararrowright">
                 <img
                   alt="Vector4221"
-                  src="public/external/vector4221-4g8r.svg"
+                  src="{% static 'vector4221-4g8r.svg' %}"
                   class="reserve2-vector3"
                 />
                 <img
                   alt="Vector4221"
-                  src="public/external/vector4221-11ot.svg"
+                  src="{% static 'vector4221-11ot.svg' %}"
                   class="reserve2-vector4"
                 />
               </div>
@@ -500,7 +494,7 @@
             </span>
             <img
               alt="Line294221"
-              src="public/external/line294221-2lo.svg"
+              src="{% static 'line294221-2lo.svg' %}"
               class="reserve2-line29"
             />
             <span class="reserve2-text200"><span>Your Time Window:</span></span>
@@ -508,7 +502,7 @@
           <div class="reserve2-start-time-selector">
             <img
               alt="Rectangle834221"
-              src="public/external/rectangle834221-n6x-200h.png"
+              src="{% static 'rectangle834221-n6x-200h.png' %}"
               class="reserve2-rectangle83 button"
             />
             <div class="reserve2-arrowdown">
@@ -516,7 +510,7 @@
                 <div class="reserve2-arrowright">
                   <img
                     alt="VectorI422"
-                    src="public/external/vectori422-j97w.svg"
+                    src="{% static 'vectori422-j97w.svg' %}"
                     class="reserve2-vector5"
                   />
                   <img alt="VectorI422" src="" class="reserve2-vector6" />
@@ -536,7 +530,7 @@
           <div class="reserve2-end-time-selector">
             <img
               alt="Rectangle834221"
-              src="public/external/rectangle834221-zypgk-200h.png"
+              src="{% static 'rectangle834221-zypgk-200h.png' %}"
               class="reserve2-rectangle831 button"
             />
             <div class="reserve2-arrowdown1">
@@ -544,7 +538,7 @@
                 <div class="reserve2-arrowright1">
                   <img
                     alt="VectorI422"
-                    src="public/external/vectori422-5spf.svg"
+                    src="{% static 'vectori422-5spf.svg' %}"
                     class="reserve2-vector7"
                   />
                   <img alt="VectorI422" src="" class="reserve2-vector8" />
