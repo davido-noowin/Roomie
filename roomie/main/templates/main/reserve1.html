@@ -70,11 +70,6 @@
       <div class="reserve1-container">
         <div class="reserve1-reserve1">
           <div class="reserve1-searchbar">
-            <div class="reserve1-group1 button">
-              <span class="reserve1-text HeadingsH5-Bold18">
-                <span>Change</span>
-              </span>
-            </div>
             <div class="reserve1-frame162633">
               <span class="reserve1-text002">
                 <span>Current center: {{ center }}</span>
@@ -353,9 +348,9 @@
               <span>Apply Filters</span>
             </button>
 
-            <button name="clear_filters" class="reserve1-clearchanges" type="submit">
-              <span>Clear Filters</span>
-            </button>
+              <a class="reserve1-clearchanges" href="{% url 'reserve' %}">
+                <span>Clear Filters</span>
+              </a>
 
           </form>
           
@@ -562,18 +557,18 @@
                   <ul class="pagination reserve-paginator">
                     <li class="page-item">
                       {% if rooms.has_previous %}
-                      <a class="page-link" href="?page=1}" aria-label="Previous">
+                      <a class="page-link" href="?{% param_replace page=1 %}" aria-label="Previous">
                         <span aria-hidden="true">&laquo;</span>
                       </a>
                       {% endif %}
                     </li>
                     {% for pages in rooms.paginator.page_range %}
-                    <li class="page-item"><a class="page-link" href="?page={{ pages }}">{{ pages }}</a></li>
+                    <li class="page-item"><a class="page-link" href="?{% param_replace page=pages %}">{{ pages }}</a></li>
                     {% endfor %}
 
                     <li class="page-item">
                       {% if rooms.has_next %}
-                      <a class="page-link" href="?page={{ rooms.paginator.num_pages }}" aria-label="Next">
+                      <a class="page-link" href="?{% param_replace page=rooms.paginator.num_pages %}" aria-label="Next">
                         <span aria-hidden="true">&raquo;</span>
                       </a>
                       {% endif %}

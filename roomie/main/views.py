@@ -92,11 +92,12 @@ def reserve(response:HttpRequest, study_room:str= '') -> HttpResponse:
 
     rooms_list = Room.objects.all().order_by('room_id')
 
+    if response.GET.get('study-room') is not None:
+        study_room = response.GET.get('study-room')
+        rooms_list = rooms_list.filter(location=abbreviation_mapping[study_room])
+
     if response.method == 'POST':
         for key, value in response.POST.items():
-            print(f'Key: {key}')
-            print(f'Value: {value}')
-
             if key != 'csrfmiddlewaretoken' and key != 'filter-room-size' and key not in abbreviation_mapping:
                 rooms_list = rooms_list.filter(roomaccomodations__accomodation=value.lower())
 
@@ -403,6 +404,12 @@ def myrooms(response:HttpResponse, user:str) -> HttpResponse:
     # Getting booking information
     booked_rooms = RoomsBooked.objects.all().filter(user=response.user)
     booked_rooms = sorted(list(booked_rooms), key= lambda room : room.booking_start_date)
+    booking = booked_rooms.copy()
+    for room in booked_rooms:
+        if room.booking_start_date.date() != today:
+            booking.remove(room)
+
+    # print(booked_rooms)
 
     context = {
         'year' : current_year,
@@ -416,7 +423,7 @@ def myrooms(response:HttpResponse, user:str) -> HttpResponse:
         'fri' : days_in_month[4],
         'sat' : days_in_month[5],
         'sun' : days_in_month[6],
-        'rooms' : booked_rooms
+        'rooms' : booking
     }
 
     return render(response, 'main/my-rooms.html', context)
