@@ -1931,8 +1931,17 @@
   align-items: flex-start;
   flex-shrink: 1;
 }
-.reserve2-text153 {
+.open-text {
+  color: var(--dl-color-default-maincolor);
+}
+.booked-text {
+  color: var(--dl-color-default-secondarycolor);
+}
+.unavailable-text {
   color: var(--dl-color-default-paragraphcolor);
+
+}
+.reserve2-text153 {
   height: auto;
   position: absolute;
   font-size: 18px;
@@ -1946,7 +1955,6 @@
 }
 .reserve2-text155 {
   top: 60px;
-  color: var(--dl-color-default-paragraphcolor);
   height: auto;
   position: absolute;
   font-size: 18px;
@@ -1960,7 +1968,6 @@
 }
 .reserve2-text157 {
   top: 120px;
-  color: var(--dl-color-default-paragraphcolor);
   height: auto;
   position: absolute;
   font-size: 18px;
@@ -1974,7 +1981,6 @@
 }
 .reserve2-text159 {
   top: 172px;
-  color: var(--dl-color-default-paragraphcolor);
   height: auto;
   position: absolute;
   font-size: 18px;
@@ -1988,7 +1994,6 @@
 }
 .reserve2-text161 {
   top: 228px;
-  color: var(--dl-color-default-paragraphcolor);
   height: auto;
   position: absolute;
   font-size: 18px;
@@ -2002,7 +2007,6 @@
 }
 .reserve2-text163 {
   top: 288px;
-  color: var(--dl-color-default-secondarycolor);
   height: auto;
   position: absolute;
   font-size: 18px;
@@ -2016,7 +2020,6 @@
 }
 .reserve2-text165 {
   top: 426px;
-  color: var(--dl-color-default-maincolor);
   height: auto;
   position: absolute;
   font-size: 18px;
@@ -2030,7 +2033,6 @@
 }
 .reserve2-text167 {
   top: 490px;
-  color: var(--dl-color-default-maincolor);
   height: auto;
   position: absolute;
   font-size: 18px;
@@ -2044,7 +2046,6 @@
 }
 .reserve2-text169 {
   top: 542px;
-  color: var(--dl-color-default-paragraphcolor);
   height: auto;
   position: absolute;
   font-size: 18px;
@@ -2058,7 +2059,6 @@
 }
 .reserve2-text171 {
   top: 354px;
-  color: var(--dl-color-default-secondarycolor);
   height: auto;
   position: absolute;
   font-size: 18px;
@@ -2072,7 +2072,6 @@
 }
 .reserve2-text173 {
   top: 611px;
-  color: var(--dl-color-default-paragraphcolor);
   height: auto;
   position: absolute;
   font-size: 18px;
@@ -2086,7 +2085,6 @@
 }
 .reserve2-text175 {
   top: 679px;
-  color: var(--dl-color-default-paragraphcolor);
   height: auto;
   position: absolute;
   font-size: 18px;
@@ -2100,7 +2098,6 @@
 }
 .reserve2-text177 {
   top: 745px;
-  color: var(--dl-color-default-paragraphcolor);
   height: auto;
   position: absolute;
   font-size: 18px;
@@ -2114,7 +2111,6 @@
 }
 .reserve2-text179 {
   top: 811px;
-  color: var(--dl-color-default-paragraphcolor);
   height: auto;
   position: absolute;
   font-size: 18px;
@@ -2128,7 +2124,6 @@
 }
 .reserve2-text181 {
   top: 873px;
-  color: var(--dl-color-default-paragraphcolor);
   height: auto;
   position: absolute;
   font-size: 18px;
@@ -2142,7 +2137,6 @@
 }
 .reserve2-text183 {
   top: 933px;
-  color: var(--dl-color-default-paragraphcolor);
   height: auto;
   position: absolute;
   font-size: 18px;
@@ -2156,7 +2150,6 @@
 }
 .reserve2-text185 {
   top: 1010px;
-  color: var(--dl-color-default-paragraphcolor);
   height: auto;
   position: absolute;
   font-size: 18px;
@@ -2170,7 +2163,6 @@
 }
 .reserve2-text187 {
   top: 1072px;
-  color: var(--dl-color-default-paragraphcolor);
   height: auto;
   position: absolute;
   font-size: 18px;
@@ -2184,7 +2176,6 @@
 }
 .reserve2-text189 {
   top: 1142px;
-  color: var(--dl-color-default-paragraphcolor);
   height: auto;
   position: absolute;
   font-size: 18px;
@@ -2198,7 +2189,6 @@
 }
 .reserve2-text191 {
   top: 1221px;
-  color: var(--dl-color-default-paragraphcolor);
   height: auto;
   position: absolute;
   font-size: 18px;
@@ -2279,7 +2269,7 @@
   color: var(--dl-color-default-textcolor);
   height: auto;
   position: absolute;
-  font-size: 40px;
+  font-size: 30px;
   font-style: Bold;
   text-align: left;
   font-family: Encode Sans Condensed;

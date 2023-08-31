@@ -237,10 +237,18 @@
                 <div class="my-rooms-group19">
                   <div class="my-rooms-event">
                     <div class="my-rooms-event1">
-                      <span class="my-rooms-text055"><span>8 AM</span></span>
-                      <span class="my-rooms-text057">
-                        <span>Study room 197</span>
-                      </span>
+                      <ul>
+                        {% for i in rooms %}
+                        <li>
+                          <span class="my-rooms-text055"><span>{{i.booking_start_date|date:"h:i A"}} - {{i.booking_end_date|date:"h:i A"}}</span></span>
+                          <br/>
+                          <span class="my-rooms-text057">
+                            <span>{{i.room.location}} {{i.room.room_number}}</span>
+                          </span>
+                        </li>
+                        <br/>
+                        {% endfor %}
+                      </ul>
                     </div>
                   </div>
                   <img

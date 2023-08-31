@@ -10,13 +10,6 @@ CREATE TABLE Student(
     email VARCHAR(30) PRIMARY KEY
 );
 
-CREATE TABLE roomsBooked(
-	 email VARCHAR(30) NOT NULL,
-     room_booked VARCHAR(20),
-     date_booked datetime NOT NULL,
-     FOREIGN KEY (email) REFERENCES Student(email),
-     PRIMARY KEY (email, room_booked)
-);
 
 
 CREATE TABLE Room(
@@ -34,6 +27,15 @@ CREATE TABLE RoomAccomodations(
     accomodation VARCHAR(20) NOT NULL,
     PRIMARY KEY (room_id, accomodation),
     FOREIGN KEY (room_id) REFERENCES Room(room_id)
+);
+
+
+CREATE TABLE roomsBooked(
+	 booking_number INT PRIMARY KEY,
+     room_id VARCHAR(20),
+     FOREIGN KEY (room_id) REFERENCES Room(room_id),
+     booking_start_date datetime NOT NULL,
+     booking_end_date datetime NOT NULL
 );
     
 

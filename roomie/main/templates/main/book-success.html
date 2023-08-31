@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="english">
   <head>
-    <title>exported project</title>
+    <title>Book Success</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta charset="utf-8" />
     <meta property="twitter:card" content="summary_large_image" />
@@ -149,7 +149,7 @@
             <a href="{% url 'reserve' %}" class="book-success-text27">
               <span>Reserve</span>
             </a>
-            <a href="{% url 'my-rooms' %}" class="book-success-text29">
+            <a href="/my-rooms/{{user}}/" class="book-success-text29">
               <span>My Rooms</span>
             </a>
             <a href="{% url 'about' %}" class="book-success-text31">
@@ -163,14 +163,16 @@
           </div>
           <span class="book-success-text33">
             <span>
-              Congratulations! A study room has been booked for [NAME]. You can
+              {% if user.is_authenticated %}
+              Congratulations! A study room has been booked for {{user.get_short_name}}. You can
               view your reservation in the “My Rooms” tab. Please check in to
               the library/center for further instructions and allow any previous
               students to gather their belongings before entering. Good luck
               with your studies!
+              {% endif %}
             </span>
           </span>
-          <a href="{% url 'my-rooms' %}" class="book-success-roomsbutton">
+          <a href="/my-rooms/{{user}}/" class="book-success-roomsbutton">
             <div class="book-success-frame162605">
               <span class="book-success-text35 HeadingsH3-Bold24">
                 Go to My Rooms

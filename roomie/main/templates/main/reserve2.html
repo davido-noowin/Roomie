@@ -6,6 +6,9 @@
     <meta charset="utf-8" />
     <meta property="twitter:card" content="summary_large_image" />
 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+
+
     <style data-tag="reset-style-sheet">
       html {  line-height: 1.15;}body {  margin: 0;}* {  box-sizing: border-box;  border-width: 0;  border-style: solid;}p,li,ul,pre,div,h1,h2,h3,h4,h5,h6,figure,blockquote,figcaption {  margin: 0;  padding: 0;}button {  background-color: transparent;}button,input,optgroup,select,textarea {  font-family: inherit;  font-size: 100%;  line-height: 1.15;  margin: 0;}button,select {  text-transform: none;}button,[type="button"],[type="reset"],[type="button"]::-moz-focus-inner,[type="reset"]::-moz-focus-inner,[type="submit"]::-moz-focus-inner {  border-style: none;  padding: 0;}button:-moz-focus,[type="button"]:-moz-focus,[type="reset"]:-moz-focus,[type="submit"]:-moz-focus {  outline: 1px dotted ButtonText;}a {  color: inherit;  text-decoration: inherit;}input {  padding: 2px 4px;}img {  display: block;}html { scroll-behavior: smooth  }
     </style>
@@ -58,6 +61,9 @@
     <link rel="stylesheet" href="{% static 'style.css' %}" />
   </head>
   <body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+
+
     <div>
       <link href="{% static 'reserve2.css' %}" rel="stylesheet" />
 
@@ -157,7 +163,7 @@
             />
           </div>
           <span class="reserve2-text032">
-            <span>Finalize your reservation</span>
+            <span>{{message}}</span>
           </span>
           <div class="reserve2-selectroom">
             <img
@@ -443,53 +449,58 @@
             <span class="reserve2-text149"><span>1 PM</span></span>
             <span class="reserve2-text151"><span>2 PM</span></span>
             <div class="reserve2-availability">
-              <span class="reserve2-text153"><span>{{ ava }}</span></span>
-              <span class="reserve2-text155"><span>{{ avb }}</span></span>
-              <span class="reserve2-text157"><span>{{ avc }}</span></span>
-              <span class="reserve2-text159"><span>{{ avd }}</span></span>
-              <span class="reserve2-text161"><span>{{ ave }}</span></span>
-              <span class="reserve2-text163"><span>{{ avf }}</span></span>
-              <span class="reserve2-text171"><span>{{ avg }}</span></span>
-              <span class="reserve2-text165"><span>{{ avh }}</span></span>
-              <span class="reserve2-text167"><span>{{ avi }}</span></span>
-              <span class="reserve2-text169"><span>{{ avj }}</span></span>
-              <span class="reserve2-text173"><span>{{ avk }}</span></span>
-              <span class="reserve2-text175"><span>{{ avl }}</span></span>
-              <span class="reserve2-text177"><span>{{ avm }}</span></span>
-              <span class="reserve2-text179"><span>{{ avn }}</span></span>
-              <span class="reserve2-text181"><span>{{ avo }}</span></span>
-              <span class="reserve2-text183"><span>{{ avp }}</span></span>
-              <span class="reserve2-text185"><span>{{ avq }}</span></span>
-              <span class="reserve2-text187"><span>{{ avr }}</span></span>
-              <span class="reserve2-text189"><span>{{ avs }}</span></span>
-              <span class="reserve2-text191"><span>{{ avt }}</span></span>
+              <span class="{% if ava == 'OPEN' %}open-text{% elif ava == 'Booked' %}booked-text{% else %}unavailable-text{% endif %} reserve2-text153 "><span>{{ ava }}</span></span>
+              <span class="{% if avb == 'OPEN' %}open-text{% elif avb == 'Booked' %}booked-text{% else %}unavailable-text{% endif %} reserve2-text155"><span>{{ avb }}</span></span>
+              <span class="{% if avc == 'OPEN' %}open-text{% elif avc == 'Booked' %}booked-text{% else %}unavailable-text{% endif %} reserve2-text157"><span>{{ avc }}</span></span>
+              <span class="{% if avd == 'OPEN' %}open-text{% elif avd == 'Booked' %}booked-text{% else %}unavailable-text{% endif %} reserve2-text159"><span>{{ avd }}</span></span>
+              <span class="{% if ave == 'OPEN' %}open-text{% elif ave == 'Booked' %}booked-text{% else %}unavailable-text{% endif %} reserve2-text161"><span>{{ ave }}</span></span>
+              <span class="{% if avf == 'OPEN' %}open-text{% elif avf == 'Booked' %}booked-text{% else %}unavailable-text{% endif %} reserve2-text163"><span>{{ avf }}</span></span>
+              <span class="{% if avg == 'OPEN' %}open-text{% elif avg == 'Booked' %}booked-text{% else %}unavailable-text{% endif %} reserve2-text171"><span>{{ avg }}</span></span>
+              <span class="{% if avh == 'OPEN' %}open-text{% elif avh == 'Booked' %}booked-text{% else %}unavailable-text{% endif %} reserve2-text165"><span>{{ avh }}</span></span>
+              <span class="{% if avi == 'OPEN' %}open-text{% elif avi == 'Booked' %}booked-text{% else %}unavailable-text{% endif %} reserve2-text167"><span>{{ avi }}</span></span>
+              <span class="{% if avj == 'OPEN' %}open-text{% elif avj == 'Booked' %}booked-text{% else %}unavailable-text{% endif %} reserve2-text169"><span>{{ avj }}</span></span>
+              <span class="{% if avk == 'OPEN' %}open-text{% elif avk == 'Booked' %}booked-text{% else %}unavailable-text{% endif %} reserve2-text173"><span>{{ avk }}</span></span>
+              <span class="{% if avl == 'OPEN' %}open-text{% elif avl == 'Booked' %}booked-text{% else %}unavailable-text{% endif %} reserve2-text175"><span>{{ avl }}</span></span>
+              <span class="{% if avm == 'OPEN' %}open-text{% elif avm == 'Booked' %}booked-text{% else %}unavailable-text{% endif %} reserve2-text177"><span>{{ avm }}</span></span>
+              <span class="{% if avn == 'OPEN' %}open-text{% elif avn == 'Booked' %}booked-text{% else %}unavailable-text{% endif %} reserve2-text179"><span>{{ avn }}</span></span>
+              <span class="{% if avo == 'OPEN' %}open-text{% elif avo == 'Booked' %}booked-text{% else %}unavailable-text{% endif %} reserve2-text181"><span>{{ avo }}</span></span>
+              <span class="{% if avp == 'OPEN' %}open-text{% elif avp == 'Booked' %}booked-text{% else %}unavailable-text{% endif %} reserve2-text183"><span>{{ avp }}</span></span>
+              <span class="{% if avq == 'OPEN' %}open-text{% elif avq == 'Booked' %}booked-text{% else %}unavailable-text{% endif %} reserve2-text185"><span>{{ avq }}</span></span>
+              <span class="{% if avr == 'OPEN' %}open-text{% elif avr == 'Booked' %}booked-text{% else %}unavailable-text{% endif %} reserve2-text187"><span>{{ avr }}</span></span>
+              <span class="{% if avs == 'OPEN' %}open-text{% elif avs == 'Booked' %}booked-text{% else %}unavailable-text{% endif %} reserve2-text189"><span>{{ avs }}</span></span>
+              <span class="{% if avt == 'OPEN' %}open-text{% elif avt == 'Booked' %}booked-text{% else %}unavailable-text{% endif %} reserve2-text191"><span>{{ avt }}</span></span>
             </div>
           </div>
-          <button class="reserve2-confirmbutton button">
-            <div class="reserve2-frame162605">
-              <span class="reserve2-text193 HeadingsH3-Bold24">
-                <span>Confirm</span>
-              </span>
-              <div class="reserve2-vuesaxlineararrowright">
-                <img
-                  alt="Vector4221"
-                  src="{% static 'vector4221-4g8r.svg' %}"
-                  class="reserve2-vector3"
-                />
-                <img
-                  alt="Vector4221"
-                  src="{% static 'vector4221-11ot.svg' %}"
-                  class="reserve2-vector4"
-                />
+
+          <form method="POST" action="">
+            {% csrf_token %}
+            <button class="reserve2-confirmbutton button" type="submit">
+              <div class="reserve2-frame162605">
+                <span class="reserve2-text193 HeadingsH3-Bold24">
+                  <span>Confirm</span>
+                </span>
+                <div class="reserve2-vuesaxlineararrowright">
+                  <img
+                    alt="Vector4221"
+                    src="{% static 'vector4221-4g8r.svg' %}"
+                    class="reserve2-vector3"
+                  />
+                  <img
+                    alt="Vector4221"
+                    src="{% static 'vector4221-11ot.svg' %}"
+                    class="reserve2-vector4"
+                  />
+                </div>
               </div>
-            </div>
-          </button>
+            </button>
+          </form>
+          
           <div class="reserve2-time-window">
             <span class="reserve2-text195">
               <span>
-                <span>Start: 3 PM</span>
+                <span>Start: {{start}}</span>
                 <br />
-                <span>End: 4PM</span>
+                <span>End: {{end}}</span>
               </span>
             </span>
             <img
@@ -505,53 +516,52 @@
               src="{% static 'rectangle834221-n6x-200h.png' %}"
               class="reserve2-rectangle83 button"
             />
-            <div class="reserve2-arrowdown">
-              <div class="reserve2-vuesaxlineararrowright1">
-                <div class="reserve2-arrowright">
-                  <img
-                    alt="VectorI422"
-                    src="{% static 'vectori422-j97w.svg' %}"
-                    class="reserve2-vector5"
-                  />
-                  <img alt="VectorI422" src="" class="reserve2-vector6" />
-                </div>
-              </div>
+
+            <div class="dropdown">
+              <button class="btn btn-secondary btn-lg dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <span class="reserve2-text202">
+                  <span >Select Start Time</span>
+                </span>
+              </button>
+              <ul class="dropdown-menu">
+                {% for hour in open_room %}
+                <li><a class="dropdown-item" href="{% url 'confirmation' %}?booking={{ room.room_id }}&start={{ hour }}">{{ hour }}</a></li>
+                {% endfor %}
+              </ul>
             </div>
-            <span class="reserve2-text202"><span>Select Start Time</span></span>
+            
             <div class="reserve2-start-date-options">
               <span class="reserve2-text204">
-                <span>MRC Study Room 172 - 3PM</span>
               </span>
               <span class="reserve2-text206">
-                <span>MRC Study Room 172 - 4PM</span>
               </span>
             </div>
           </div>
+          
           <div class="reserve2-end-time-selector">
             <img
               alt="Rectangle834221"
               src="{% static 'rectangle834221-zypgk-200h.png' %}"
               class="reserve2-rectangle831 button"
             />
-            <div class="reserve2-arrowdown1">
-              <div class="reserve2-vuesaxlineararrowright2">
-                <div class="reserve2-arrowright1">
-                  <img
-                    alt="VectorI422"
-                    src="{% static 'vectori422-5spf.svg' %}"
-                    class="reserve2-vector7"
-                  />
-                  <img alt="VectorI422" src="" class="reserve2-vector8" />
-                </div>
-              </div>
+
+            <div class="dropdown">
+              <button class="btn btn-secondary btn-lg dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <span class="reserve2-text208">
+                  <span>Select End Time</span>
+                </span>
+              </button>
+              <ul class="dropdown-menu">
+                {% for end in ending_room %}
+                <li><a class="dropdown-item" href="{% url 'confirmation' %}?booking={{ room.room_id }}&start={{ start }}&end={{ end }}">{{ end }}</a></li>
+                {% endfor %}
+              </ul>
             </div>
-            <span class="reserve2-text208"><span>Select End Time</span></span>
+            
             <div class="reserve2-end-date-options">
               <span class="reserve2-text210">
-                <span>MRC Study Room 172 - 4PM</span>
               </span>
               <span class="reserve2-text212">
-                <span>MRC Study Room 172 - 5PM</span>
               </span>
             </div>
           </div>

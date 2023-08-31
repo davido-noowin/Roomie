@@ -1,9 +1,9 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth import login, authenticate, logout
-from django.http import HttpResponse, HttpResponseRedirect, HttpRequest, QueryDict
-from django.contrib.auth.forms import UserCreationForm
+from django.http import HttpResponse, HttpRequest
+from django.utils import timezone
 from django.contrib.auth.decorators import login_required
-from .models import Room, RoomAccomodations
+from .models import Room, RoomsBooked
 from django.contrib import messages
 from django.core.paginator import Paginator
 from django.db.models import Q
@@ -51,6 +51,27 @@ OPERATING_TIMES = {
         '5' : [13, 14, 15, 16],
     }
 }
+
+
+# Helper Functions
+def parseTime(parsing:str) -> int:
+    try:
+        time = parsing.split(' - ')[1]
+        if 'PM' in time:
+            hour = int(time.split(' PM')[0])
+            if hour != 12:
+                hour += 12
+
+                return hour
+        else:
+            hour = int(time.split(' AM')[0])
+            if hour == 12:
+                hour += 12
+            
+            return hour
+    except IndexError:
+        return 0
+    
 
 
 def home(response:HttpResponse) -> HttpResponse:
@@ -150,6 +171,9 @@ def reserve(response:HttpRequest, study_room:str= '') -> HttpResponse:
 
 @login_required(login_url='account')
 def confirmReservation(response:HttpResponse):
+    # message is used to 
+    message = 'Finalize your reservation'
+
     today = datetime.date.today()
     weekday = today.weekday()
 
@@ -200,7 +224,6 @@ def confirmReservation(response:HttpResponse):
     try:
         room_booking = Room.objects.get(room_id=booking_response)
 
-        working_hours = ''
 
         if room_booking.location == 'Multimedia Resources Center':
             working_hours = OPERATING_TIMES['MRC'][str(weekday)]
@@ -212,27 +235,111 @@ def confirmReservation(response:HttpResponse):
             working_hours = OPERATING_TIMES['Gateway'][str(weekday)]
         else:
             print('invalid center selection')
+        
 
-        print(working_hours)
+        # print(working_hours)
 
     except Room.DoesNotExist:
-        pass
+        return redirect(reserve)
 
 
     availability = [8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 0, 1, 2, 3]
+    hours = availability.copy()
+    end_hours = [hour + 1 for hour in hours]
+
+    booked_rooms = None
+    booked_hours = []
+    try:
+        booked_rooms = RoomsBooked.objects.all().filter(room=booking_response)
+
+        for booking in booked_rooms:
+            if booking.booking_start_date.date() == today:
+                starting_time = booking.booking_start_date.hour
+                ending_time = booking.booking_end_date.hour
+                while starting_time <= ending_time:
+                    booked_hours.append(starting_time)
+                    starting_time += 1
+
+    except RoomsBooked.DoesNotExist:
+        pass
+
+
     for hour in availability:
-        # TODO: check if the room is booked
-        # make that hour = BOOKED
-        if hour not in working_hours:
+        if hour in booked_hours:
+            availability[availability.index(hour)] = 'Booked'
+        elif hour not in working_hours:
             availability[availability.index(hour)] = 'Unavailable'
         else:
             availability[availability.index(hour)] = 'OPEN'
 
-    print(availability)
+    
+    start_time_display = []
+    for i in range(len(hours)):
+        if availability[i] == 'OPEN':
+            if hours[i] == 0:
+                start_time_display.append(f'{room_booking.location} {room_booking.room_number} - 12 AM')
+            elif hours[i] > 12:
+                start_time_display.append(f'{room_booking.location} {room_booking.room_number} - {hours[i] - 12} PM')
+            elif hours[i] == 12:
+                start_time_display.append(f'{room_booking.location} {room_booking.room_number} - 12 PM')
+            else:
+                start_time_display.append(f'{room_booking.location} {room_booking.room_number} - {hours[i]} AM')
 
+    start_selection = None
+    if response.GET.get('start') is not None:
+        start_selection = response.GET.get('start')
+        # print(start_selection)
+        
+    end_selection = None
+    time1 = -1
+    time2 = -1
+
+    if response.GET.get('end') is not None:
+        end_selection = response.GET.get('end')
+
+        time1 = parseTime(start_selection)
+            
+        time2 = parseTime(end_selection)
+
+    # Doing checks to confirm correct study room selection and making the reservation
+    if response.method == 'POST':
+        if (time1 == 24):
+            # convert 12am (24) to 0 so that the math works out
+            time1 = 0
+        diff = time2 - time1
+
+        if start_selection is None:
+            message = 'Select a start time'
+        elif end_selection is None:
+            message = 'Select an end time'
+        elif diff < 1 or diff > 2:
+            message = 'Invalid start and end times'
+        elif time1 in booked_hours:
+            message = 'Room has been booked during that time'
+        else:
+            pass
+            begin = timezone.make_aware(datetime.datetime.combine(today, datetime.time(time1, 0)))
+            end = timezone.make_aware(datetime.datetime.combine(today, datetime.time(time2, 0)))
+            booking = RoomsBooked(room=room_booking, user=response.user, booking_start_date=begin, booking_end_date=end)
+            booking.save()
+            return render(response, 'main/book-success.html', {})
+
+
+    end_time_display = []
+    for i in range(len(end_hours)):
+        if availability[i] == 'OPEN':
+            if hours[i] == 24:
+                end_time_display.append(f'{room_booking.location} {room_booking.room_number} - 12 AM')
+            elif end_hours[i] > 12:
+                end_time_display.append(f'{room_booking.location} {room_booking.room_number} - {end_hours[i] - 12} PM')
+            elif end_hours[i] == 12:
+                end_time_display.append(f'{room_booking.location} {room_booking.room_number} - 12 PM')
+            else:
+                end_time_display.append(f'{room_booking.location} {room_booking.room_number} - {end_hours[i]} AM')
     
 
     context = {
+        'message' : message,
         'room' : room_booking,
         'header' : header,
         'mon' : studyroom_selection_window[0],
@@ -242,6 +349,8 @@ def confirmReservation(response:HttpResponse):
         'fri' : studyroom_selection_window[4],
         'sat' : studyroom_selection_window[5],
         'sun' : studyroom_selection_window[6],
+        'open_room' : start_time_display,
+        'ending_room' : end_time_display,
         'ava' : availability[0],
         'avb' : availability[1],
         'avc' : availability[2],
@@ -261,8 +370,9 @@ def confirmReservation(response:HttpResponse):
         'avq' : availability[16],
         'avr' : availability[17],
         'avs' : availability[18],
-        'avt' : availability[19]
-        
+        'avt' : availability[19],
+        'start' : start_selection,
+        'end' : end_selection
     }
     return render(response, 'main/reserve2.html', context)
 
@@ -288,7 +398,11 @@ def myrooms(response:HttpResponse, user:str) -> HttpResponse:
             else:
                 days_in_month[i].append(weeks[i])
 
-    print(days_in_month)
+    # print(days_in_month)
+
+    # Getting booking information
+    booked_rooms = RoomsBooked.objects.all().filter(user=response.user)
+    booked_rooms = sorted(list(booked_rooms), key= lambda room : room.booking_start_date)
 
     context = {
         'year' : current_year,
@@ -302,6 +416,7 @@ def myrooms(response:HttpResponse, user:str) -> HttpResponse:
         'fri' : days_in_month[4],
         'sat' : days_in_month[5],
         'sun' : days_in_month[6],
+        'rooms' : booked_rooms
     }
 
     return render(response, 'main/my-rooms.html', context)
@@ -311,6 +426,7 @@ def about(response:HttpResponse) -> HttpResponse:
     return render(response, 'main/about.html', {})
 
 
+@login_required(login_url='account')
 def bookSuccess(response:HttpResponse) -> HttpResponse:
     context = {}
     return render(response, 'main/book-success.html', context)
